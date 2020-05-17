@@ -1,0 +1,63 @@
+///////////////////////////////////////////////////////////////////
+///////////Realizado por |ArgA|Ignacio//////////////
+//////////////////////////////////////////////////////////////////
+
+author="|ArgA|Vultur|Sdo¹";
+OnLoadName = "Regreso a Casa";
+OnLoadMission = "";
+loadScreen = "imgs\portada.jpg";
+overviewPicture = "imgs\portada.jpg";
+
+enableDebugConsole = 1;
+
+//disableChannels[]={{0, true, true}, {1, true, true}, {2, true, true},{3, false, true}, {4, true, true}, {6, true, true}};
+
+respawnOnStart = 0;
+
+class Header {
+    gameType=coop;
+    minPlayers=1;
+    maxPlayers=55;
+};
+
+class CfgFunctions {
+  class MANDI {
+    class general {
+      class setBriefing {
+        file = "functions\fnc_setBriefing.sqf";
+      };
+      class makeInfo {
+        file = "functions\fnc_makeInfo.sqf";
+      };
+      class posicion {
+        file = "functions\fnc_posicion.sqf";
+      };
+    };
+  };
+  class MAC {
+    class general {
+      class switchMove{
+        file = "functions\fnc_switchMove.sqf";
+      };
+    };
+  };
+};
+//////////////////////////////////////////////////////////////////
+///////////      Realizado por |ArgA|Vultur|Sdo¹    //////////////
+//////////////////////////////////////////////////////////////////
+class CfgSounds{
+// List of sounds (.ogg files without the .ogg extension)
+  sounds[] = {};
+  class radio2{
+    // filename, volume, pitch, distance (optional)
+    name = "radio2"; // Name for mission editor
+    sound[] = {\sounds\mensajeRadio.ogg, 1, 1.0};
+    titles[] = {0, ""};
+  };
+  class Beeper2{
+    name = "Beeper2"; // Name for mission editor
+    // filename, volume, pitch, distance (optional)
+    sound[] = {\sounds\Beeper2.ogg, 1, 1.0};
+    titles[] = {0, ""};
+  };
+};

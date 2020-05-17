@@ -1,0 +1,291 @@
+version=12;
+class Mission
+{
+	addOns[]=
+	{
+		"a3_map_altis",
+		"A3_Soft_F_Car",
+		"A3_Characters_F_BLUFOR"
+	};
+	addOnsAuto[]=
+	{
+		"A3_Characters_F_BLUFOR",
+		"A3_Soft_F_Car",
+		"a3_map_altis"
+	};
+	randomSeed=15879901;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=6;
+		day=24;
+		hour=12;
+		minute=0;
+		startFogBase=0.001;
+		forecastFogBase=0.001;
+		startFogDecay=0.0049999999;
+		forecastFogDecay=0.0049999999;
+	};
+	class Groups
+	{
+		items=2;
+		class Item0
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={22727.375,2.7935305,18619.449};
+					id=0;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.60000002;
+					text="server";
+				};
+			};
+		};
+		class Item1
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={22930.777,3.1900001,18402.111};
+					azimut=4.6359463;
+					special="FLY";
+					id=1;
+					side="WEST";
+					vehicle="B_Soldier_F";
+					player="PLAYER COMMANDER";
+					leader=1;
+					skill=0.60000002;
+					init="this allowdamage false";
+				};
+			};
+		};
+	};
+	class Vehicles
+	{
+		items=1;
+		class Item0
+		{
+			position[]={22939.887,3.1900001,18398.822};
+			id=2;
+			side="EMPTY";
+			vehicle="C_Hatchback_01_sport_F";
+			skill=0.60000002;
+		};
+	};
+	class Markers
+	{
+		items=6;
+		class Item0
+		{
+			position[]={22914.121,3.1900001,18447.85};
+			name="respawn_west";
+			type="Empty";
+		};
+		class Item1
+		{
+			position[]={22550.195,14.055595,18649.857};
+			name="EOSinf_1";
+			markerType="RECTANGLE";
+			type="Empty";
+			a=50;
+			b=50;
+		};
+		class Item2
+		{
+			position[]={22830.84,7.5012841,17223.391};
+			name="BAS_zone_1";
+			markerType="ELLIPSE";
+			type="Empty";
+			a=100;
+			b=100;
+			angle=0.64133602;
+		};
+		class Item3
+		{
+			position[]={22200.66,16.640406,18363.215};
+			name="EOSinf_2";
+			markerType="ELLIPSE";
+			type="Empty";
+			a=75;
+			b=75;
+		};
+		class Item4
+		{
+			position[]={23564.129,3.1900001,18214.211};
+			name="EOSmot_1";
+			markerType="RECTANGLE";
+			type="Empty";
+			a=50;
+			b=500;
+			angle=39.832802;
+		};
+		class Item5
+		{
+			position[]={22774.639,13.005122,19004.414};
+			name="EOSmot_2";
+			markerType="ELLIPSE";
+			type="Empty";
+			a=300;
+			b=125;
+			angle=32.147022;
+		};
+	};
+	class Sensors
+	{
+		items=3;
+		class Item0
+		{
+			position[]={22873.281,3.1900001,18419.305};
+			a=0;
+			b=0;
+			activationBy="BRAVO";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			text="DEACTIVATE ZONE";
+			expActiv="[[""BAS_zone_1"",""EOSinf_1"",""EOSinf_2"",""EOSmot_1"",""EOSmot_2""]] call EOS_deactivate";
+			class Effects
+			{
+			};
+		};
+		class Item1
+		{
+			position[]={22958.877,3.1900001,18428.039};
+			activationBy="WEST";
+			interruptable=1;
+			age="UNKNOWN";
+			expActiv="HINT ""USE YOUR RADIO TO DEACTIVATE ZONES"";";
+			class Effects
+			{
+			};
+		};
+		class Item2
+		{
+			position[]={22848.469,3.1900001,18417.342};
+			a=0;
+			b=0;
+			activationBy="DELTA";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			text="Count Units on map";
+			expActiv="hint format [""%1"",{alive _x} count allUnits];";
+			class Effects
+			{
+			};
+		};
+	};
+};
+class Intro
+{
+	addOns[]=
+	{
+		"a3_map_altis"
+	};
+	addOnsAuto[]=
+	{
+		"a3_map_altis"
+	};
+	randomSeed=6522068;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=6;
+		day=24;
+		hour=12;
+		minute=0;
+		startFogBase=0.001;
+		forecastFogBase=0.001;
+		startFogDecay=0.0049999999;
+		forecastFogDecay=0.0049999999;
+	};
+};
+class OutroWin
+{
+	addOns[]=
+	{
+		"a3_map_altis"
+	};
+	addOnsAuto[]=
+	{
+		"a3_map_altis"
+	};
+	randomSeed=13571945;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=6;
+		day=24;
+		hour=12;
+		minute=0;
+		startFogBase=0.001;
+		forecastFogBase=0.001;
+		startFogDecay=0.0049999999;
+		forecastFogDecay=0.0049999999;
+	};
+};
+class OutroLoose
+{
+	addOns[]=
+	{
+		"a3_map_altis"
+	};
+	addOnsAuto[]=
+	{
+		"a3_map_altis"
+	};
+	randomSeed=14444602;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=6;
+		day=24;
+		hour=12;
+		minute=0;
+		startFogBase=0.001;
+		forecastFogBase=0.001;
+		startFogDecay=0.0049999999;
+		forecastFogDecay=0.0049999999;
+	};
+};

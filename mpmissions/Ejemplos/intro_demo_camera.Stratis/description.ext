@@ -1,0 +1,16 @@
+overviewPicture = "Img\Snapshot.jpg";
+onLoadName 		= INTRO script-DEMO;
+author 			= ALIAS;									
+onLoadMission 	= INTRO script - DEMO mission;
+loadScreen 		= "Img\Overlay.jpg";
+
+class CfgSounds
+{
+	class intro_music
+	{
+		name = "intro_music"; // Name for mission editor
+		sound[] = {\sound\intro_music.ogg, .5, 1.0};
+		titles[] = {0, ""};
+	};
+
+};

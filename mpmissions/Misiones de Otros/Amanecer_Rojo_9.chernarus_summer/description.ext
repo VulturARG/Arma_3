@@ -1,0 +1,17 @@
+﻿enableDebugConsole = 1;
+author = "Yakra para ArgA"; // Author
+onLoadName = "Op Valkyrias"; // Mission name
+onLoadMission = "Campaña Oficial Amanecer Rojo" ;
+onLoadMissionTime = 1;
+loadScreen =  "imgs\portada 2.jpg";
+
+class Header
+{
+    gameType=coop;
+    minPlayers=1;
+    maxPlayers=50; //Cantidad de slots
+};
+
+respawnOnStart = 0;
+
+//Este archivo sirve para las configuraciones previas de la mision, como la cantidad de slots, el nombre, las imagenes, respawn, autor.

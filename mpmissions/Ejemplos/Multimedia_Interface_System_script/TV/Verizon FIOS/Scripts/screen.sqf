@@ -1,0 +1,1 @@
+tv setobjecttextureglobal [0,"TV\Verizon FIOS\Pictures\screen.jpg"]; tv say3D 'bip'; 

@@ -1,0 +1,368 @@
+version=11;
+class Mission
+{
+	addOns[]=
+	{
+		"cacharacters_e",
+		"takistan",
+		"cawheeled_e_suv"
+	};
+	addOnsAuto[]=
+	{
+		"cacharacters_e",
+		"cawheeled_e_suv",
+		"takistan"
+	};
+	randomSeed=6629847;
+	class Intel
+	{
+		briefingName="Under Cover Team";
+		briefingDescription="Under Cover Team and how they can fail.";
+		startWeather=0.39999998;
+		forecastWeather=0.39999998;
+		year=2009;
+		day=28;
+		hour=16;
+		minute=20;
+	};
+	class Groups
+	{
+		items=4;
+		class Item0
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=3;
+				class Item0
+				{
+					position[]={5176.6445,145.39114,6063.4248};
+					azimut=-20.2976;
+					special="CARGO";
+					id=0;
+					side="WEST";
+					vehicle="US_Delta_Force_Undercover_Takistani06_EP1";
+					player="PLAYER COMMANDER";
+					leader=1;
+					skill=0.60000002;
+					init="uct = group this; {removeAllWeapons _x; _x addMagazine ""30Rnd_545x39_AK""; _x addWeapon ""AKS_74""; _x setCaptive true; _x moveInCargo car;} forEach units uct - [this]; uct setCombatMode ""BLUE""; removeAllWeapons this; this addMagazine ""30Rnd_545x39_AK""; this addWeapon ""AKS_74""; this setCaptive true; this moveInDriver car;";
+				};
+				class Item1
+				{
+					position[]={5193.9702,145.39999,6066.4756};
+					azimut=-20.297625;
+					id=1;
+					side="WEST";
+					vehicle="US_Delta_Force_Undercover_Takistani06_EP1";
+					skill=0.60000002;
+				};
+				class Item2
+				{
+					position[]={5192.7817,145.39999,6062.9087};
+					azimut=-20.297625;
+					id=18;
+					side="WEST";
+					vehicle="US_Delta_Force_Undercover_Takistani06_EP1";
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item1
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=5;
+				class Item0
+				{
+					position[]={5087.752,149.46307,6127.1777};
+					azimut=120;
+					id=3;
+					side="EAST";
+					vehicle="TK_Soldier_MG_EP1";
+					leader=1;
+					rank="CORPORAL";
+					skill=0.33333331;
+				};
+				class Item1
+				{
+					position[]={5081.9219,149.44905,6127.0796};
+					azimut=120;
+					id=4;
+					side="EAST";
+					vehicle="TK_Soldier_MG_EP1";
+					rank="CORPORAL";
+					skill=0.33333331;
+				};
+				class Item2
+				{
+					position[]={5080.9219,149.08081,6125.3477};
+					azimut=120;
+					id=5;
+					side="EAST";
+					vehicle="TK_Soldier_AT_EP1";
+					rank="CORPORAL";
+					skill=0.33333331;
+				};
+				class Item3
+				{
+					position[]={5079.9219,148.83646,6123.6157};
+					azimut=120;
+					id=6;
+					side="EAST";
+					vehicle="TK_Soldier_GL_EP1";
+					skill=0.2;
+				};
+				class Item4
+				{
+					position[]={5078.9219,148.636,6121.8833};
+					azimut=120;
+					id=7;
+					side="EAST";
+					vehicle="TK_Soldier_AMG_EP1";
+					skill=0.2;
+				};
+			};
+		};
+		class Item2
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=5;
+				class Item0
+				{
+					position[]={5213.0811,143.68684,6147.6934};
+					azimut=230;
+					id=8;
+					side="EAST";
+					vehicle="TK_Soldier_MG_EP1";
+					leader=1;
+					rank="CORPORAL";
+					skill=0.33333331;
+				};
+				class Item1
+				{
+					position[]={5214.9829,143.72026,6153.2056};
+					azimut=230;
+					id=9;
+					side="EAST";
+					vehicle="TK_Soldier_MG_EP1";
+					rank="CORPORAL";
+					skill=0.33333331;
+				};
+				class Item2
+				{
+					position[]={5213.6973,143.72516,6154.7373};
+					azimut=230;
+					id=10;
+					side="EAST";
+					vehicle="TK_Soldier_AT_EP1";
+					rank="CORPORAL";
+					skill=0.33333331;
+				};
+				class Item3
+				{
+					position[]={5212.4116,143.73282,6156.2695};
+					azimut=230;
+					id=11;
+					side="EAST";
+					vehicle="TK_Soldier_GL_EP1";
+					skill=0.2;
+				};
+				class Item4
+				{
+					position[]={5211.126,143.83403,6157.8018};
+					azimut=230;
+					id=12;
+					side="EAST";
+					vehicle="TK_Soldier_AMG_EP1";
+					skill=0.2;
+				};
+			};
+		};
+		class Item3
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=5;
+				class Item0
+				{
+					position[]={5167.7046,145.39502,6097.9385};
+					azimut=190.88753;
+					id=13;
+					side="EAST";
+					vehicle="TK_Soldier_MG_EP1";
+					leader=1;
+					rank="CORPORAL";
+					skill=0.33333331;
+				};
+				class Item1
+				{
+					position[]={5165.7046,145.39999,6103.4165};
+					azimut=190.88753;
+					id=14;
+					side="EAST";
+					vehicle="TK_Soldier_MG_EP1";
+					rank="CORPORAL";
+					skill=0.33333331;
+				};
+				class Item2
+				{
+					position[]={5163.7412,145.39804,6103.791};
+					azimut=190.88753;
+					id=15;
+					side="EAST";
+					vehicle="TK_Soldier_AT_EP1";
+					rank="CORPORAL";
+					skill=0.33333331;
+				};
+				class Item3
+				{
+					position[]={5161.7773,145.38164,6104.1704};
+					azimut=190.88753;
+					id=16;
+					side="EAST";
+					vehicle="TK_Soldier_GL_EP1";
+					skill=0.2;
+				};
+				class Item4
+				{
+					position[]={5159.812,145.34137,6104.5488};
+					azimut=190.88753;
+					id=17;
+					side="EAST";
+					vehicle="TK_Soldier_AMG_EP1";
+					skill=0.2;
+				};
+			};
+		};
+	};
+	class Vehicles
+	{
+		items=1;
+		class Item0
+		{
+			position[]={5165.0005,145.36537,6060.1973};
+			azimut=348.258;
+			id=2;
+			side="EMPTY";
+			vehicle="SUV_TK_EP1";
+			leader=1;
+			skill=0.60000002;
+			text="car";
+		};
+	};
+	class Sensors
+	{
+		items=3;
+		class Item0
+		{
+			position[]={5154.5,152.57962,6069.521};
+			a=70;
+			b=40;
+			angle=-13.9547;
+			rectangular=1;
+			activationBy="ANY";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="compound";
+			expCond="{vehicle _x in thislist} count units uct < count units uct;";
+			class Effects
+			{
+			};
+		};
+		class Item1
+		{
+			position[]={5179.3027,145.39688,6081.1592};
+			a=0;
+			b=0;
+			interruptable=1;
+			age="UNKNOWN";
+			expCond="triggerActivated compound";
+			expActiv="{_x setCaptive false;} forEach units uct;";
+			class Effects
+			{
+			};
+		};
+		class Item2
+		{
+			position[]={5185.4165,145.39999,6080.479};
+			a=0;
+			b=0;
+			interruptable=1;
+			age="UNKNOWN";
+			text="AssignEVH";
+			expCond="true";
+			expActiv="{_x addEventHandler [""fired"", ""{_x setCaptive false;} forEach units uct;""]} forEach units uct; ";
+			class Effects
+			{
+			};
+		};
+	};
+};
+class Intro
+{
+	addOns[]=
+	{
+		"takistan"
+	};
+	addOnsAuto[]=
+	{
+		"takistan"
+	};
+	randomSeed=11120661;
+	class Intel
+	{
+		startWeather=0.40000001;
+		forecastWeather=0.40000001;
+		year=2009;
+		day=28;
+		hour=16;
+		minute=20;
+	};
+};
+class OutroWin
+{
+	addOns[]=
+	{
+		"takistan"
+	};
+	addOnsAuto[]=
+	{
+		"takistan"
+	};
+	randomSeed=671195;
+	class Intel
+	{
+		startWeather=0.40000001;
+		forecastWeather=0.40000001;
+		year=2009;
+		day=28;
+		hour=16;
+		minute=20;
+	};
+};
+class OutroLoose
+{
+	addOns[]=
+	{
+		"takistan"
+	};
+	addOnsAuto[]=
+	{
+		"takistan"
+	};
+	randomSeed=14948063;
+	class Intel
+	{
+		startWeather=0.40000001;
+		forecastWeather=0.40000001;
+		year=2009;
+		day=28;
+		hour=16;
+		minute=20;
+	};
+};

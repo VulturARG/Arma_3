@@ -1,0 +1,384 @@
+version=53;
+class EditorData
+{
+	moveGridStep=1;
+	angleGridStep=0.2617994;
+	scaleGridStep=1;
+	autoGroupingDist=10;
+	toggles=1;
+	class ItemIDProvider
+	{
+		nextID=15;
+	};
+	class Camera
+	{
+		pos[]={8024.5537,57.966846,9763.209};
+		dir[]={-0.85936213,-0.30836731,-0.40818709};
+		up[]={-0.27861831,0.9512381,-0.13234067};
+		aside[]={-0.42908829,-7.1486284e-008,0.90337449};
+	};
+};
+binarizationWanted=0;
+addons[]=
+{
+	"A3_Characters_F",
+	"asr_ai3_skills",
+	"A3_Weapons_F",
+	"task_force_radio_items",
+	"arga_gorro",
+	"arga_uniforme",
+	"ace_medical",
+	"ace_hearing",
+	"ace_captives",
+	"arga_chaleco",
+	"CUP_CWA_Misc",
+	"A3_Structures_F_Heli_Items_Airport"
+};
+class AddonsMetaData
+{
+	class List
+	{
+		items=11;
+		class Item0
+		{
+			className="A3_Characters_F";
+			name="Arma 3 Alpha - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item1
+		{
+			className="A3_Weapons_F";
+			name="Arma 3 Alpha - Weapons and Accessories";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item2
+		{
+			className="task_force_radio_items";
+			name="task_force_radio_items";
+			author="[TF]Nkey";
+			url="https://github.com/michail-nikolaev/task-force-arma-3-radio";
+		};
+		class Item3
+		{
+			className="arga_gorro";
+			name="arga_gorro";
+		};
+		class Item4
+		{
+			className="arga_uniforme";
+			name="arga_uniforme";
+		};
+		class Item5
+		{
+			className="ace_medical";
+			name="ACE3 - Medical";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
+		class Item6
+		{
+			className="ace_hearing";
+			name="ACE3 - Hearing";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
+		class Item7
+		{
+			className="ace_captives";
+			name="ACE3 - Captives";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
+		class Item8
+		{
+			className="arga_chaleco";
+			name="arga_chaleco";
+		};
+		class Item9
+		{
+			className="CUP_CWA_Misc";
+			name="CUP_CWA_Misc";
+		};
+		class Item10
+		{
+			className="A3_Structures_F_Heli";
+			name="Arma 3 Helicopters - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+	};
+};
+randomSeed=16560951;
+class ScenarioData
+{
+	author="Vultur";
+};
+class Mission
+{
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		wavesForced=1;
+		windForced=1;
+		year=2035;
+		month=6;
+		day=24;
+		hour=12;
+		minute=0;
+		startFogDecay=0.014;
+		forecastFogDecay=0.014;
+	};
+	class Entities
+	{
+		items=7;
+		class Item0
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7973.0083,30.32585,9746.5283};
+						angles[]={0,2.6369662,0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						isPlayer=1;
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="arga_u_marpatw";
+								isBackpack=0;
+								class ItemCargo
+								{
+									items=9;
+									class Item0
+									{
+										name="ACE_packingBandage";
+										count=5;
+									};
+									class Item1
+									{
+										name="ACE_elasticBandage";
+										count=5;
+									};
+									class Item2
+									{
+										name="ACE_tourniquet";
+										count=1;
+									};
+									class Item3
+									{
+										name="ACE_EarPlugs";
+										count=1;
+									};
+									class Item4
+									{
+										name="ACE_CableTie";
+										count=3;
+									};
+									class Item5
+									{
+										name="ACE_morphine";
+										count=2;
+									};
+									class Item6
+									{
+										name="ACE_epinephrine";
+										count=2;
+									};
+									class Item7
+									{
+										name="ACE_quikclot";
+										count=5;
+									};
+									class Item8
+									{
+										name="ACE_fieldDressing";
+										count=5;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="arga_c_marpatw";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="tf_anprc152";
+							gps="ItemGPS";
+							headgear="arga_bo_sgt";
+						};
+					};
+					id=1;
+					type="B_Soldier_TL_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male07ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=0;
+		};
+		class Item1
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7993.939,30.466927,9668.1943};
+				angles[]={0,0.0009648368,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				name="tropa";
+			};
+			id=2;
+			type="cwa_HeliHEmpty";
+			atlOffset=3.8146973e-006;
+		};
+		class Item2
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7972.2671,30.541443,9687.0234};
+				angles[]={0.001544081,1.9751358,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=3;
+			type="Land_PortableHelipadLight_01_F";
+		};
+		class Item3
+		{
+			dataType="Trigger";
+			position[]={7972.2871,30.43078,9687.0127};
+			angle=1.9751331;
+			class Attributes
+			{
+				condition="call{this}";
+				onActivation="call{nul = execVM ""scripts\soldadosMarchando.sqf"";}";
+				sizeA=1;
+				sizeB=1;
+				repeatable=1;
+				activationBy="WEST";
+			};
+			id=4;
+			type="EmptyDetector";
+		};
+		class Item4
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7974.9067,30.43619,9743.2061};
+				angles[]={0.00077204045,1.9751358,6.2824135};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=5;
+			type="Land_PortableHelipadLight_01_F";
+		};
+		class Item5
+		{
+			dataType="Trigger";
+			position[]={7974.9268,30.325502,9743.1953};
+			angle=1.9751365;
+			class Attributes
+			{
+				condition="call{this}";
+				onActivation="call{nul = execVM ""scripts\soldadosMarchando.sqf"";}";
+				sizeA=1;
+				sizeB=1;
+				repeatable=1;
+				activationBy="WEST";
+			};
+			id=6;
+			type="EmptyDetector";
+		};
+		class Item6
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7994.0708,30.581203,9667.2412};
+				angles[]={0.0039967569,0,6.2816033};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=14;
+			type="Land_PortableHelipadLight_01_F";
+		};
+	};
+};

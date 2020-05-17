@@ -1,0 +1,48 @@
+///////////////////////////////////////////////////////////////////
+///////////Realizado por |ArgA|Ignacio//////////////
+//////////////////////////////////////////////////////////////////
+
+author="";
+OnLoadName = "";
+OnLoadMission = "";
+loadScreen = "";
+overviewPicture = "";
+
+enableDebugConsole = 1;
+
+//disableChannels[]={{0, true, true}, {1, true, true}, {2, true, true},{3, false, true}, {4, true, true}, {6, true, true}};
+
+respawnOnStart = 0;
+
+class Header {
+    gameType=coop;
+    minPlayers=1;
+    maxPlayers=40;
+};
+
+class CfgFunctions {
+  class MANDI {
+    class general {
+      class setBriefing {
+        file = "functions\fnc_setBriefing.sqf";
+      };
+      class makeInfo {
+        file = "functions\fnc_makeInfo.sqf";
+      };
+      class posicion {
+        file = "functions\fnc_posicion.sqf";
+      };
+    };
+  };
+  class MAC {
+    class general {
+      class switchMove{
+        file = "functions\fnc_switchMove.sqf";
+      };
+    };
+  };
+};
+
+///////////////////////////////////////////////////////////////////
+///////////Realizado por |ArgA|Ignacio//////////////
+//////////////////////////////////////////////////////////////////

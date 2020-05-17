@@ -1,0 +1,50 @@
+class CfgSounds
+{
+// List of sounds (.ogg files without the .ogg extension)
+sounds[] = {rap,house,rock,bip,bip2};
+
+// Definition for each sound
+class rap
+{
+// Name for mission editor
+name = "rap"; 
+//Path of the .ogg file. since it's in the same folder just use the filename
+sound[] = {TV\Media Player\Music\rap.ogg, 1, 1.0}; 
+titles[] = {};
+};
+class house
+{
+// Name for mission editor
+name = "house"; 
+//Path of the .ogg file. since it's in the same folder just use the filename
+sound[] = {TV\Media Player\Music\house.ogg, 1, 1.0}; 
+titles[] = {};
+};
+class rock
+{
+// Name for mission editor
+name = "rock"; 
+//Path of the .ogg file. since it's in the same folder just use the filename
+sound[] = {TV\Media Player\Music\rock.ogg, 1, 1.0}; 
+titles[] = {};
+};
+class bip
+{
+// Name for mission editor
+name = "bip"; 
+//Path of the .ogg file. since it's in the same folder just use the filename
+sound[] = {TV\TV logo & beep\Sounds\bip.ogg, 1, 1.0}; 
+titles[] = {};
+};
+class bip2
+{
+// Name for mission editor
+name = "bip2"; 
+//Path of the .ogg file. since it's in the same folder just use the filename
+sound[] = {TV\TV logo & beep\Sounds\bip2.ogg, 1, 1.0}; 
+titles[] = {};
+};
+
+};
+
+

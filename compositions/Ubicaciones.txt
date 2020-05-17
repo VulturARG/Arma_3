@@ -1,0 +1,6 @@
+DESCOMPRIMIR EN:
+Mis documentos\Arma 3 - Other Profiles\Nombre.de.nuestro.perfil\compositions
+               o Arma 3 (dependiendo donde tenemos nuestro perfil)
+
+
+Las imagenes se guardan dentro de la carpeta de cada mision por particular.

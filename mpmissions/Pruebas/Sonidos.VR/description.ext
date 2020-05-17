@@ -1,0 +1,43 @@
+///////////////////////////////////////////////////////////////////
+///////////Realizado por |ArgA|Ignacio//////////////
+//////////////////////////////////////////////////////////////////
+
+author="|ArgA|Vultur|Sdo¹";
+OnLoadName = "Pruebas";
+OnLoadMission = "Probando cosas";
+loadScreen = "imgs\portada.jpg";
+overviewPicture = "imgs\portada.jpg";
+
+enableDebugConsole = 1;
+
+//disableChannels[]={{0, true, true}, {1, true, true}, {2, true, true},{3, false, true}, {4, true, true}, {6, true, true}};
+
+respawnOnStart = 0;
+
+class Header {
+    gameType=coop;
+    minPlayers=1;
+    maxPlayers=60;
+};
+
+//////////////////////////////////////////////////////////////////
+///////////      Realizado por |ArgA|Vultur|Sdo¹    //////////////
+//////////////////////////////////////////////////////////////////
+
+class CfgSounds {
+	sounds[] = {};
+  class sonido1
+	{
+	name = "sonido1";
+	sound[] = {"sounds\Track01.ogg", 1, 1};
+	titles[] = {};
+	};
+  class sonido2
+	{
+	name = "sonido2";
+	sound[] = {"sounds\Track02.ogg", 1, 1};
+	titles[] = {};
+	};
+};
+// activa la carga de settings de archivo
+//cba_settings_hasSettingsFile = 1;

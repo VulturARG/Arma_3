@@ -1,0 +1,28 @@
+Hell-Heli Autorotation Practice 2.4
+dr_strangepete (pete@shitnami.net)
+-------------------------------------------------------------------------------------------
+This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 Unported License:
+	http://creativecommons.org/licenses/by-sa/3.0/deed.en_US
+-------------------------------------------------------------------------------------------
+
+Check for latest updates on the Arma 3 forum:
+
+	http://forums.bistudio.com/showthread.php?152165-SP-Hell-Heli-Simple-Randomized-Autorotation-Practice
+
+
+
+Installation:
+
+put  *.pbo  file in [ Steam Install Root ]/steamapps/common/Arma3/Missions
+
+for easy play through the scenarios play menu,
+
+
+AND/OR,
+
+
+Copy the included FOLDER(s) to edit or see how it works in the editor:
+
+	"{user}/Documents/Arma 3/missions"
+
+	or "{user}/Documents/Arma 3 Other Profiles/{profilename}/missions" if using a non-default profile.

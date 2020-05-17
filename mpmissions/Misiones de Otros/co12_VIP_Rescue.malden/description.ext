@@ -1,0 +1,50 @@
+class Params
+{
+	class EmtpyLine1
+	{
+		title = ":: Mission Settings ::";
+		values[]={0,0};
+		texts[]={ "",""};
+		default = 0;
+	};
+	
+	class EmtpyLine2
+	{
+		title = "...............................";
+		values[]={0,0};
+		texts[]={ "",""};
+		default = 0;
+	};
+	
+	class RadiusDetected
+	{
+		title = "Enemys Detection Radius for Players";
+		values[] = {20,50,100,150,200,500,1000,1500,2000};
+		texts[] = {"20 meters","50 meters","100 meters","150 meters","200 meters","500 meters","1000 meters","1500 meters","2000 meters"};
+		default = 500;
+	};
+	
+	class TimeToCallInContact
+	{
+		title = "Time enemies will take to call in when players are spotted.";
+		values[] = {5,10,15,20,25,30};
+		texts[] = {"5 seconds","10 seconds","15 seconds","20 seconds","25 seconds","30 seconds"};
+		default = 20;
+	};
+};
+
+author = "|TG189| Unkl [www.TacticalGamer.com]";
+onLoadName = "co12 VIP Rescue";
+onLoadMission = "Spec Ops team attempts a rescue at night. Tickets/Revive/JIP";
+briefingName = "co12 VIP Rescue";
+loadScreen = "pics\tgbanner.paa";
+overviewPicture = "pics\tgbanner.paa";
+overviewText = "Spec Ops team attempts a rescue at night. Tickets/Revive/JIP";
+
+#include "CHVD\dialog.hpp"
+
+class cfgFunctions 
+{
+	#include "functions\cfgfunctions.hpp"	
+	#include "CHVD\CfgFunctions.hpp"
+};

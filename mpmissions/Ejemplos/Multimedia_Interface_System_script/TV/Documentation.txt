@@ -1,0 +1,102 @@
+1 - To use this interface on any device or panel, put the "TV" folder in your
+mission folder and add the following to your description.ext :
+
+
+class CfgSounds
+{
+// List of sounds (.ogg files without the .ogg extension)
+sounds[] = {rap,house,rock,bip,bip2};
+
+// Definition for each sound
+class rap
+{
+// Name for mission editor
+name = "rap"; 
+//Path of the .ogg file. since it's in the same folder just use the filename
+sound[] = {TV\Media Player\Music\rap.ogg, 1, 1.0}; 
+titles[] = {};
+};
+class house
+{
+// Name for mission editor
+name = "house"; 
+//Path of the .ogg file. since it's in the same folder just use the filename
+sound[] = {TV\Media Player\Music\house.ogg, 1, 1.0}; 
+titles[] = {};
+};
+class rock
+{
+// Name for mission editor
+name = "rock"; 
+//Path of the .ogg file. since it's in the same folder just use the filename
+sound[] = {TV\Media Player\Music\rock.ogg, 1, 1.0}; 
+titles[] = {};
+};
+class bip
+{
+// Name for mission editor
+name = "bip"; 
+//Path of the .ogg file. since it's in the same folder just use the filename
+sound[] = {TV\TV logo & beep\Sounds\bip.ogg, 1, 1.0}; 
+titles[] = {};
+};
+class bip2
+{
+// Name for mission editor
+name = "bip2"; 
+//Path of the .ogg file. since it's in the same folder just use the filename
+sound[] = {TV\TV logo & beep\Sounds\bip2.ogg, 1, 1.0}; 
+titles[] = {};
+};
+
+};
+
+
+2 - After that, name "tv" the device where you want to use the interface, and
+add the following in the object init field :
+
+
+     tv addAction ["Turn ON", "TV\tv-init.sqf"];
+
+
+3 - Create an invisible object, like an invisible helipad, and name it "media_player"
+
+
+VERY IMPORTANT : - Never launch more than one video at the same time,it will lag
+                   very hard and it's impossible to stop a video so you have to
+                   wait for it to finish before starting another one.
+                   
+                 - When using Media Player, you also have to wait for a song to 
+                   finish before starting another but this time you will be able
+                   to stop it.
+                   
+                 
+
+If you want to add more functionality to this interface, you will have to add
+actions or replace the ones present and associate a content to them in 
+"openMyscriptname.sqf" located in eachapplication "Scripts" folder, to make 
+everything easier to use, both actions and related content will have the same name.
+
+
+For example, in the Facebook folder :
+
+If you want to change the first action for something like View friend request,
+You will change the following: 
+
+ -in "TV\Facebook\Scripts\openFacebook.sqf", go to the line :  tv addAction ["Open home page", "TV\Facebook\Scripts\action1.sqf"];
+
+ -Replace "Open home page" by the action of your choice, in this example :  tv addAction ["View friend request", "TV\Facebook\Scripts\action1.sqf"];
+
+ -Don't change anything else, after that simply replace the related content by the media of your choice, in this example : replace "action1.jpg" located in "TV\Facebook\Pictures" folder by your file but rename it action1.
+
+ -In this example it was a picture but it can be any type of media.
+
+ -Always give the same name to both your content and action sqf file.
+
+The same applies to Youtube, Twitter, Verizon FIOS and others applications, just follow the example given.
+
+You can put as many content as you want if you do this correctly, there is no limit at all.
+
+It works with all devices : TV, tablet, smartphones, computers and even with huge panels.
+
+ 

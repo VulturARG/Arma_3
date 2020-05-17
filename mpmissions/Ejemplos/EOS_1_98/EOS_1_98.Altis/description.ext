@@ -1,0 +1,5 @@
+respawn = "BASE";
+respawndelay = 10;
+author = "BangaBob"; 
+onLoadName = "EOS"; 
+onLoadMission = "Enemy Occupation System"; 

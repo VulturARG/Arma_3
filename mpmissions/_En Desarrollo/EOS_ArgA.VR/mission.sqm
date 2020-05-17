@@ -1,0 +1,25 @@
+version=53;
+class EditorData
+{
+	moveGridStep=1;
+	angleGridStep=0.2617994;
+	scaleGridStep=1;
+	autoGroupingDist=10;
+	toggles=1;
+	class Camera
+	{
+		pos[]={3047.834,15,2951.447};
+		dir[]={-0.98398948,-0.17364819,0.040137738};
+		up[]={-0.17350391,0.98480779,0.007077367};
+		aside[]={0.04075693,-4.6566129e-010,0.99916917};
+	};
+};
+binarizationWanted=0;
+class AddonsMetaData
+{
+};
+randomSeed=12911882;
+class ScenarioData
+{
+	author="Vultur";
+};

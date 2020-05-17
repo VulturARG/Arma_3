@@ -1,0 +1,107 @@
+Author 		       = "OMARDOMINE";
+OnLoadName 			 = "SONIDOS";
+OnLoadMission 		 = "Guia practica de sonidos";
+loadScreen               = "";
+onLoadMissionTime 	 = 0;
+overviewText 		 = Guia practica de sonidos.;
+overviewPicture 	       = "";
+allowFunctionsLog        = 1;
+aiKills                  = 1;
+RespawnDialog            = 0;
+disabledAI               = 0;
+enableDebugConsole       = 1;
+allowFunctionsRecompile  = 1;
+
+
+Respawn = "INSTANT";
+RespawnDelay = 2;
+
+
+class Header
+{
+gameType = COOP;       
+minplayers=1;
+maxplayers=4;       
+};
+
+class CfgMusic
+{
+	tracks[] = 
+	{
+	  musica
+	};
+	class musica
+
+	{
+		name = "musica";
+		sound[] = {"\sounds\musica.ogg", db+20, 1.0};
+		titles[] = {0, "Sonido de Musica"};
+	};
+	
+}; 
+
+class CfgSounds
+ {
+ // List of sounds (.ogg files without the .ogg extension)
+ sounds[] = {};
+ 
+// Definition for each sound
+ class alarma
+ {
+ name = "alarma"; // Name for mission editor
+ sound[] = {\sounds\alarma.ogg, 1.9, 1.0};
+ titles[] = {0, ""};
+ };
+ 
+class luces
+ {
+ name = "luces"; // Name for mission editor
+ sound[] = {\sounds\luces.ogg, 0.60, 1.0};
+ titles[] = {0, "Sonido de Luces"};
+ };
+ 
+  class pajaros
+ {
+ name = "pajaros"; // Name for mission editor
+ sound[] = {\sounds\pajaros.ogg, 0.60, 1.0};
+ titles[] = {0, "Sonido de pajaros"};
+ };
+ 
+ class sirena
+ {
+ name = "sirena"; // Name for mission editor
+ sound[] = {\sounds\sirena.ogg, 1.2, 1.0};
+ titles[] = {0, "Sonido de Sirena"};
+ };
+  class rehen
+ {
+ name = "rehen"; // Name for mission editor
+ sound[] = {\sounds\rehen.ogg, 0.60, 1.0};
+ titles[] = {0, "Soy un Rehen"};
+ };
+   class radio7
+ {
+ name = "radio7"; // Name for mission editor
+ sound[] = {\sounds\radio7.ogg, 0.60, 1.0};
+ titles[] = {0, "Sonido de Radio"};
+ };
+ };
+ 
+class CfgRadio
+{
+	sounds[] = {};
+	class radio2
+	{
+		name = "radio2";
+		sound[] = {"\sounds\radio2.ogg", db-70, 1.0};
+		title = "Mensaje de Radio entrante.";
+	};
+	class rehen
+	{
+		name = "rehen";
+		sound[] = {"\sounds\rehen.ogg", db-100, 1.0}; // .wss implied
+		title = "I am ready for your orders.";
+	};
+};  
+///Descripcion del archivo description.ext/////////////////////////////////////////
+ ///////////////////////https://community.bistudio.com/wiki/Description.ext/////////////////

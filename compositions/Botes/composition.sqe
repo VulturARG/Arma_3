@@ -1,0 +1,270 @@
+version=53;
+center[]={27447.771,23.542109,5327.7339};
+class items
+{
+	items=6;
+	class Item0
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-0.22265625,2.4855423,-0.38476563};
+			angles[]={0.00048828125,0,6.2826972};
+		};
+		side="Empty";
+		class Attributes
+		{
+		};
+		id=6571;
+		type="rhsgref_hidf_rhib";
+		atlOffset=1.1662521;
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ammoBox";
+				expression="[_this,_value] call bis_fnc_initAmmoBox;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="[[[[""rhs_weap_fim92""],[1]],[[""rhs_fim92_mag"",""RPG32_HE_F"",""RPG32_F"",""3Rnd_HE_Grenade_shell"",""ACE_HuntIR_M203"",""ACE_20Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk319_Mod_0_Mag"",""rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger_Tracer_Red"",""acfaa_100Rnd_762x51"",""200Rnd_556x45_Box_F"",""10Rnd_338_Mag""],[4,4,4,10,6,20,20,10,5,4,5]],[[""ACE_HuntIR_monitor""],[1]],[[""tf_rt1523g""],[2]]],false]";
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
+	class Item1
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-0.2109375,-0.51395607,-0.045410156};
+			angles[]={-0,3.140444,0};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+		};
+		id=6572;
+		type="Land_Destroyer_01_Boat_Rack_01_F";
+	};
+	class Item2
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-8.578125,3.9827003,-0.76660156};
+		};
+		side="Empty";
+		class Attributes
+		{
+		};
+		id=6578;
+		type="B_Boat_Armed_01_minigun_F";
+		atlOffset=0.65874863;
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ammoBox";
+				expression="[_this,_value] call bis_fnc_initAmmoBox;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="[[[[""rhs_weap_fim92""],[1]],[[""rhs_fim92_mag"",""RPG32_HE_F"",""RPG32_F"",""3Rnd_HE_Grenade_shell"",""ACE_HuntIR_M203"",""ACE_20Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk319_Mod_0_Mag"",""rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger_Tracer_Red"",""acfaa_100Rnd_762x51"",""200Rnd_556x45_Box_F"",""10Rnd_338_Mag""],[4,4,4,10,6,20,20,10,5,4,5]],[[""ACE_HuntIR_monitor""],[1]],[[""tf_rt1523g""],[2]]],false]";
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
+	class Item3
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-8.6640625,-0.51409531,-0.91943359};
+			angles[]={-0,3.140444,-0};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+		};
+		id=6574;
+		type="Land_Destroyer_01_Boat_Rack_01_F";
+	};
+	class Item4
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={8.8183594,1.901453,0.92089844};
+		};
+		side="Empty";
+		class Attributes
+		{
+		};
+		id=6577;
+		type="rhsgref_hidf_assault_boat";
+		atlOffset=0.65792084;
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ammoBox";
+				expression="[_this,_value] call bis_fnc_initAmmoBox;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="[[[[""rhs_weap_fim92""],[1]],[[""rhs_fim92_mag"",""RPG32_HE_F"",""RPG32_F"",""3Rnd_HE_Grenade_shell"",""ACE_HuntIR_M203"",""ACE_20Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk319_Mod_0_Mag"",""rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger_Tracer_Red"",""acfaa_100Rnd_762x51"",""200Rnd_556x45_Box_F"",""10Rnd_338_Mag""],[4,4,4,10,6,20,20,10,5,4,5]],[[""ACE_HuntIR_monitor""],[1]],[[""tf_rt1523g""],[2]]],false]";
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
+	class Item5
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={8.8574219,-0.51417542,1.1948242};
+			angles[]={-0,3.140444,0};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+		};
+		id=6576;
+		type="Land_Destroyer_01_Boat_Rack_01_F";
+	};
+};
+class VehicleInVehicleLinks
+{
+	class LinkIDProvider
+	{
+		nextID=9;
+	};
+	class Links
+	{
+		items=9;
+		class Item0
+		{
+			linkID=0;
+			item0=1924;
+			item1=1925;
+			class CustomData
+			{
+				role=4;
+			};
+		};
+		class Item1
+		{
+			linkID=1;
+			item0=1931;
+			item1=1923;
+			class CustomData
+			{
+				role=4;
+			};
+		};
+		class Item2
+		{
+			linkID=2;
+			item0=1934;
+			item1=1933;
+			class CustomData
+			{
+				role=4;
+			};
+		};
+		class Item3
+		{
+			linkID=3;
+			item0=1782;
+			item1=1789;
+			class CustomData
+			{
+				role=4;
+			};
+		};
+		class Item4
+		{
+			linkID=4;
+			item0=1784;
+			item1=1785;
+			class CustomData
+			{
+				role=4;
+			};
+		};
+		class Item5
+		{
+			linkID=5;
+			item0=1786;
+			item1=1787;
+			class CustomData
+			{
+				role=4;
+			};
+		};
+		class Item6
+		{
+			linkID=6;
+			item0=6571;
+			item1=6572;
+			class CustomData
+			{
+				role=4;
+			};
+		};
+		class Item7
+		{
+			linkID=7;
+			item0=6578;
+			item1=6574;
+			class CustomData
+			{
+				role=4;
+			};
+		};
+		class Item8
+		{
+			linkID=8;
+			item0=6577;
+			item1=6576;
+			class CustomData
+			{
+				role=4;
+			};
+		};
+	};
+};

@@ -1,0 +1,63 @@
+///////////////////////////////////////////////////////////////////
+///////////Realizado por |ArgA|Ignacio//////////////
+//////////////////////////////////////////////////////////////////
+
+author="|ArgA|Vultur|Sdo¹";
+OnLoadName = "Práctica Aerotransportada";
+OnLoadMission = "Práctica de insersión y extracción bajo fuego";
+loadScreen = "imgs\portada.jpg";
+overviewPicture = "imgs\portada.jpg";
+
+enableDebugConsole = 1;
+
+//disableChannels[]={{0, true, true}, {1, true, true}, {2, true, true},{3, false, true}, {4, true, true}, {6, true, true}};
+
+respawnOnStart = 0;
+
+class Header {
+    gameType=coop;
+    minPlayers=1;
+    maxPlayers=60;
+};
+
+class CfgFunctions {
+  class MANDI {
+    class general {
+      class setBriefing {
+        file = "functions\fnc_setBriefing.sqf";
+      };
+      class makeInfo {
+        file = "functions\fnc_makeInfo.sqf";
+      };
+      class posicion {
+        file = "functions\fnc_posicion.sqf";
+      };
+    };
+  };
+  class MAC {
+    class general {
+      class switchMove{
+        file = "functions\fnc_switchMove.sqf";
+      };
+    };
+  };
+};
+
+///////////////////////////////////////////////////////////////////
+///////////Realizado por |ArgA|Ignacio//////////////
+//////////////////////////////////////////////////////////////////
+class CfgSounds {
+	sounds[] = {};
+  class sonido1
+	{
+	name = "sonido1";
+	sound[] = {"sounds\Track01.ogg", 1, 1};
+	titles[] = {};
+	};
+  class sonido2
+	{
+	name = "sonido2";
+	sound[] = {"sounds\Track02.ogg", 1, 1};
+	titles[] = {};
+	};
+};

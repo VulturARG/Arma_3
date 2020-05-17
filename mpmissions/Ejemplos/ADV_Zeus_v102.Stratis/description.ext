@@ -1,0 +1,6 @@
+	//respawn
+respawn = 3; 
+respawnDelay = 3;
+respawnTemplatesWest[] = {"Counter","MenuInventory"};
+	//other
+enableDebugConsole = 1;

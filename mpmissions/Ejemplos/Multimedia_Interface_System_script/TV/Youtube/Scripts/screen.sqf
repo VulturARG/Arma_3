@@ -1,0 +1,1 @@
+tv setobjecttextureglobal [0,"TV\Youtube\Pictures\screen.jpg"]; tv say3D 'bip'; 

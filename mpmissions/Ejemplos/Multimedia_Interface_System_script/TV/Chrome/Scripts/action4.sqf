@@ -1,0 +1,1 @@
+tv setobjecttextureglobal [0,"TV\Chrome\Pictures\action4.jpg"]; tv say3D 'bip'; 

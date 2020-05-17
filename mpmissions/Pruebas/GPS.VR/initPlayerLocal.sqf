@@ -1,0 +1,2 @@
+nul = [] execVm "gpsMap.sqf";
+

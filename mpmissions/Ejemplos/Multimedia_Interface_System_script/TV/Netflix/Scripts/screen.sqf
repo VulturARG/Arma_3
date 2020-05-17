@@ -1,0 +1,1 @@
+tv setobjecttextureglobal [0,"TV\Netflix\Pictures\screen.jpg"]; tv say3D 'bip'; 

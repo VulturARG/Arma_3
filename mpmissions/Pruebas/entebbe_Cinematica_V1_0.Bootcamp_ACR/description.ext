@@ -1,0 +1,63 @@
+///////////////////////////////////////////////////////////////////
+///////////Realizado por |ArgA|Ignacio//////////////
+//////////////////////////////////////////////////////////////////
+
+author="|ArgA|Vultur|Sdo";
+OnLoadName = "Operación Trueno";
+OnLoadMission = "Rescate en Entebbe";
+loadScreen = "imgs\portada.jpg";
+overviewPicture = "imgs\portada.jpg";
+
+enableDebugConsole = 0;
+
+//disableChannels[]={{0, true, true}, {1, true, true}, {2, true, true},{3, false, true}, {4, true, true}, {6, true, true}};
+
+respawnOnStart = 0;
+
+class Header {
+    gameType=coop;
+    minPlayers=1;
+    maxPlayers=50;
+};
+
+class CfgFunctions {
+  class MANDI {
+    class general {
+      class setBriefing {
+        file = "functions\fnc_setBriefing.sqf";
+      };
+      class makeInfo {
+        file = "functions\fnc_makeInfo.sqf";
+      };
+      class posicion {
+        file = "functions\fnc_posicion.sqf";
+      };
+    };
+  };
+  class MAC {
+    class general {
+      class switchMove{
+        file = "functions\fnc_switchMove.sqf";
+      };
+    };
+  };
+  class HLF
+	{
+		tag = "HLF";
+		class UnitCapture
+		{
+			file = "functions";
+			description = "Unit Capture Unit Play for Infantry.";
+
+			class infUnitCapture			{description = "Infantry unit capture, records movement, animation and (optional) firing";};
+			class infUnitCaptureAnim		{description = "Record unit animation (for infantry)";};
+			class infUnitCaptureFiring		{description = "Record unit firing (for infantry)";};
+			class infUnitPlayAnim			{description = "Plays unit animation (for infantry)";};
+			class infUnitPlayFiring			{description = "Plays unit firing (for infantry)";};
+		};
+	};
+};
+
+///////////////////////////////////////////////////////////////////
+///////////Realizado por |ArgA|Ignacio//////////////
+//////////////////////////////////////////////////////////////////
