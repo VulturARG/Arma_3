@@ -171,36 +171,39 @@ if (!(getmarkercolor _mkr == "colorblack"))then {
 
 		if (_debug) then {
 			player sidechat format ["Static:%1",_counter];
-			0 = [_mkr,_counter,"Static",(getpos leader (_eGroup select 2))] call EOS_debug};
+			0 = [_mkr,_counter,"Static",(getpos leader (_eGroup select 2))] call EOS_debug
 		};
+	};
 
 //SPAWN CHOPPER
 	for "_counter" from 1 to _fGrps do {
-	if (isnil "_fGrp") then {_fGrp=[];};
-	if ((_fSize select 0) > 0) then {_vehType=4}else{_vehType=3};
-	_newpos = [(markerpos _mkr), 1500, random 360] call BIS_fnc_relPos;
-	_fGroup=[_newpos,_side,_faction,_vehType,"fly"]call EOS_fnc_spawnvehicle;
-	_fGrp set [count _fGrp,_fGroup];
+		if (isnil "_fGrp") then {_fGrp=[];};
+		if ((_fSize select 0) > 0) then {_vehType=4}else{_vehType=3};
+		_newpos = [(markerpos _mkr), 1500, random 360] call BIS_fnc_relPos;
+		_fGroup=[_newpos,_side,_faction,_vehType,"fly"]call EOS_fnc_spawnvehicle;
+		_fGrp set [count _fGrp,_fGroup];
 
 
-	if ((_fSize select 0) > 0) then {
-		_cargoGrp = createGroup _side;
-		0=[(_fGroup select 0),_fSize,_cargoGrp,_faction,9] call eos_fnc_setcargo;
-		0=[_cargoGrp,"INFskill"] call eos_fnc_grouphandlers;
-		_cargoGrp setGroupId [format ["%1 CP %2",_mkr,_counter]]; //AV Chopper patrol
-		_fGroup set [count _fGroup,_cargoGrp];
-		null = [_mkr,_fGroup,_counter] execvm "eos\functions\TransportUnload_fnc.sqf";
-	}else{
-		_wp1 = (_fGroup select 2) addWaypoint [(markerpos _mkr), 0];
-		_wp1 setWaypointSpeed "FULL";
-		_wp1 setWaypointType "SAD";};
+		if ((_fSize select 0) > 0) then {
+			_cargoGrp = createGroup _side;
+			0=[(_fGroup select 0),_fSize,_cargoGrp,_faction,9] call eos_fnc_setcargo;
+			0=[_cargoGrp,"INFskill"] call eos_fnc_grouphandlers;
+			_cargoGrp setGroupId [format ["%1 CP %2",_mkr,_counter]]; //AV Chopper patrol
+			_fGroup set [count _fGroup,_cargoGrp];
+			null = [_mkr,_fGroup,_counter] execvm "eos\functions\TransportUnload_fnc.sqf";
+		}else{
+			_wp1 = (_fGroup select 2) addWaypoint [(markerpos _mkr), 0];
+			_wp1 setWaypointSpeed "FULL";
+			_wp1 setWaypointType "SAD";
+		};
 
 		0=[(_fGroup select 2),"AIRskill"] call eos_fnc_grouphandlers;
 
 		if (_debug) then {
 			player sidechat format ["Chopper:%1",_counter];
-			0 = [_mkr,_counter,"Chopper",(getpos leader (_fGroup select 2))] call EOS_debug};
+			0 = [_mkr,_counter,"Chopper",(getpos leader (_fGroup select 2))] call EOS_debug
 		};
+	};
 
 //SPAWN ALT TRIGGERS
 		_clear = createTrigger ["EmptyDetector",_mPos];
@@ -241,14 +244,15 @@ if (_debug) then {player sidechat format ["ID:c%1",_cGrps];};};
 if (_debug) then {player sidechat format ["ID:c%1",_dGrps];};};
 
 // CACHE PATROL INFANTRY
-	if (!isnil "_bGrp") then
-				{		_n=0;
-						{	_n=_n+1;_units={alive _x} count units _x;_cacheGrp=format ["PA%1",_n];
-	if (_debug) then{player sidechat format ["ID:%1,cache - %2",_cacheGrp,_units];};
-						_eosActivated setvariable [_cacheGrp,_units];
-						{deleteVehicle _x} foreach units _x;deleteGroup _x;
-						}foreach _bGrp;
-				};
+	if (!isnil "_bGrp") then{
+		_n=0;
+		{
+			_n=_n+1;_units={alive _x} count units _x;_cacheGrp=format ["PA%1",_n];
+			if (_debug) then{player sidechat format ["ID:%1,cache - %2",_cacheGrp,_units];};
+			_eosActivated setvariable [_cacheGrp,_units];
+			{deleteVehicle _x} foreach units _x;deleteGroup _x;
+		}foreach _bGrp;
+	};
 
 // CACHE HOUSE INFANTRY
 	if (!isnil "_aGrp") then

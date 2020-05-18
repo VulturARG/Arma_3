@@ -61,14 +61,11 @@ EOS_DAMAGE_MULTIPLIER=1;	// 1 is default
 EOS_KILLCOUNTER=FALSE;		// Counts killed units
 
 
-//////////////////////////////////////////////////////////////////
-///////////      Modificado por |ArgA|Vultur|Sdo¹    /////////////
-//////////////////////////////////////////////////////////////////
-//null = [[_marker],[1,1],[0,0],[0],[0,0],[5,0,EAST,TRUE],[30,2,60,FALSE,TRUE],[_angle]] call Bastion_Spawn;
-//PLAYER SIDECHAT (format ["Marker: %1, Angulo: %2, Nº Jug.: %3, Oleadas: %4",_marker,_angle,_jugadores,_waves]);
-//_jugadores  = { alive _x} count  allPlayers;
+/*******************************************************************************
+                        Realizado por |ArgA|Vultur|Cbo¹
+*******************************************************************************/
 //_jugadores = 27;
-hint format["%1",_jugadores];
+//hint format["%1",_jugadores];
 
 //_waves = 1;// Borrar
 private _EOS_FACCION = EAST;

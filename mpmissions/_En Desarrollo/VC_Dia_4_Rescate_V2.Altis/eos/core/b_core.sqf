@@ -276,7 +276,7 @@ _Placement=(_mkrX + 500);
 		//}
 		_unit allowdamage true;// Now you can take damage.
 	};
-
+// TODO: Poner params a las funciones
 	OpenPlayerChuteHA =
 	{
 		private ["_paraPlayer"];

@@ -3,10 +3,11 @@
 *******************************************************************************/
 params [["_nuevosWP",""],["_redirigidos",["",0,""]],["_lado",EAST]];
 
-_todos = allGroups select {side _x isEqualTo _lado};//returns all groups of _lado
+private _todos = allGroups select {side _x isEqualTo _lado};//returns all groups of _lado
 
-_coincidentes = [];
-_listaApoyo = [];
+private _coincidentes = [];
+private _listaApoyo = [];
+private _remanentes = [];
 {
   _marker = _x select 0;
   _porcentaje = _x select 1;
@@ -65,7 +66,6 @@ _listaApoyo = [];
           } else {
             _getToMarker setWaypointBehaviour "COMBAT";
           };
-
           _getToMarker setWaypointFormation "NO CHANGE";
           _getToMarker setWaypointCompletionRadius _mkrSize;
           _getToMarker setWaypointCombatMode "RED";
@@ -111,4 +111,4 @@ _listaApoyo = [];
 		_getToMarker setWaypointCombatMode "RED";
     //units _x doFollow leader _x;
   };// fin if
-}forEach _todos;
+}forEach _remanentes;
