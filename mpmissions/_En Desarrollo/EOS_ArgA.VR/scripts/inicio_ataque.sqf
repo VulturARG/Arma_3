@@ -9,5 +9,5 @@ private _headlessClients = entities "HeadlessClient_F";
 private _humanPlayers = allPlayers - _headlessClients;
 _Nro_Jugadores = count _humanPlayers;
 // Activo la zona EOS
-["M_Panagia_EOS",45,_Nro_Jugadores,10] execVM "eos\OpemMe.sqf";
+["marker_0",45,_Nro_Jugadores,10] execVM "eos\OpenMe.sqf";
 

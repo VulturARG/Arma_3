@@ -1,32 +1,38 @@
-// markerDir "test"; Da la direccion del marker
-// markerDir _mkr
+params ["_mkr","_infantry","_LVeh","_AVeh","_SVeh","_PTrooper","_HAtrooper","_settings","_basSettings","_angle",["_initialLaunch",false]];
 if (!isServer) exitWith {};
-private ["_fGroup","_cargoType","_vehType","_CHside","_mkrAgl","_initialLaunch","_pause","_eosZone","_hints","_waves","_aGroup","_side","_actCond","_enemyFaction","_mAH","_mAN","_distance","_grp","_cGroup","_bGroup","_CHType","_time","_timeout","_faction","_angle"];
+private ["_fGroup","_cargoType","_vehType","_CHside","_mkrAgl","_initialLaunch","_pause","_eosZone","_hints","_waves","_aGroup","_side","_actCond","_enemyFaction","_mAH","_mAN","_distance","_grp","_cGroup","_bGroup","_CHType","_time","_timeout","_faction"];
 
-_mkr=(_this select 0);_mPos=markerpos(_this select 0);_mkrX=getMarkerSize _mkr select 0;_mkrY=getMarkerSize _mkr select 1;_mkrAgl=markerDir _mkr;
-_infantry=(_this select 1);_PApatrols=_infantry select 0;_PAgroupSize=_infantry select 1;_PAminDist=_infantry select 2;
-_LVeh=(_this select 2);_LVehGroups=_LVeh select 0;_LVgroupSize=_LVeh select 1;_LVminDist=_LVeh select 2;
-_AVeh=(_this select 3);_AVehGroups=_AVeh select 0;_AVminDist=_AVeh select 1;
-_SVeh=(_this select 4);_CHGroups=_SVeh select 0;_fSize=_SVeh select 1;_CHminDist=_SVeh select 2;
-_PTrooper=(_this select 5);_PTGroups=_PTrooper select 0;_PTSize=_PTrooper select 1;_PTminDist=_PTrooper select 2;_PTAltSalto=_PTrooper select 3;
-_HAtrooper=(_this select 6);_HApatrols=_HAtrooper select 0;_HAgroupSize=_HAtrooper select 1;_HAminDist=_HAtrooper select 2;_HAAltSalto=_HAtrooper select 3;
-_settings=(_this select 7);_faction=_settings select 0;_mA=_settings select 1;_side=_settings select 2;
+//_mkr=(_this select 0);
+_mPos=markerpos(_this select 0);_mkrX=getMarkerSize _mkr select 0;_mkrY=getMarkerSize _mkr select 1;_mkrAgl=markerDir _mkr;
+//_infantry=(_this select 1);
+_PApatrols=_infantry select 0;_PAgroupSize=_infantry select 1;_PAminDist=_infantry select 2;
+//_LVeh=(_this select 2);
+_LVehGroups=_LVeh select 0;_LVgroupSize=_LVeh select 1;_LVminDist=_LVeh select 2;
+//_AVeh=(_this select 3);
+_AVehGroups=_AVeh select 0;_AVminDist=_AVeh select 1;
+//_SVeh=(_this select 4);
+_CHGroups=_SVeh select 0;_fSize=_SVeh select 1;_CHminDist=_SVeh select 2;
+//_PTrooper=(_this select 5);
+_PTGroups=_PTrooper select 0;_PTSize=_PTrooper select 1;_PTminDist=_PTrooper select 2;_PTAltSalto=_PTrooper select 3;
+//_HAtrooper=(_this select 6);
+_HApatrols=_HAtrooper select 0;_HAgroupSize=_HAtrooper select 1;_HAminDist=_HAtrooper select 2;_HAAltSalto=_HAtrooper select 3;
+//_settings=(_this select 7);
+_faction=_settings select 0;_mA=_settings select 1;_side=_settings select 2;
 _heightLimit=if (count _settings > 4) then {_settings select 4} else {false};
 _debug=if (count _settings > 5) then {_settings select 5} else {false};
-_basSettings=(_this select 8);
+//_basSettings=(_this select 8);
 _pause=_basSettings select 0;
 _waves=_basSettings select 1;
 _timeout=_basSettings select 2;
 _eosZone=_basSettings select 3;
 _hints=_basSettings select 4;
-_angleArray=(_this select 9);
-_angle = _angleArray select 0;
+//_angleArray=(_this select 9);
+//_angle = _angleArray select 0;
 //_initialLaunch= if (count _this > 7) then {_this select 7} else {false};
-_initialLaunch= if (count _this > 10) then {_this select 10} else {false};
+////_initialLaunch= if (count _this > 10) then {_this select 10} else {false};
 
 private _lado = _side;
-
-//PLAYER SIDECHAT (format ["Wave: %1, _LVeh: %2",_waves,_LVeh]);
+systemChat format ["_infantry: %1, _PApatrols: %2",_infantry,_PApatrols];
 
 _Placement=(_mkrX + 500);
 

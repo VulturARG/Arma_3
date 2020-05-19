@@ -16,7 +16,7 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={6428.4814,56.031719,4846.0176};
+		pos[]={6448.6685,18.972151,4886.8125};
 		dir[]={-0.16512258,-0.48606986,0.85820031};
 		up[]={-0.091840632,0.87391216,0.47732794};
 		aside[]={0.98200768,-2.5812187e-007,0.18894148};
@@ -13795,7 +13795,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={6398.5112,5.1106801,4939.6357};
-				angles[]={-0,3.0735645,0};
+				angles[]={0,3.0735645,0};
 			};
 			side="Empty";
 			flags=4;
@@ -13814,7 +13814,7 @@ class Mission
 			{
 				text="Redirije";
 				condition="call{this}";
-				onActivation="call{null = [[""m_0"",""m_1""],[[""Hospital"",50,""""],[""Casa"",50,""""]],EAST] call compile preprocessfilelinenumbers ""scripts\b_redirijoUnidades.sqf"";}";
+				onActivation="call{null = [[""m_0"",""m_1""],[[""Hospital"",50,""""],[""Casa"",50,""m_0""]],EAST] call compile preprocessfilelinenumbers ""eos\core\b_redirijoUnidades.sqf"";}";
 				sizeA=1;
 				sizeB=1;
 				activationBy="ANYPLAYER";
