@@ -1,4 +1,4 @@
-_par = params ["_JIPmkr","_infantry","_LVeh","_AVeh","_SVeh","_PTrooper","_HAtrooper","_settings","_basSettings","_angle"];
+params ["_JIPmkr","_infantry","_LVeh","_AVeh","_SVeh","_PTrooper","_HAtrooper","_settings","_basSettings","_angle"];
 if (isServer) then {
 	private ["_PAgroupArray","_LVgroupArray","_CHgroupArray","_PTgroupArray","_HAgroupArray"];
 

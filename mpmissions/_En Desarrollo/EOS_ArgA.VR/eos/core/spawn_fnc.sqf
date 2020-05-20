@@ -1,4 +1,3 @@
-
 IF (isnil "server")then{hint "YOU MUST PLACE A GAME LOGIC NAMED SERVER!";};
 eos_fnc_spawnvehicle=compile preprocessfilelinenumbers "eos\functions\eos_SpawnVehicle.sqf";
 eos_fnc_grouphandlers=compile preprocessfilelinenumbers "eos\functions\setSkill.sqf";
@@ -12,11 +11,11 @@ eos_fnc_getunitpool= compile preprocessfilelinenumbers "eos\UnitPools.sqf";
 call compile preprocessfilelinenumbers "eos\AI_Skill.sqf";
 // Vultur /////////////////////////////////////////////////////
 eos_fnc_infInv= compile preprocessfile "eos\functions\infantry_inventory.sqf";
+FNC_newWaypoint=compile preprocessfilelinenumbers "eos\functions\FNC_newWaypoint.sqf";
 ///////////////////////////////////////////////////////////////
 
 EOS_Deactivate = {
-	private ["_mkr"];
-		_mkr=(_this select 0);
+	params ["_mkr"];;
 	{
 		_x setmarkercolor "colorblack";
 		_x setmarkerAlpha 0;
@@ -24,17 +23,13 @@ EOS_Deactivate = {
 };
 
 EOS_debug = {
-private ["_note"];
-_mkr=(_this select 0);
-_n=(_this select 1);
-_note=(_this select 2);
-_pos=(_this select 3);
+	params ["_mkr","_n","_note","_pos"];
 
-_mkrID=format ["%3:%1,%2",_mkr,_n,_note];
-deletemarker _mkrID;
-_debugMkr = createMarker[_mkrID,_pos];
-_mkrID setMarkerType "Mil_dot";
-_mkrID setMarkercolor "colorBlue";
-_mkrID setMarkerText _mkrID;
+	_mkrID=format ["%3:%1,%2",_mkr,_n,_note];
+	deletemarker _mkrID;
+	_debugMkr = createMarker[_mkrID,_pos];
+	_mkrID setMarkerType "Mil_dot";
+	_mkrID setMarkercolor "colorBlue";
+	_mkrID setMarkerText _mkrID;
 _mkrID setMarkerAlpha 0.5;
 };

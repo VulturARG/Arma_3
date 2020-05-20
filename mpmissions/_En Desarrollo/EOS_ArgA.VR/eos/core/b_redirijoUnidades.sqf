@@ -3,8 +3,6 @@
 *******************************************************************************/
 params [["_nuevosWP",""],["_redirigidos",["",0,""]],["_lado",EAST]];
 
-FNC_newWaypoint=compile preprocessfilelinenumbers "eos\functions\FNC_newWaypoint.sqf";
-
 private _todos = allGroups select {side _x isEqualTo _lado};//returns all groups of _lado
 private _coincidentes = [];
 private _listaApoyo = [];
