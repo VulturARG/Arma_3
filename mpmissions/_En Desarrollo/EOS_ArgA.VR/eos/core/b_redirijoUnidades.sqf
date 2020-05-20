@@ -11,9 +11,7 @@ private _listaApoyo = [];
 private _remanentes = [];
 
 {
-  _marker = _x select 0;
-  _porcentaje = _x select 1;
-  _secundarioWP = _x select 2;
+  _x params["_marker","_porcentaje","_secundarioWP"];
   _escuadronIA = _todos select {[_marker, groupId _x] call BIS_fnc_inString};
   _nroEscuadrones = count _escuadronIA;
   _escRedirigidos = round (_nroEscuadrones * _porcentaje / 100);
