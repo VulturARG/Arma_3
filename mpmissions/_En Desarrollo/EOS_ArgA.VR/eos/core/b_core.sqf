@@ -1,13 +1,6 @@
 params ["_mkr","_infantry","_LVeh","_AVeh","_SVeh","_PTrooper","_HAtrooper","_settings","_basSettings","_angle",["_initialLaunch",false]];
 if (!isServer) exitWith {};
-private ["_fGroup","_cargoType","_vehType","_CHside","_mkrAgl","_initialLaunch","_pause","_eosZone","_hints","_waves","_aGroup","_side","_actCond","_enemyFaction","_mAH","_mAN","_distance","_grp","_cGroup","_bGroup","_CHType","_time","_timeout","_faction"];
-
-_infantry params["_PApatrols","_PAgroupSize",["_PAminDist",500]];
-_LVeh params["_LVehGroups","_LVgroupSize",["_LVminDist",800]];
-_AVeh params["_AVehGroups",["_AVminDist",800]];
-_SVeh params["_CHGroups","_CHgroupSize",["_CHminDist",1400]];
-_PTrooper params["_PTGroups","_PTgroupSize",["_PTminDist",1400],["_PTAltSalto",400]];
-_HAtrooper params["_HAGroups","_HAgroupSize",["_HAminDist",200],["_HAAltSalto",600]];
+private ["_ptGroup","_fGroup","_cargoType","_vehType","_CHside","_mkrAgl","_initialLaunch","_pause","_eosZone","_hints","_waves","_aGroup","_side","_actCond","_enemyFaction","_mAH","_mAN","_distance","_grp","_cGroup","_bGroup","_CHType","_time","_timeout","_faction"];
 
 _mPos=markerpos _mkr;
 getMarkerSize _mkr params ["_mkrX","_mkrY"];
@@ -16,7 +9,7 @@ _mkrAgl=markerDir _mkr;
 _infantry params["_PApatrols","_PAgroupSize","_PAminDist"];
 _LVeh params["_LVehGroups","_LVgroupSize","_LVminDist"];
 _AVeh params["_AVehGroups","_AVminDist"];
-_SVeh params["_CHGroups","_CHgroupSize","_CHminDist"];
+_SVeh params["_CHGroups","_fsize","_CHminDist"];
 _PTrooper params["_PTGroups","_PTSize","_PTminDist","_PTAltSalto"];
 _HAtrooper params["_HApatrols","_HAgroupSize","_HAminDist","_HAAltSalto"];
 _settings params["_faction","_mA","_side",["_heightLimit",false],["_debug",false],["_log",false]];
@@ -128,7 +121,7 @@ for "_counter" from 1 to _LVehGroups do {
 		0=[(_bGroup select 0),_LVgroupSize,(_bGroup select 2),_faction,_cargoType] call eos_fnc_setcargo;
 	};
 	0 = [(_bGroup select 2),"LIGskill"] call eos_fnc_grouphandlers;
-	_bGroup setGroupId [format ["%1 LV %2-%3",_mkr,_waves,_counter]];
+	(_bGroup select 2) setGroupId [format ["%1 LV %2-%3",_mkr,_waves,_counter]];
 	_bGrp set [count _bGrp,_bGroup];
 	if (_debug) then {
 		systemChat format ["Light Vehicle:%1 - r%2",_counter,_LVehGroups];
@@ -149,7 +142,7 @@ for "_counter" from 1 to _AVehGroups do {
 	_vehType=2;
 	_cGroup=[_newpos,_side,_faction,_vehType]call EOS_fnc_spawnvehicle;
 	0=[(_cGroup select 2),"ARMskill"] call eos_fnc_grouphandlers;
-	_cGroup setGroupId [format ["%1 AV %2-%3",_mkr,_waves,_counter]];
+	(_cGroup select 2) setGroupId [format ["%1 AV %2-%3",_mkr,_waves,_counter]];
 	_cGrp set [count _cGrp,_cGroup];
 	if (_debug) then {
 		systemChat format ["Armoured:%1 - r%2",_counter,_AVehGroups];
@@ -168,13 +161,13 @@ for "_counter" from 1 to _CHGroups do {
 	_Place=(_mkrX + _CHminDist + random 600);
 	_newpos = [_mPos, _Place, _dir_atk] call BIS_fnc_relPos;
 	_fGroup=[_newpos,_lado,_faction,_vehType,"fly"] call EOS_fnc_spawnvehicle;
-	_fGroup setGroupId [format ["%1 HT %2-%3",_mkr,_waves,_counter]];
 	_CHside=_side;
 	_fGrp set [count _fGrp,_fGroup];
 	if ((_fSize select 0) > 0) then {
 		_cargoGrp = createGroup _side;
 		0=[(_fGroup select 0),_fSize,_cargoGrp,_faction,9] call eos_fnc_setcargo;
 		0=[_cargoGrp,"INFskill"] call eos_fnc_grouphandlers;
+		_cargoGrp setGroupId [format ["%1 HT %2-%3",_mkr,_waves,_counter]];
 		_fGroup set [count _fGroup,_cargoGrp];
 		null = [_mkr,_fGroup,_counter] execvm "eos\functions\TransportUnload_fnc.sqf";
 	} else {
@@ -192,6 +185,7 @@ for "_counter" from 1 to _CHGroups do {
 //*/
 //SPAWN HELICOPTERS WITH PARATROOPERS (New)
 _ptGrp=[];
+_ptGroup=[];
 for "_counter" from 1 to _PTGroups do {
 	_vehType=4;
 	_dir_atk=_mkrAgl+(random _angle)-_angle/2;
@@ -218,33 +212,6 @@ for "_counter" from 1 to _PTGroups do {
 };
 
 // SPAWN HALO (New)
-paraLandSafeHA =
-{
-	private ["_unit"];
-	_unit = _this select 0;
-	_chuteheight = _this select 1;
-	_unit allowDamage false;
-	[_unit,_chuteheight] spawn OpenPlayerchuteHA;
-	//_unit allowdamage true;// Now you can take damage.
-	waitUntil { isTouchingGround _unit || (position _unit select 2) < 1 };
-	_unit allowdamage true;// Now you can take damage.
-	sleep 1;
-	//if (alive _unit){
-		_inv = name _unit;
-		[_unit, [missionNamespace, format["%1%2", "Inventory",_inv]]] call BIS_fnc_loadInventory;// Reload Loadout.
-	//}
-	_unit allowdamage true;// Now you can take damage.
-};
-
-OpenPlayerChuteHA =
-{
-	private ["_paraPlayer"];
-	_paraPlayer = _this select 0;
-	_chuteheight = _this select 1;
-	waitUntil {(position _paraPlayer select 2) <= _chuteheight};
-	_paraPlayer action ["openParachute", _paraPlayer];
-};
-
 _HAGroup=[];
 for "_counter" from 1 to _HApatrols do {
 	_dir_atk=_mkrAgl+(random _angle)-_angle/2;

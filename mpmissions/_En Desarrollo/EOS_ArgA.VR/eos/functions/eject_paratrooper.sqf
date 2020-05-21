@@ -1,6 +1,7 @@
 /*
 	Filename: Simple ParaDrop Script v0.96 eject.sqf
 	Author: Beerkan
+	Modify by Vultur
 
 	Description:
      A Simple Paradrop Script
@@ -12,12 +13,11 @@
    Example:
    0 = [vehicle, altitude] execVM "eject.sqf"
 */
+params ["_vehicle",["_chuteHeight",100]];
 
 if (!isServer) exitWith {};
-private ["_paras","_vehicle","_chuteHeight","_dir"];
-_vehicle = _this select 0;
-_chuteheight = if ( count _this > 1 ) then { _this select 1 } else { 100 };
-//PLAYER SIDECHAT (format ["Dentro _mPos: %1, Count: %2",_this select 2,count _this]);
+
+private ["_paras","_dir"];
 
 _vehicle allowDamage false;
 _paras = assignedcargo _vehicle;
@@ -25,9 +25,7 @@ _dir = direction _vehicle;
 
 paraLandSafe =
 {
-	private ["_unit"];
-	_unit = _this select 0;
-	_chuteheight = _this select 1;
+	params ["_unit","_chuteheight"];
 	(vehicle _unit) allowDamage false;
 	if (isPlayer _unit) then {[_unit,_chuteheight] spawn OpenPlayerchute};
 	waitUntil { isTouchingGround _unit || (position _unit select 2) < 1 };
@@ -40,11 +38,9 @@ paraLandSafe =
 
 OpenPlayerChute =
 {
-	private ["_paraPlayer"];
-	_paraPlayer = _this select 0;
-	_chuteheight = _this select 1;
-	waitUntil {(position _paraPlayer select 2) <= _chuteheight};
-	_paraPlayer action ["openParachute", _paraPlayer];
+	params ["_paraUnit","_chuteheight"];
+	waitUntil {(position _paraUnit select 2) <= _chuteheight};
+	_paraUnit action ["openParachute", _paraUnit];
 };
 
 {

@@ -1,7 +1,7 @@
+params ["_mkr","_veh","_counter"];
+
 private ["_pad","_getToMarker","_cargoGrp","_vehicle"];
-_mkr=(_this select 0); _mPos=getMarkerPos _mkr;
-_veh=(_this select 1);
-_counter=(_this select 2);
+_mPos=getMarkerPos _mkr;
 
 _debug=false;
 _vehicle = _veh select 0;
@@ -31,22 +31,13 @@ _cargoGrp leaveVehicle _vehicle;
 
 waitUntil{sleep 0.2; {_x in _vehicle} count units _cargoGrp == 0};
 if (_debug) then {hint "Transport unloaded";};
-//Modificado por Vultur
-//0 = [_cargoGrp,_mkr] call eos_fnc_taskpatrol;
-_getToMarker = _cargoGrp addWaypoint [_mPos, 0];
-_getToMarker setWaypointType "SAD";
-_getToMarker setWaypointSpeed "LIMITED";
-_getToMarker setWaypointBehaviour "COMBAT";
-_getToMarker setWaypointFormation (["STAG COLUMN", "WEDGE", "ECH LEFT", "ECH RIGHT", "VEE", "DIAMOND", "LINE"] call BIS_fnc_selectRandom);
-_getToMarker setWaypointCompletionRadius 15;
-_getToMarker setWaypointCombatMode "RED";
+
+[_cargoGrp,_mkr,"center","SAD","LIMITED","SAFE","COMBAT"] call FNC_newWaypoint;
 
 _dir_atk=random 360;
 _Place= 2300;
 _newpos = [_Pos, _Place, _dir_atk] call BIS_fnc_relPos;
 _wp2 = _grp addWaypoint [_newpos, 0];
-/////////////////////////////////////////////////////////////////////////////////
-//_wp2 = _grp addWaypoint [[0,0,0], 0];
 _wp2 setWaypointSpeed "FULL";
 _wp2 setWaypointType "MOVE";
 _wp2 setWaypointStatements ["true", "{deleteVehicle _x} forEach crew (vehicle this) + [vehicle this];"];
