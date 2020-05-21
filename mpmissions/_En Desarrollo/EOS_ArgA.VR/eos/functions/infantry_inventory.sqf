@@ -1,9 +1,6 @@
 if (!isServer) exitWith {};
 // SINGLE INFANTRY GROUP
-private ["_unit","_unitType"];
-
-_unit=(_this select 0);
-_unitType=(_this select 1);
+params ["_unit","_unitType"];
 
 // Change for your units type and it's elementos with the export of BI Arsenal
 // Cambiar los tipos de unidad y sus elementos con lo exportado del arsenal BI

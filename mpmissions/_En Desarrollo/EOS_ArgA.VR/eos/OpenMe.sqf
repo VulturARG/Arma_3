@@ -81,7 +81,7 @@ private _EOS_FACCION = EAST;
 
 //null = [[_marker],[1,2],[4,1],[2,1],[1],[4],[3,1],[0,1,200,_EOS_FACCION,false]] call EOS_Spawn;
 //null = [["Hospital"],[10,0,100],[0,1,100],[0,0,0],[0,0],[0],[0,0,0],[5,1,200,_EOS_FACCION,false]] call EOS_Spawn;
-null = [[_marker],[0,1,150],[3,2,800],[0,1000],[0,1,1500],[0,2,1500,600],[0,3,300,500],[0,1,_EOS_FACCION,false,false,false],[1,_waves,300,false,false],_angle] call Bastion_Spawn;
+null = [[_marker],[3,1,150],[3,2,800],[2,500],[4,1,1000],[3,2,1000,600],[2,3,300,500],[0,1,_EOS_FACCION,false,false,false],[1,_waves,300,false,false],_angle] call Bastion_Spawn;
 
 if (_jugadores <= 10) then {
   //null = [[_marker],[0,2,100],[10,2,100],[0,0,0],[0,0],[0],[0,0,0],[5,1,300,_EOS_FACCION,false]] call EOS_Spawn;

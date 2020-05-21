@@ -1,14 +1,10 @@
+params["_pos","_grpSize","_faction","_side"];
+
 if (!isServer) exitWith {};
 // SINGLE INFANTRY GROUP
-private ["_grp","_unit","_pool","_pos","_faction"];
+private ["_grp","_unit","_pool"];
 
-_pos=(_this select 0);
-_grpSize=(_this select 1);
-_faction=(_this select 2);
-_side=(_this select 3);
-
-_grpMin=_grpSize select 0;
-_grpMax=_grpSize select 1;
+_grpSize params["_grpMin","_grpMax"];
 _d=_grpMax-_grpMin;
 _r=floor(random _d);
 _grpSize=_r+_grpMin;
