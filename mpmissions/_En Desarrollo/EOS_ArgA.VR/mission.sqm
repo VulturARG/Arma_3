@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=65;
+		nextID=76;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={2525.6365,18.877712,2449.5305};
-		dir[]={0.9014008,-0.31247631,0.2998628};
-		up[]={0.29652533,0.94991606,0.098642528};
-		aside[]={0.31566504,-1.4035322e-007,-0.94890672};
+		pos[]={2572.7993,17.806093,2502.8152};
+		dir[]={0.22552173,-0.43365869,0.87243396};
+		up[]={0.10853729,0.90106469,0.41987848};
+		aside[]={0.96820319,-4.1021121e-007,-0.25027779};
 	};
 };
 binarizationWanted=0;
@@ -84,9 +84,11 @@ class Mission
 	{
 		timeOfChanges=1800.0002;
 		startWeather=0;
+		startFog=0.41669446;
 		startWind=0.1;
 		startWaves=0.1;
 		forecastWeather=0;
+		forecastFog=0.37920699;
 		forecastWind=0.1;
 		forecastWaves=0.1;
 		forecastLightnings=0.1;

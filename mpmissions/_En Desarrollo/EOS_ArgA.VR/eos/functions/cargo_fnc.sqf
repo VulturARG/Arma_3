@@ -1,14 +1,17 @@
 params ["_vehicle","_grpSize","_grp","_faction","_cargoType"];
 
 if (!isServer) exitWith {};
-	private ["_cargoPool","_emptySeats","_vehicle","_debug","_grpSize"];
+	
+	private ["_cargoPool","_emptySeats","_debug"];
 
 	_debug=false;
 
 	_cargoPool=[_faction,_cargoType] call eos_fnc_getunitpool;
-	_side=side (leader _grp);
+	//_side=side (leader _grp);
 
-//systemChat format ["%1, %2, %3, %4, %5, %6", _vehicle, _grpSize, _grp, _faction, _cargoType, _debug];
+//systemChat format ["%1, %2, %3, %4, %5", _vehicle, _grpSize, _grp, _faction, _cargoType];
+//[format ["%1, %2, %3, %4, %5", _vehicle, _grpSize, _grp, _faction, _cargoType]]  call BIS_fnc_logFormat;
+
 
 // FILL EMPTY SEATS
 	_emptySeats=_vehicle emptyPositions "cargo";

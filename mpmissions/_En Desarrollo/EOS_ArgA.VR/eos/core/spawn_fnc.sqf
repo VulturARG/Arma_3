@@ -71,3 +71,17 @@ paraLandSafeHA = {
 	_unit allowdamage true;// Now you can take damage.
 };
 
+/*******************************************************************************
+                            Created by |ArgA|Vultur|Cbo¹
+*******************************************************************************/
+EOS_VUL_Debug = {
+	params [["_strData",[]]];
+	private _data = MissionName;
+	
+	_strData = _strData apply {if (typeName _x != "STRING") then {str _x} else {_x}};
+	{
+		_data = _data + " " + _x;	
+	} forEach _strData;
+	//systemChat format["%1",_data];
+	[format ["%1",_data]] call BIS_fnc_logFormat;
+};
