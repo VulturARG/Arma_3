@@ -2,6 +2,7 @@ params ["_mkr","_infantry","_LVeh","_AVeh","_SVeh","_PTrooper","_HAtrooper","_se
 if (!isServer) exitWith {};
 private ["_ptGroup","_fGroup","_cargoType","_vehType","_CHside","_mkrAgl","_pause","_eosZone","_hints","_waves","_aGroup","_side","_actCond","_enemyFaction","_mAH","_mAN","_distance","_grp","_cGroup","_bGroup","_CHType","_time","_timeout","_faction"];
 private ["_troupsPA","_troupsLV","_troupsAV","_troupsHT","_troupsPT","_troupsHA"];
+
 _mPos=markerpos _mkr;
 getMarkerSize _mkr params ["_mkrX","_mkrY"];
 _mkrAgl=markerDir _mkr;
@@ -335,7 +336,6 @@ if (_debugLog) then {
 waituntil {triggeractivated _bastActive};
 
 _waves=(_waves - 1);
-
 if (_waves >= 1) then {
 	if (_debugLog) then {[[_mkr,"Wave", _waves,"Inicio_Espera_proximo_ataque","-",_side]] call EOS_VUL_Debug;};
 	
@@ -374,7 +374,7 @@ if (_debugLog) then {
 };
 
 if (triggeractivated _bastActive and triggeractivated _bastClear and (_waves < 1) ) then{
-		//if (_debugLog) then {[[_mkr,"Wave", _waves,"Fin_ataques"]] call EOS_VUL_Debug;};
+		if (_debugLog) then {[[_mkr,"Wave", _waves,"Fin_ataques"]] call EOS_VUL_Debug;};
 		if (_hints) then  {hint "Waves complete";};
 		_mkr setmarkercolor VictoryColor;
 		_mkr setmarkeralpha _mAN;
@@ -393,6 +393,8 @@ if (_debug) then {systemChat "delete units";};
 
 //if (_debug) then {systemChat "delete wp";};
 
+
+//TODO los para cuando termina la ola no al final de las olas
 // Borro los wp de las unidades
 /*_todos = allGroups select {side _x isEqualTo _side};//returns all groups of _side
 //systemChat (format ["_selection: %1",count _todos]);

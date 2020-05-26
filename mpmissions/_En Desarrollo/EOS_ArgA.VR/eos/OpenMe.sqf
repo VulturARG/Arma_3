@@ -79,13 +79,13 @@ EOS_KILLCOUNTER=FALSE;		// Counts killed units
 _waves = 3;// Borrar
 private _EOS_FACCION = EAST;
 
-//null = [[_marker],[1,2],[4,1],[2,1],[1],[4],[3,1],[0,1,200,_EOS_FACCION,false]] call EOS_Spawn;
+//null = [_marker,[1,2],[4,1],[2,1],[1],[4],[3,1],[0,1,200,_EOS_FACCION,false]] call EOS_Spawn;
 //null = [["Hospital"],[10,0,100],[0,1,100],[0,0,0],[0,0],[0],[0,0,0],[5,1,200,_EOS_FACCION,false]] call EOS_Spawn;
-null = [[_marker],[0,2,150],[0,2,800],[0,500],[0,2,1000],[3,2,1000,200],[0,3,300,500],[0,1,_EOS_FACCION,false,false,true],[30,_waves,90,false,false],_angle] call Bastion_Spawn;
-null = [[_marker],[4,2,15],[0,2,800],[0,500],[0,2,1000],[0,2,1000,200],[0,3,300,500],[1,1,west,false,false,true],[10,_waves,90,false,false],_angle] call Bastion_Spawn;
+null = [_marker,[0,2,150],[0,2,800],[0,500],[0,2,1000],[0,2,1000,200],[2,3,300,500],[0,1,_EOS_FACCION,false,false,true],[30,_waves,90,false,false],_angle] call Bastion_Spawn;
+null = [_marker,[4,2,15],[0,2,800],[0,500],[0,2,1000],[0,2,1000,200],[0,3,300,500],[1,1,west,false,false,true],[10,_waves,90,false,false],_angle] call Bastion_Spawn;
 
 if (_jugadores <= 10) then {
-  //null = [[_marker],[0,2,100],[10,2,100],[0,0,0],[0,0],[0],[0,0,0],[5,1,300,_EOS_FACCION,false]] call EOS_Spawn;
+  //null = [_marker,[0,2,100],[10,2,100],[0,0,0],[0,0],[0],[0,0,0],[5,1,300,_EOS_FACCION,false]] call EOS_Spawn;
  
   /*ZSU addEventHandler ["Killed", {
     //null = [["ZM_1","ZM_2","ZM_3","ZM_4","ZM_5","ZM_6"],[["patrullas_H",50,"Hospital"],["Hospital",0,""]],EAST] call Bastion_Redirect_WP;//

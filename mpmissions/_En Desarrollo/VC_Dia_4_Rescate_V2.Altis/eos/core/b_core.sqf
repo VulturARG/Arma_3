@@ -436,7 +436,7 @@ _Placement=(_mkrX + 500);
 	if (_debug) then {player sidechat "delete wp";};
 
 	// Borro los wp de las unidades
-	_todos = allGroups select {side _x isEqualTo _lado};//returns all groups of _lado
+	/*_todos = allGroups select {side _x isEqualTo _lado};//returns all groups of _lado
 	//PLAYER SIDECHAT (format ["_selection: %1",count _todos]);
 	{
 		for "_i" from count waypoints _x - 1 to 0 step -1 do{
@@ -446,7 +446,7 @@ _Placement=(_mkrX + 500);
 			doStop _x
 		}forEach units _x;
 	}forEach _todos;
-
+*/
 
 // Modificado por Vultur. Evito que borre todas las unidades activas al terminar las olas
 /*
