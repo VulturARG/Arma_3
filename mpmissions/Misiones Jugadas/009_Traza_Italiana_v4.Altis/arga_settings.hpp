@@ -2,7 +2,7 @@
                           Realizado por |ArgA|Ignacio
 *******************************************************************************/
 
-#define NAME "Traza Italiana"           // Colocar nombre de mision
+#define NAME "Traza Italiana"  // Colocar nombre de mision
 #define IMAGE "imgs\TI.paa"             // Colocar nombre y extension de la imagen de portada, ej "imgs\portada.jpg"
 #define DESCRIPTION ""                  // Colocar descripcion de la mision entre las comillas
 

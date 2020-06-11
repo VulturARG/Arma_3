@@ -73,7 +73,7 @@ bastionColor="colorBLUFOR";	// Colour for bastion marker
 EOS_DAMAGE_MULTIPLIER=1;	// 1 is default
 EOS_KILLCOUNTER=FALSE;		// Counts killed units
 
-_jugadores = 17; // TODO Comentar
+//_jugadores = 21; // TODO Comentar
 //hint format["%1",_jugadores];
 /*if (allowFunctionsLog != 1) then {
   hint "PUT allowFunctionsLog = 1; IN description.ext";
@@ -82,7 +82,7 @@ _jugadores = 17; // TODO Comentar
 
 //_waves = 3;// Borrar // TODO Comentar
 private _EOS_FACCION = EAST;
-null = [["inicial"],[3,3,15],[0,2,800],[0,500],[0,2,1000],[0,2,1000,200],[0,3,300,500], [1,1,WEST,FALSE,FALSE,true,true],[30,_waves+2,180,false,false],_angle] call Bastion_Spawn;
+null = [["inicial"],[4,3,15],[0,2,800],[0,500],[0,2,1000],[0,2,1000,200],[0,3,300,500], [1,1,WEST,FALSE,FALSE,true,true],[10,_waves+2,90,false,false],_angle] call Bastion_Spawn;
 if (_jugadores <= 10) then {
   //Asalto inicial
   null = [_marker,[0,2,1000],[0,3,1000],[0,1500],[0,1,1500],[0,0,1500,600],[6,1,400,5000],[6,1,_EOS_FACCION,FALSE,FALSE,true],[600,1,600,FALSE,FALSE],_angle] call Bastion_Spawn;
@@ -115,18 +115,21 @@ if (_jugadores > 15 && _jugadores <= 20) then {
   // Última ola
   null = [["final"],[0,2,1000],[5,2,1000],[4,1500],[0,1,1500],[5,3,1500,600],[0,3,300,5000],[6,1,_EOS_FACCION,FALSE,FALSE,true],[960,1,600,FALSE,FALSE],_angle] call Bastion_Spawn;
   // Apaches
-  null = [["final"],[0,1,1000],[0,2,1000],[0,1500],[3,0,3000],[0,4,1500,600],[0,3,300,5000],[1,1,WEST,FALSE,FALSE,true],[1080,1,600,FALSE,FALSE],_angle] call Bastion_Spawn;
+  null = [["final"],[0,1,1000],[0,2,1000],[0,1500],[4,0,3000],[0,4,1500,600],[0,3,300,5000],[1,1,WEST,FALSE,FALSE,true],[1080,1,600,FALSE,FALSE],_angle] call Bastion_Spawn;
 };
 if (_jugadores > 20 && _jugadores <= 25) then {
-  null = [_marker,[0,2,1000],[0,3,1000],[0,1500],[0,1,1500],[0,0,1500,600],[6,3,300,5000],[6,1,_EOS_FACCION,FALSE,FALSE,true],[600,1,600,FALSE,FALSE],_angle] call Bastion_Spawn;
+  //null = [_marker,[0,2,1000],[0,3,1000],[0,1500],[0,1,1500],[0,0,1500,600],[6,3,300,5000],[6,1,_EOS_FACCION,FALSE,FALSE,true],[600,1,600,FALSE,FALSE],_angle] call Bastion_Spawn;
   //Oleadas impares
-  null = [_marker,[3,3,1000],[4,2,1000],[0,1500],[0,1,1500],[4,3,1500,600],[0,3,300,5000],[6,1,_EOS_FACCION,FALSE,FALSE,true],[1200,_waves,600,FALSE,FALSE],_angle] call Bastion_Spawn;
+  //null = [_marker,[3,3,1000],[4,2,1000],[0,1500],[0,1,1500],[4,3,1500,600],[0,3,300,5000],[6,1,_EOS_FACCION,FALSE,FALSE,true],[30,_waves,180,FALSE,FALSE],_angle] call Bastion_Spawn;
+  null = [_marker,[0,3,1000],[0,2,1000],[0,1500],[0,1,1500],[4,3,1500,200],[0,3,300,5000],[6,1,_EOS_FACCION,FALSE,FALSE,true],[30,_waves,180,FALSE,FALSE],_angle] call Bastion_Spawn;
   //Oleadas pares
-  null = [_marker,[3,3,1000],[0,3,1000],[2,1500],[4,3,1500],[0,0,1500,600],[0,3,300,5000],[6,1,_EOS_FACCION,FALSE,FALSE,true],[1500,_waves,600,FALSE,FALSE],_angle] call Bastion_Spawn;
+  //null = [_marker,[3,3,1000],[0,3,1000],[2,1500],[4,3,1500],[0,0,1500,600],[0,3,300,5000],[6,1,_EOS_FACCION,FALSE,FALSE,true],[120,_waves,180,FALSE,FALSE],_angle] call Bastion_Spawn;
+  null = [_marker,[0,3,1000],[0,3,1000],[0,1500],[0,3,1500],[4,3,1500,200],[0,3,300,5000],[6,1,_EOS_FACCION,FALSE,FALSE,true],[170,_waves,180,FALSE,FALSE],_angle] call Bastion_Spawn;
   // Última ola
-  null = [_marker,[0,2,1000],[6,2,1000],[5,1500],[0,1,1500],[5,3,1500,600],[0,3,300,5000],[6,1,_EOS_FACCION,FALSE,FALSE,true],[7500,1,600,FALSE,FALSE],_angle] call Bastion_Spawn;
+  //null = [_marker,[0,2,1000],[6,2,1000],[5,1500],[0,1,1500],[5,3,1500,600],[0,3,300,5000],[6,1,_EOS_FACCION,FALSE,FALSE,true],[7500,1,600,FALSE,FALSE],_angle] call Bastion_Spawn;
   // Apaches
-  null = [_marker,[0,1,1000],[0,2,1000],[0,1500],[4,0,3000],[0,4,1500,600],[0,3,300,5000],[1,1,WEST,FALSE,FALSE,true],[7800,1,600,FALSE,FALSE],_angle] call Bastion_Spawn;
+  //null = [_marker,[0,1,1000],[0,2,1000],[0,1500],[4,0,3000],[0,4,1500,600],[0,3,300,5000],[1,1,WEST,FALSE,FALSE,true],[7800,1,600,FALSE,FALSE],_angle] call Bastion_Spawn;
+  null = [_marker,[0,1,1000],[0,2,1000],[0,1500],[4,0,1200],[0,4,1500,600],[0,3,300,5000],[1,1,WEST,FALSE,FALSE,true],[403,1,600,FALSE,FALSE],_angle] call Bastion_Spawn;
 };
 if (_jugadores > 25 && _jugadores <= 30) then {
   //Asalto inicial

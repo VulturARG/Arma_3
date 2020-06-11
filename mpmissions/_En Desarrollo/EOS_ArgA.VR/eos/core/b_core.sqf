@@ -210,19 +210,13 @@ for "_counter" from 1 to _ptNumGroups do {
 	_newpos = [_mPos, _Place, _dir_atk] call BIS_fnc_relPos;
 	_ptGroup=[_newpos,_side,_faction,_vehType,"fly"] call EOS_fnc_spawnvehicle;
 	_ptGrp set [count _ptGrp,_ptGroup];
-	if ((_ptSize select 0) > 0) then {
-		_cargoGrpPT = createGroup _side;
-		0=[(_ptGroup select 0),_ptSize,_cargoGrpPT,_faction,9] call eos_fnc_setcargo;
-		0=[_cargoGrpPT,"INFskill"] call eos_fnc_grouphandlers;
-		_cargoGrpPT setGroupId [format ["%1 PT %2-%3",_mkr,_waves,_counter]];
-		_troupsPT = _troupsPT + count units _cargoGrpPT;
-		_ptGroup set [count _ptGroup,_cargoGrpPT];
-		null = [_mkr,_ptGroup,_counter,_PTAltSalto] execvm "eos\functions\TransportParachute_fnc.sqf";
-	} else {
-		_wp1 = (_ptGroup select 2) addWaypoint [(markerpos _mkr), 0];
-		_wp1 setWaypointSpeed "FULL";
-		_wp1 setWaypointType "SAD";
-	};
+	_cargoGrpPT = createGroup _side;
+	0=[(_ptGroup select 0),_ptSize,_cargoGrpPT,_faction,9] call eos_fnc_setcargo;
+	0=[_cargoGrpPT,"INFskill"] call eos_fnc_grouphandlers;
+	_cargoGrpPT setGroupId [format ["%1 PT %2-%3",_mkr,_waves,_counter]];
+	_troupsPT = _troupsPT + count units _cargoGrpPT;
+	_ptGroup set [count _ptGroup,_cargoGrpPT];
+	null = [_mkr,_ptGroup,_counter,_PTAltSalto] execvm "eos\functions\TransportParachute_fnc.sqf";
 	if (_debug) then {
 			systemChat format ["Chopper:%1",_counter];
 			0= [_mkr,_counter,"Chopper",(getpos leader (_ptGroup select 2))] call EOS_debug;

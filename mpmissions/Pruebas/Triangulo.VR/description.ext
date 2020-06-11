@@ -14,7 +14,7 @@ respawnOnStart = 0;
 class Header {
     gameType=coop;
     minPlayers=1;
-    maxPlayers=40;
+    maxPlayers=60;
 };
 
 class CfgFunctions {
