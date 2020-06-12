@@ -54,6 +54,8 @@ if(_disableBluforIA == 1) then {
   }foreach allUnits;
 };
 
+//execVM "scripts\smart_tank\smart.sqf";
+
 /*******************************************************************************
                           Realizado por |ArgA|Vultur|Cbo¹
 *******************************************************************************/

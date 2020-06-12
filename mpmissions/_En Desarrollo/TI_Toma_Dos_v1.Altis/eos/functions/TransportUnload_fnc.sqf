@@ -1,15 +1,15 @@
 params ["_mkr","_veh","_counter"];
 
 private ["_pad","_getToMarker","_cargoGrp","_vehicle"];
+_mPos=getMarkerPos _mkr;
 
-//units _x doFollow leader _x;
 _debug=false;
 _veh params ["_vehicle","_nada","_grp","_cargoGrp"];
 
 //Modificado por Vultur
 _dir_atk= _mPos getDir _vehicle;
-_minDist = 300;
-_Place=(_minDist + random 300);
+_minDist = 200;
+_Place=(_minDist + random 200);
 _pos = [_mPos, _Place, _dir_atk] call BIS_fnc_relPos;
 /////////////////////////////////////////////////////////////////////////////////
 

@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=959;
+		nextID=963;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={22959.266,28.190001,18486.838};
-		dir[]={0.62879831,-0.53444159,0.56480151};
-		up[]={0.39760047,0.84520108,0.35713425};
-		aside[]={0.668239,1.040753e-007,-0.74395484};
+		pos[]={23015.486,9.4626484,18495.82};
+		dir[]={-0.9508943,-0.1832357,-0.24961677};
+		up[]={-0.17725205,0.98306239,-0.046530258};
+		aside[]={-0.25391456,5.2183168e-007,0.96726167};
 	};
 };
 binarizationWanted=0;
@@ -568,7 +568,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=176;
+		items=179;
 		class Item0
 		{
 			dataType="Object";
@@ -9893,13 +9893,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={22988.027,6.317956,18496.916};
-						angles[]={0,2.0511875,0};
+						position[]={22988.027,6.3184395,18496.916};
+						angles[]={0,2.0511808,0};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						isPlayer=1;
 						isPlayable=1;
 						class Inventory
 						{
@@ -9921,6 +9922,7 @@ class Mission
 					};
 					id=839;
 					type="C_scientist_F";
+					atlOffset=0.00048351288;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -9969,6 +9971,7 @@ class Mission
 			{
 			};
 			id=838;
+			atlOffset=0.00048351288;
 		};
 		class Item134
 		{
@@ -14468,8 +14471,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={22977.076,4.2738132,18490.578};
-				angles[]={0,0.80869198,0};
+				position[]={22977.451,4.2738132,18497.045};
+				angles[]={0,1.8503935,0};
 			};
 			side="Empty";
 			flags=5;
@@ -17166,8 +17169,8 @@ class Mission
 		class Item175
 		{
 			dataType="Trigger";
-			position[]={22981.65,3.1900001,18495.18};
-			angle=5.1369047;
+			position[]={22983.275,3.1900001,18494.496};
+			angle=5.1369052;
 			class Attributes
 			{
 				name="cuartel";
@@ -17175,7 +17178,7 @@ class Mission
 				onActivation="call{nul = [] execVM ""scripts\apaches.sqf"";}";
 				onDeactivation="call{player removeaction addActionID;}";
 				sizeA=7;
-				sizeB=7;
+				sizeB=8;
 				sizeC=7;
 				repeatable=1;
 				activationBy="ANYPLAYER";
@@ -17183,6 +17186,48 @@ class Mission
 			};
 			id=958;
 			type="EmptyDetectorAreaR50";
+		};
+		class Item176
+		{
+			dataType="Marker";
+			position[]={22986.242,3.1900001,18504.904};
+			name="impares";
+			markerType="ELLIPSE";
+			type="ellipse";
+			colorName="ColorBrown";
+			alpha=0;
+			a=300;
+			b=300;
+			angle=40.067989;
+			id=959;
+		};
+		class Item177
+		{
+			dataType="Marker";
+			position[]={22986.242,3.1900001,18504.904};
+			name="pares";
+			markerType="ELLIPSE";
+			type="ellipse";
+			colorName="ColorBrown";
+			alpha=0;
+			a=300;
+			b=300;
+			angle=40.067989;
+			id=960;
+		};
+		class Item178
+		{
+			dataType="Marker";
+			position[]={22986.242,3.1900001,18504.904};
+			name="defensa";
+			markerType="ELLIPSE";
+			type="ellipse";
+			colorName="ColorBrown";
+			alpha=0;
+			a=300;
+			b=300;
+			angle=40.067989;
+			id=961;
 		};
 	};
 };

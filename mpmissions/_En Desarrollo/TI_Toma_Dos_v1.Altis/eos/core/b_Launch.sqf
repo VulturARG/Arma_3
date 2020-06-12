@@ -1,4 +1,5 @@
 params ["_JIPmkr","_infantry","_LVeh","_AVeh","_SVeh","_PTrooper","_HAtrooper","_settings","_basSettings","_angle"];
+//systemChat format["%1",_JIPmkr];
 if (isServer) then {
 	private ["_PAgroupArray","_LVgroupArray","_CHgroupArray","_PTgroupArray","_HAgroupArray"];
 

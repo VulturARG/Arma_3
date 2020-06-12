@@ -75,9 +75,9 @@ paraLandSafeHA = {
                             Created by |ArgA|Vultur|Cbo¹
 *******************************************************************************/
 EOS_VUL_Debug = {
-	params [["_strData",[]]];
+	params ["_strData"];
 	private _data = MissionName;
-	
+	//systemChat format["%1",_strData];
 	_strData = _strData apply {if (typeName _x != "STRING") then {str _x} else {_x}};
 	{
 		_data = _data + " " + _x;	

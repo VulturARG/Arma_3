@@ -1,9 +1,11 @@
 params ["_mkr","_infantry","_LVeh","_AVeh","_SVeh","_PTrooper","_HAtrooper","_settings","_basSettings","_angle",["_initialLaunch",false]];
 if (!isServer) exitWith {};
-private ["_ptGroup","_fGroup","_cargoType","_vehType","_CHside","_mkrAgl","_pause","_eosZone","_hints","_waves","_aGroup","_side","_actCond","_enemyFaction","_mAH","_mAN","_distance","_grp","_cGroup","_bGroup","_CHType","_time","_timeout","_faction"];
+private ["_ptGroup","_fGroup","_cargoType","_vehType","_CHside","_mkrAgl","_pause","_eosZone","_hints","_waves","_aGroup","_side"];
+private ["_actCond","_enemyFaction","_mAH","_mAN","_distance","_grp","_cGroup","_bGroup","_CHType","_time","_timeout","_faction"];
 private ["_troupsPA","_troupsLV","_troupsAV","_troupsHT","_troupsPT","_troupsHA"];
+private ["_enemigos","_inconcientes"];
 
-_mPos=markerpos _mkr;
+_mPos=getMarkerPos _mkr;
 getMarkerSize _mkr params ["_mkrX","_mkrY"];
 _mkrAgl=markerDir _mkr;
 
@@ -79,6 +81,30 @@ if (_pause > 0 and !_initialLaunch) then {
 		time > _espera
 	};
 	if (_debugLog) then {[[_mkr,"Wave", _waves,"Fin_Espera_Inicial","-",_side]] call EOS_VUL_Debug;};
+	
+	// Busco todas las IAs inconcientes
+	_inconcientes = allUnits select {_x getVariable "ACE_isUnconscious" isEqualTo true && !isPlayer _x && (side _x == _side)};
+	if (_debugLog) then {[[_mkr,"Wave", _waves,"Inconscientes",count _inconcientes,_side]] call EOS_VUL_Debug;};
+	{
+		_x setDamage 1;
+	} forEach _inconcientes;
+	if (_debugLog) then {
+		_inconcientes = allUnits select {_x getVariable "ACE_isUnconscious" isEqualTo true && !isPlayer _x && (side _x == _side)};
+		[[_mkr,"Wave", _waves,"Inconscientes(Post)",count _inconcientes,_side]] call EOS_VUL_Debug;
+	};
+
+	//Borro las unidades que estan a mas de una determinada distancia 
+	_enemigos = allUnits select {side _x == _side && _x iskindof "Man" && (_mPos distance2D _x) > 950}; 
+	if (_debugLog) then {[[_mkr,"Wave", _waves,"IAs>950",count _enemigos,_side]] call EOS_VUL_Debug;};
+	{ 
+		if (!(isPlayer _x))then { 
+			_x setDamage 1 
+		} 
+	}foreach _enemigos;
+	if (_debugLog) then {
+		_enemigos = allUnits select {side _x == _side && _x iskindof "Man" && (_mPos distance2D _x) > 950}; 
+		[[_mkr,"Wave", _waves,"IAs>950(Post)",count _enemigos,_side]] call EOS_VUL_Debug;
+	}
 };
 
 // SPAWN PATROLS
@@ -116,7 +142,7 @@ _bGrp=[];
 _troupsLV = 0;
 for "_counter" from 1 to _LVehGroups do {
 	_dir_atk=_mkrAgl+(random _angle)-_angle/2;
-	_Place=(_mkrX + _LVminDist + random 200);
+	_Place=(_mkrX + _LVminDist + random 100);
 	_newpos = [_mPos, _Place, _dir_atk] call BIS_fnc_relPos;
 
 	while {(surfaceiswater _newpos)} do {
@@ -144,7 +170,7 @@ _cGrp=[];
 _troupsAV = 0;
 for "_counter" from 1 to _AVehGroups do {
 	_dir_atk=_mkrAgl+(random _angle)-_angle/2;
-	_Place=(_mkrX + _AVminDist + random 200);
+	_Place=(_mkrX + _AVminDist + random 100);
 	_newpos = [_mPos, _Place, _dir_atk] call BIS_fnc_relPos;
 	while {(surfaceiswater _newpos)} do {
 		_dir_atk=_mkrAgl+(random _angle)-_angle/2;
@@ -173,7 +199,7 @@ for "_counter" from 1 to _CHGroups do {
 		_vehType=3;
 	};
 	_dir_atk=_mkrAgl+(random _angle)-_angle/2;
-	_Place=(_mkrX + _CHminDist + random 600);
+	_Place=(_mkrX + _CHminDist + random 100);
 	_newpos = [_mPos, _Place, _dir_atk] call BIS_fnc_relPos;
 	_fGroup=[_newpos,_side,_faction,_vehType,"fly"] call EOS_fnc_spawnvehicle;
 	_CHside=_side;
@@ -207,7 +233,7 @@ _troupsPT = 0;
 for "_counter" from 1 to _ptNumGroups do {
 	_vehType=4;
 	_dir_atk=_mkrAgl+(random _angle)-_angle/2;
-	_Place=(_mkrX + _PTminDist + random 300);
+	_Place=(_mkrX + _PTminDist + random 100);
 	_newpos = [_mPos, _Place, _dir_atk] call BIS_fnc_relPos;
 	_ptGroup=[_newpos,_side,_faction,_vehType,"fly"] call EOS_fnc_spawnvehicle;
 	_ptGrp set [count _ptGrp,_ptGroup];
@@ -231,7 +257,7 @@ _troupsHA = 0;
 
 for "_counter" from 1 to _HApatrols do {
 	_dir_atk=_mkrAgl+(random _angle)-_angle/2;
-	_Place=(_HAminDist + random 200);
+	_Place=(_HAminDist + random 100);
 	_pos = [_mPos, _Place, _dir_atk] call BIS_fnc_relPos;
 	while {(surfaceiswater _pos)} do {
 		_dir_atk=_mkrAgl+(random _angle)-_angle/2;
@@ -321,9 +347,9 @@ if (_debugLog) then {
 	_getToMarker = _x addWaypoint [_mPos, 0];
 	_getToMarker setWaypointType "SAD";
 	_getToMarker setWaypointSpeed "LIMITED";
-	_getToMarker setWaypointBehaviour "COMBAT";
+	_getToMarker setWaypointBehaviour "AWARE";
 	_getToMarker setWaypointFormation (["STAG COLUMN", "WEDGE", "ECH LEFT", "ECH RIGHT", "VEE", "DIAMOND", "LINE"] call BIS_fnc_selectRandom);
-	_getToMarker setWaypointCompletionRadius 15;
+	_getToMarker setWaypointCompletionRadius 50;
 	_getToMarker setWaypointCombatMode "RED";
 }foreach _HAGroup;
 
@@ -354,29 +380,30 @@ if (_waves >= 1) then {
 		time > _espera
 	};
 	if (_debugLog) then { [[_mkr,"Wave", _waves,"Fin_Espera_proximo_ataque","-",_side]] call EOS_VUL_Debug;};
-};
-
-// Busco todas las IAs inconcientes
-_inconcientes = allUnits select {_x getVariable "ACE_isUnconscious" isEqualTo true && !isPlayer _x && (side _x == _side)};
-if (_debugLog) then {[[_mkr,"Wave", _waves,"Inconscientes",count _inconcientes,_side]] call EOS_VUL_Debug;};
-{
-	_x setDamage 1;
-} forEach _inconcientes;
-if (_debugLog) then {
+	// Busco todas las IAs inconcientes
 	_inconcientes = allUnits select {_x getVariable "ACE_isUnconscious" isEqualTo true && !isPlayer _x && (side _x == _side)};
-	[[_mkr,"Wave", _waves,"Inconscientes(Post)",count _inconcientes,_side]] call EOS_VUL_Debug;
-};
+	if (_debugLog) then {[[_mkr,"Wave", _waves,"Inconscientes_2",count _inconcientes,_side]] call EOS_VUL_Debug;};
+	{
+		_x setDamage 1;
+	} forEach _inconcientes;
+	if (_debugLog) then {
+		_inconcientes = allUnits select {_x getVariable "ACE_isUnconscious" isEqualTo true && !isPlayer _x && (side _x == _side)};
+		[[_mkr,"Wave", _waves,"Inconscientes_2(Post)",count _inconcientes,_side]] call EOS_VUL_Debug;
+	};
 
-//Borro las unidades que estan a mas de una determinada distancia
-/*
-enemigos = allUnits select {side _x == _side &&  (_mPos distance _x) > 1000}; //_x iskindof "Man" &&
-{
-	if (!(isPlayer _x))then{
-		deleteVehicle _x:
-		//m_x setDamage 1;
-	 };
-}forEach enemigos;
-*/
+	//Borro las unidades que estan a mas de una determinada distancia 
+	_enemigos = allUnits select {side _x == _side && _x iskindof "Man" && (_mPos distance2D _x) > 950}; 
+	if (_debugLog) then {[[_mkr,"Wave", _waves,"IAs>950_2",count _enemigos,_side]] call EOS_VUL_Debug;};
+	{ 
+		if (!(isPlayer _x))then { 
+			_x setDamage 1 
+		} 
+	}foreach _enemigos;
+	if (_debugLog) then {
+		_enemigos = allUnits select {side _x == _side && _x iskindof "Man" && (_mPos distance2D _x) > 950}; 
+		[[_mkr,"Wave", _waves,"IAs>950(Post)_2",count _enemigos,_side]] call EOS_VUL_Debug;
+	}
+};
 
 if (triggeractivated _bastActive and triggeractivated _bastClear and (_waves < 1) ) then{
 		if (_debugLog) then {[[_mkr,"Wave", _waves,"Fin_ataques"]] call EOS_VUL_Debug;};

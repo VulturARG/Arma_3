@@ -4,9 +4,7 @@ private ["_pad","_getToMarker","_cargoGrp","_vehicle"];
 _mPos=getMarkerPos _mkr;
 
 _debug=false;
-_vehicle = _veh select 0;
-_grp = _veh select 2;
-_cargoGrp= _veh select 3;
+_veh params ["_vehicle","_nada","_grp","_cargoGrp"];
 
 //Modificado por Vultur
 _dir_atk= _mPos getDir _vehicle;
