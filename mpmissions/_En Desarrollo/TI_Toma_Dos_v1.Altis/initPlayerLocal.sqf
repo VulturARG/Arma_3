@@ -55,7 +55,7 @@ addActionID = 0;
 switch (toLower roleDescription player) do {
   case "cacique @comandancia": { player execVM "roles\capitan.sqf"; };
   case "pampa": { player execVM "roles\teniente.sqf"; };
-  case "matrero": { player execVM "roles\tirador_mk11.sqf"; };
+  case "matrero": { player execVM "roles\tirador_fal.sqf"; };
   case "líder @alfa": { player execVM "roles\lider_peloton.sqf"; };
   case "líder @bravo": { player execVM "roles\lider_peloton.sqf"; };
   case "líder @charly": { player execVM "roles\lider_peloton.sqf"; };

@@ -17170,13 +17170,13 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={22983.275,3.1900001,18494.496};
-			angle=5.1369052;
+			angle=5.1369047;
 			class Attributes
 			{
 				name="cuartel";
-				condition="call{([""vultur"", str thisList] call BIS_fnc_inString);}";
-				onActivation="call{nul = [] execVM ""scripts\apaches.sqf"";}";
-				onDeactivation="call{player removeaction addActionID;}";
+				condition="call{this}";
+				onActivation="call{nul = [] execVM ""scripts\apaches.sqf""; hint ""Activado"";}";
+				onDeactivation="call{player removeaction addActionID; hint ""Desactivado"";}";
 				sizeA=7;
 				sizeB=8;
 				sizeC=7;

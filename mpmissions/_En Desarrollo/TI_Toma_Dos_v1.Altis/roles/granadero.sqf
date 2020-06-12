@@ -62,4 +62,4 @@ _unit linkItem "ACE_Altimeter";
 _unit linkItem "tf_anprc152_8";
 //_unit linkItem "ACE_NVG_Wide";
 
-_unit action ["WeaponOnBack", _unit];
+_unit action ["SwitchWeapon", _unit, _unit, 100];

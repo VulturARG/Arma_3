@@ -47,5 +47,5 @@ _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 _unit linkItem "tf_anprc152";
 
-
-_unit action ["WeaponOnBack", _unit];
+_unit action ["SwitchWeapon", _unit, _unit, 100];
+//_unit action ["WeaponOnBack", _unit];

@@ -47,3 +47,4 @@ _unit linkItem "tf_anprc148jem_1";
                           Realizado por |ArgA|Ignacio
 						  Rol por       |ArgA|Maxi|Cbo
 *******************************************************************************/
+_unit action ["SwitchWeapon", _unit, _unit, 100];

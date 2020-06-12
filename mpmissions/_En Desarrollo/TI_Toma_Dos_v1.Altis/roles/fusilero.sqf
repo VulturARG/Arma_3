@@ -41,3 +41,4 @@ for "_i" from 1 to 3 do {_unit addItemToBackpack "SmokeShellBlue";};
                           Realizado por |ArgA|Ignacio
 						  Rol por       |ArgA|Ignacio
 *******************************************************************************/
+_unit action ["SwitchWeapon", _unit, _unit, 100];

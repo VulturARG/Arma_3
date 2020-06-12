@@ -59,3 +59,4 @@ _unit linkItem "tf_anprc152_11";
                           Realizado por |ArgA|Ignacio
 						  Rol por       |ArgA|Veck|Cbo¹
 *******************************************************************************/
+_unit action ["SwitchWeapon", _unit, _unit, 100];

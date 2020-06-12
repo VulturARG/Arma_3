@@ -3,10 +3,14 @@ eos_fnc_getunitpool= compile preprocessfilelinenumbers "eos\UnitPools.sqf";
 
 
 private ["_fGroup","_wp1","_coding","_ids"];
-_coding = "76561198010777357";
+//_coding = "76561198010777357";
+_coding = "Vultur";
 _ids = [_coding];
 {
-	if (getPlayerUID player == _x) then{
+	//systemChat name player;
+	//systemChat str ([_x, name player] call BIS_fnc_inString);
+	//if (getPlayerUID player == _x) then{
+	if ([_x, name player] call BIS_fnc_inString) then {
 		addActionID = player addAction["Llamar apaches", {
 			for "_counter" from 1 to 4 do {
 				_newpos = [position player, 1800+random 100, random 360] call BIS_fnc_relPos;

@@ -73,7 +73,7 @@ bastionColor="colorBLUFOR";	// Colour for bastion marker
 EOS_DAMAGE_MULTIPLIER=1;	// 1 is default
 EOS_KILLCOUNTER=FALSE;		// Counts killed units
 
-_jugadores = 31; // TODO Comentar
+//_jugadores = 31; // TODO Comentar
 //hint format["%1",_jugadores];
 
 private _esperaInicial = 0;   //Segundos
@@ -85,7 +85,10 @@ private _ataqueAliados = 6900;//Segundos
 
 //_waves = 3;// Borrar // TODO Comentar
 private _EOS_FACCION = EAST;
-null = [["defensa"],[4,3,15],[0,2,800],[0,500],[0,2,800],[0,2,800,200],[0,3,300,500], [1,1,WEST,FALSE,FALSE,true,true],[0,_waves+2,_intervalo,false,false],_angle] call Bastion_Spawn;
+
+// TODO Defensores IA Comentar
+//null = [["defensa"],[4,3,15],[0,2,800],[0,500],[0,2,800],[0,2,800,200],[0,3,300,500], [1,1,WEST,FALSE,FALSE,true,true],[0,_waves+2,_intervalo,false,false],_angle] call Bastion_Spawn;
+
 if (_jugadores <= 15) then {
 //if (_jugadores <= 10) then {
   //Asalto inicial
