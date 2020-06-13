@@ -89,8 +89,8 @@ private _EOS_FACCION = EAST;
 // TODO Defensores IA Comentar
 //null = [["defensa"],[4,3,15],[0,2,800],[0,500],[0,2,800],[0,2,800,200],[0,3,300,500], [1,1,WEST,FALSE,FALSE,true,true],[0,_waves+2,_intervalo,false,false],_angle] call Bastion_Spawn;
 
-if (_jugadores <= 15) then {
-//if (_jugadores <= 10) then {
+//if (_jugadores <= 15) then {
+if (_jugadores <= 10) then {
   //Asalto inicial
   null = [_marker,[0,2,800],[0,3,800],[0,800],[0,1,800],[0,0,800,200],[6,1,300,5000],[6,1,_EOS_FACCION,FALSE,FALSE,true],[_esperaInicial,1,_intervalo,FALSE,FALSE],_angle] call Bastion_Spawn;
   //Oleadas impares
@@ -102,8 +102,8 @@ if (_jugadores <= 15) then {
   // Apaches
   null = [_marker,[0,1,800],[0,2,800],[0,800],[2,0,3000],[0,4,800,200],[0,3,200,5000],[1,1,WEST,FALSE,FALSE,true],[_ataqueAliados,1,_intervalo,FALSE,FALSE],_angle] call Bastion_Spawn;
 };
-if (_jugadores > 15 && _jugadores <= 20) then {
-//if (_jugadores > 10 && _jugadores <= 15) then {
+//if (_jugadores > 15 && _jugadores <= 20) then {
+if (_jugadores > 10 && _jugadores <= 15) then {
   null = [_marker,[0,2,800],[0,3,800],[0,800],[0,1,800],[0,0,800,200],[6,2,400,5000],[6,1,_EOS_FACCION,FALSE,FALSE,true],[_esperaInicial,1,_intervalo,FALSE,FALSE],_angle] call Bastion_Spawn;
   //Oleadas impares
   null = [["impares"],[3,2,500],[3,2,800],[0,800],[0,1,800],[3,2,800,200],[0,3,300,5000],[6,1,_EOS_FACCION,FALSE,FALSE,true],[_esperaImpares,_waves,_intervalo,FALSE,FALSE],_angle] call Bastion_Spawn;
@@ -114,8 +114,8 @@ if (_jugadores > 15 && _jugadores <= 20) then {
   // Apaches
   null = [_marker,[0,1,800],[0,2,800],[0,800],[3,0,3000],[0,4,800,200],[0,3,300,5000],[1,1,WEST,FALSE,FALSE,true],[_ataqueAliados,1,_intervalo,FALSE,FALSE],_angle] call Bastion_Spawn;
 };
-if (_jugadores > 20 && _jugadores <= 25) then {
-//if (_jugadores > 15 && _jugadores <= 20) then {
+//if (_jugadores > 20 && _jugadores <= 25) then {
+if (_jugadores > 15 && _jugadores <= 20) then {
   null = [["inicial"],[0,2,800],[0,3,800],[0,800],[0,1,800],[0,0,800,200],[6,3,300,5000],[6,1,_EOS_FACCION,FALSE,FALSE,true],[_esperaInicial,1,_intervalo,FALSE,FALSE],_angle] call Bastion_Spawn;
   //Oleadas impares
   null = [["impares"],[4,2,500],[4,2,800],[0,800],[0,1,800],[4,2,800,200],[0,3,300,5000],[6,1,_EOS_FACCION,FALSE,FALSE,true],[_esperaImpares,_waves,_intervalo,FALSE,FALSE],_angle] call Bastion_Spawn;
@@ -126,8 +126,8 @@ if (_jugadores > 20 && _jugadores <= 25) then {
   // Apaches
   null = [[_marker],[0,1,800],[0,2,800],[0,800],[4,0,3000],[0,4,800,200],[0,3,300,5000],[1,1,WEST,FALSE,FALSE,true],[_ataqueAliados,1,_intervalo,FALSE,FALSE],_angle] call Bastion_Spawn;
 };
-if (_jugadores > 25 && _jugadores <= 30) then {
-//if (_jugadores > 20 && _jugadores <= 25) then {
+//if (_jugadores > 25 && _jugadores <= 30) then {
+if (_jugadores > 20 && _jugadores <= 25) then {
   null = [_marker,[0,2,800],[0,3,800],[0,800],[0,1,800],[0,0,800,200],[6,3,300,5000],[6,1,_EOS_FACCION,FALSE,FALSE,true],[_esperaInicial,1,_intervalo,FALSE,FALSE],_angle] call Bastion_Spawn;
   //Oleadas impares
   null = [["impares"],[3,3,500],[4,2,800],[0,800],[0,1,800],[4,3,800,200],[0,3,300,5000],[6,1,_EOS_FACCION,FALSE,FALSE,true],[_esperaImpares,_waves,_intervalo,FALSE,FALSE],_angle] call Bastion_Spawn;
@@ -139,8 +139,8 @@ if (_jugadores > 25 && _jugadores <= 30) then {
   null = [_marker,[0,1,800],[0,2,800],[0,800],[4,0,3000],[0,4,800,200],[0,3,300,5000],[1,1,WEST,FALSE,FALSE,true],[_ataqueAliados,1,_intervalo,FALSE,FALSE],_angle] call Bastion_Spawn;
 
 };
-if (_jugadores > 30) then {
-//if (_jugadores > 25 && _jugadores <= 30) then {
+//if (_jugadores > 30) then {
+if (_jugadores > 25 && _jugadores <= 30) then {
   //Asalto inicial
   null = [_marker,[0,2,800],[0,3,800],[0,800],[0,1,800],[0,0,800,200],[7,3,300,5000],[6,1,_EOS_FACCION,FALSE,FALSE,true],[_esperaInicial,1,_intervalo,FALSE,FALSE],_angle] call Bastion_Spawn;
   //Oleadas impares
@@ -152,7 +152,7 @@ if (_jugadores > 30) then {
   // Apaches
   null = [_marker,[0,1,800],[0,2,800],[0,800],[4,0,3000],[0,4,800,200],[0,3,300,5000],[1,1,WEST,FALSE,FALSE,true],[_ataqueAliados,1,_intervalo,FALSE,FALSE],_angle] call Bastion_Spawn;
 };
-/*if (_jugadores > 30) then {
+if (_jugadores > 30) then {
   //Asalto inicial
   null = [_marker,[0,2,800],[0,3,800],[0,800],[0,1,800],[0,0,800,200],[8,3,300,5000],[6,1,_EOS_FACCION,FALSE,FALSE,true],[_esperaInicial,1,_intervalo,FALSE,FALSE],_angle] call Bastion_Spawn;
   //Oleadas impares

@@ -49,7 +49,6 @@ if(_disableCustomLoadout == 1)then{
 /*******************************************************************************
                           Realizado por |ArgA|Vultur|Cbo¹
 *******************************************************************************/
-addActionID = 0;
 
 //hint roleDescription player;
 switch (toLower roleDescription player) do {
@@ -67,4 +66,10 @@ switch (toLower roleDescription player) do {
   case "fusilero": { player execVM "roles\fusilero.sqf"; };
 
   //default { player execVM "roles\fusilero.sqf"; };
+};
+
+if (["Vultur", profileName] call BIS_fnc_inString) then {
+    apaches addAction["Llamar apaches", {
+    [[], "scripts\apaches.sqf"] remoteExec ["BIS_fnc_execVM", 2];
+  },[],1.5,true,true,"","true",3];
 };

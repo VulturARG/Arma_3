@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=963;
+		nextID=964;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={23015.486,9.4626484,18495.82};
-		dir[]={-0.9508943,-0.1832357,-0.24961677};
-		up[]={-0.17725205,0.98306239,-0.046530258};
-		aside[]={-0.25391456,5.2183168e-007,0.96726167};
+		pos[]={23000.322,5.8525543,18472.773};
+		dir[]={-0.32336584,-0.12137156,0.93854654};
+		up[]={-0.039555658,0.99258977,0.11480517};
+		aside[]={0.9455303,1.0476797e-006,0.32577434};
 	};
 };
 binarizationWanted=0;
@@ -548,11 +548,11 @@ class Mission
 		resistanceEast=1;
 		timeOfChanges=1800.0002;
 		startWeather=0.21196195;
-		startFog=0.4416863;
+		startFog=0.57080972;
 		startWind=0.1;
 		startWaves=0.1;
 		forecastWeather=0.36868858;
-		forecastFog=0.50416541;
+		forecastFog=0.61662757;
 		forecastWind=0.1;
 		forecastWaves=0.1;
 		forecastLightnings=0.1;
@@ -568,7 +568,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=179;
+		items=178;
 		class Item0
 		{
 			dataType="Object";
@@ -2464,8 +2464,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={22984.791,7.0654001,18494.037};
-				angles[]={0,3.591439,0};
+				position[]={22984.789,7.0654001,18494.037};
+				angles[]={0,3.5914338,0};
 			};
 			side="Empty";
 			flags=5;
@@ -5687,16 +5687,17 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={22990.416,4.2936168,18497.924};
-				angles[]={0,2.0420141,0};
+				position[]={22990.416,4.293529,18497.924};
+				angles[]={0,2.0420177,0};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
+				name="apaches";
 			};
 			id=667;
 			type="Box_AAF_Equip_F";
+			atlOffset=0.72200012;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -17168,27 +17169,6 @@ class Mission
 		};
 		class Item175
 		{
-			dataType="Trigger";
-			position[]={22983.275,3.1900001,18494.496};
-			angle=5.1369047;
-			class Attributes
-			{
-				name="cuartel";
-				condition="call{this}";
-				onActivation="call{nul = [] execVM ""scripts\apaches.sqf""; hint ""Activado"";}";
-				onDeactivation="call{player removeaction addActionID; hint ""Desactivado"";}";
-				sizeA=7;
-				sizeB=8;
-				sizeC=7;
-				repeatable=1;
-				activationBy="ANYPLAYER";
-				isRectangle=1;
-			};
-			id=958;
-			type="EmptyDetectorAreaR50";
-		};
-		class Item176
-		{
 			dataType="Marker";
 			position[]={22986.242,3.1900001,18504.904};
 			name="impares";
@@ -17201,7 +17181,7 @@ class Mission
 			angle=40.067989;
 			id=959;
 		};
-		class Item177
+		class Item176
 		{
 			dataType="Marker";
 			position[]={22986.242,3.1900001,18504.904};
@@ -17215,7 +17195,7 @@ class Mission
 			angle=40.067989;
 			id=960;
 		};
-		class Item178
+		class Item177
 		{
 			dataType="Marker";
 			position[]={22986.242,3.1900001,18504.904};

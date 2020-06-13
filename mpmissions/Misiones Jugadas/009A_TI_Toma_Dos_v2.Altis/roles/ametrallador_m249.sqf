@@ -13,26 +13,28 @@ if (!local _unit) exitWith {};
 _unit addBackpack _back;
 _unit addHeadgear _helmet;
 
-_unit addWeapon "rhs_weap_m240B";
-_unit addPrimaryWeaponItem "rhsusf_acc_ARDEC_M240";
+_unit addWeapon "rhs_weap_m249_pip_S_vfg3";
+_unit addPrimaryWeaponItem "rhsusf_acc_SF3P556";
+_unit addPrimaryWeaponItem "rhsusf_acc_anpeq15side_bk";
 _unit addPrimaryWeaponItem "rhsusf_acc_ACOG_RMR_3d";
-_unit addPrimaryWeaponItem "rhsusf_100Rnd_762x51";
-_unit addWeapon "rhsusf_weap_glock17g4";
-_unit addHandgunItem "rhsusf_mag_17Rnd_9x19_JHP";
+_unit addPrimaryWeaponItem "rhsusf_200Rnd_556x45_box";
+_unit addPrimaryWeaponItem "rhsusf_acc_kac_grip_saw_bipod";
+_unit addWeapon "hgun_ACPC2_F";
+_unit addHandgunItem "9Rnd_45ACP_Mag";
 
 for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_epinephrine";};
+_unit addItemToUniform "ACE_MapTools";
 for "_i" from 1 to 4 do {_unit addItemToUniform "ACE_morphine";};
 _unit addItemToUniform "ACE_EntrenchingTool";
 for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
-for "_i" from 1 to 2 do {_unit addItemToUniform "adv_aceSplint_splint";};
-for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
-for "_i" from 1 to 10 do {_unit addItemToUniform "ACE_elasticBandage";};
 _unit addItemToUniform "ACE_EarPlugs";
-for "_i" from 1 to 10 do {_unit addItemToUniform "ACE_packingBandage";};
-for "_i" from 1 to 4 do {_unit addItemToVest "rhsusf_100Rnd_762x51_m62_tracer";};
-for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellBlue";};
-for "_i" from 1 to 8 do {_unit addItemToBackpack "rhsusf_100Rnd_762x51_m62_tracer";};
-for "_i" from 1 to 2 do {_unit addItemToBackpack "SmokeShellBlue";};
+for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
+for "_i" from 1 to 9 do {_unit addItemToUniform "ACE_packingBandage";};
+for "_i" from 1 to 10 do {_unit addItemToUniform "ACE_elasticBandage";};
+for "_i" from 1 to 2 do {_unit addItemToUniform "adv_aceSplint_splint";};
+for "_i" from 1 to 3 do {_unit addItemToVest "rhsusf_200Rnd_556x45_M855_mixed_soft_pouch_coyote";};
+_unit addItemToBackpack "SmokeShellBlue";
+for "_i" from 1 to 6 do {_unit addItemToBackpack "rhsusf_200Rnd_556x45_M855_mixed_soft_pouch_coyote";};
 
 _unit linkItem "ItemMap";
 _unit linkItem "ItemCompass";
@@ -42,3 +44,4 @@ _unit linkItem "ACE_Altimeter";
                           Realizado por |ArgA|Ignacio
 						  Rol por       |ArgA|Maxi|Cbo
 *******************************************************************************/
+_unit action ["SwitchWeapon", _unit, _unit, 100];

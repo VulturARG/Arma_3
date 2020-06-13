@@ -19,4 +19,4 @@ _luces = [Luz_1,Luz_2,Luz_3,Luz_4,Luz_5,Luz_6,Luz_7];
 
 // Activo la zona EOS
 //_markers,_waves,_jugadores,_angle
-[["Traza_Italiana"],2,_Nro_Jugadores,360] execVM "eos\OpenMe.sqf";
+[["Traza_Italiana"],10,_Nro_Jugadores,360] execVM "eos\OpenMe.sqf";
