@@ -33,6 +33,7 @@ if (!isServer) exitWith {};
 		for "_x" from 1 to _grpSize do {
 			_unit=_cargoPool select (floor(random(count _cargoPool)));
 			_unit=_unit createUnit [GETPOS _vehicle, _grp];
+			_unit addeventhandler ["Killed", {_this execVM "scripts\remove_dead.sqf"}];
 		};
 
 		{

@@ -86,7 +86,7 @@ if (_pause > 0 and !_initialLaunch) then {
 	_inconcientes = allUnits select {_x getVariable "ACE_isUnconscious" isEqualTo true && !isPlayer _x && (side _x == _side)};
 	if (_debugLog) then {[[_mkr,"Wave", _waves,"Inconscientes",count _inconcientes,_side]] call EOS_VUL_Debug;};
 	{
-		_x setDamage 1;
+		deletevehicle _x;
 	} forEach _inconcientes;
 	if (_debugLog) then {
 		_inconcientes = allUnits select {_x getVariable "ACE_isUnconscious" isEqualTo true && !isPlayer _x && (side _x == _side)};
@@ -98,7 +98,7 @@ if (_pause > 0 and !_initialLaunch) then {
 	if (_debugLog) then {[[_mkr,"Wave", _waves,"IAs>950",count _enemigos,_side]] call EOS_VUL_Debug;};
 	{ 
 		if (!(isPlayer _x))then { 
-			_x setDamage 1 
+			deletevehicle _x; 
 		} 
 	}foreach _enemigos;
 	if (_debugLog) then {
@@ -384,7 +384,7 @@ if (_waves >= 1) then {
 	_inconcientes = allUnits select {_x getVariable "ACE_isUnconscious" isEqualTo true && !isPlayer _x && (side _x == _side)};
 	if (_debugLog) then {[[_mkr,"Wave", _waves,"Inconscientes_2",count _inconcientes,_side]] call EOS_VUL_Debug;};
 	{
-		_x setDamage 1;
+		deletevehicle _xY;
 	} forEach _inconcientes;
 	if (_debugLog) then {
 		_inconcientes = allUnits select {_x getVariable "ACE_isUnconscious" isEqualTo true && !isPlayer _x && (side _x == _side)};
@@ -396,7 +396,7 @@ if (_waves >= 1) then {
 	if (_debugLog) then {[[_mkr,"Wave", _waves,"IAs>950_2",count _enemigos,_side]] call EOS_VUL_Debug;};
 	{ 
 		if (!(isPlayer _x))then { 
-			_x setDamage 1 
+			deletevehicle _x;
 		} 
 	}foreach _enemigos;
 	if (_debugLog) then {

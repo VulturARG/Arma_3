@@ -7,6 +7,7 @@ _vehicleType=[_faction,_type] call eos_fnc_getunitpool;
 _grp = createGroup _side;
 _vehPositions=[(_vehicleType select 0)] call BIS_fnc_vehicleRoles;
 _vehicle = createVehicle [(_vehicleType select 0), _position, [], 0, _special];
+_vehicle addeventhandler ["Killed", {_this execVM "scripts\remove_dead.sqf"}];
 _vehCrew=[];
 
 {
@@ -14,6 +15,8 @@ _vehCrew=[];
 	_currentPosition=_x;
 	if (_currentPosition select 0 == "driver")then {
 		_unit = _grp createUnit [(_vehicleType select 1), _position, [], 0, "CAN_COLLIDE"];
+		_unit addeventhandler ["Killed", {_this execVM "scripts\remove_dead.sqf"}];
+		//systemChat format ["1º %1",_unit];
 		_unit assignAsDriver _vehicle;
 		_unit moveInDriver _vehicle;
 		_vehCrew set [count _vehCrew,_unit];
@@ -39,6 +42,8 @@ _vehCrew=[];
 		};
 		if (_estado) then {//*/
 			_unit = _grp createUnit [(_vehicleType select 1), _position, [], 0, "CAN_COLLIDE"];
+			_unit addeventhandler ["Killed", {_this execVM "scripts\remove_dead.sqf"}];
+			//systemChat format ["if %1",_unit];
 			_unit assignAsGunner _vehicle;
 			_unit MoveInTurret [_vehicle,_currentPosition select 1];
 			_vehCrew set [count _vehCrew,_unit];
