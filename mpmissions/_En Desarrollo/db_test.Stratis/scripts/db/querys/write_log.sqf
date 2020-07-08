@@ -120,12 +120,12 @@ if (_logType == "info") then {
 	} forEach _unitList;
 };
 
-if (_logType == "disconnected" || _logType == "killed" || _logType == "respawn") then {
-	private _uid = _unit select 0;
-	private _name = _unit select 1;
-	_unit = _unit select 2;
+if (_logType == "disconnected") then {
+	//private _uid = _unit select 0;
+	//private _name = _unit select 1;
+	//_unit = _unit select 2;
 	// TODO verificar si la instrucción de abajo funciona al tener el _unit de los dos lados de la igualdad
-	//_unit params["_uid","_name","_unit"];
+	_unit params["_uid","_name","_unit"];
 
 	_query = "INSERT INTO log (`log_type_id`, `player_name`, `player_uid`, `player_state_id`, `mission_name`, `mission_time`) VALUES";
 
@@ -134,6 +134,25 @@ if (_logType == "disconnected" || _logType == "killed" || _logType == "respawn")
 		_logType,
 		_name,
 		_uid,
+		_unit call MANDI_fnc_getState,
+		missionName,
+		time
+	];
+
+	_query = [_query, _values] joinString " ";
+
+	_query execVM "scripts\db\connect_db.sqf";
+};
+
+if (_logType == "killed" || _logType == "respawn") then {
+
+	_query = "INSERT INTO log (`log_type_id`, `player_name`, `player_uid`, `player_state_id`, `mission_name`, `mission_time`) VALUES";
+
+	_values = format [
+		"((SELECT id from log_type WHERE name = '%1'), '%2', '%3', (SELECT id from player_state WHERE name = '%4'), '%5', %6);",
+		_logType,
+		name _unit,
+		getPlayerUID _unit,
 		_unit call MANDI_fnc_getState,
 		missionName,
 		time
