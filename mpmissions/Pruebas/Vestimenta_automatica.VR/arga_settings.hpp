@@ -20,6 +20,8 @@ NOMBRE_CAMPANIA = "";
 INTRO = 2;                              // Intros: 1 y 2. Para desactivar: 0
 MAX_DIST_VISION = 4000;
 DESACTIVAR_EQUIPAMIENTO_PERSONALIZADO = 1; // Equipamiento guardado en arsenal virtual
+PERMITIR_COMPUTADORA_ARTILLERIA = true;  // Habilita computadora artilleria poner true. Para que no aparezca poner false
+PERMITIR_ROL_AUTOMATICO = true;
 
 //EQUIPAMIENTO
 // Camuflajes disponibles:          Tipos disponibles:
@@ -40,9 +42,6 @@ CASCO_PERSONALIZADO = "";
 CHALECO_PERSONALIZADO = "";
 MOCHILA_PERSONALIZADO = "";
 MOCHILA_CHICA_PERSONALIZADO = "";
-STAND_MEDICO = "standMedico";
-STAND_INGENIERO = "standIngeniero";
-STAND_PILOTO = "standPiloto";
 
 //BRIEFING
 // Cada elemento del array es un parrafo
@@ -77,5 +76,3 @@ COMMANDING = 0.75; 		//liderazgo
 /*******************************************************************************
                          Realizado por |ArgA|Vultur|Cbo¹
 *******************************************************************************/
-PERMITIR_COMPUTADORA_ARTILLERIA = true;  // Habilita computadora artilleria poner true. Para que no aparezca poner false
-PERMITIR_ROL_AUTOMATICO = true;

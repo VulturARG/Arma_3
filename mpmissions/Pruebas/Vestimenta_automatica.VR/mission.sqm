@@ -5,7 +5,7 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=1;
+	toggles=513;
 	class ItemIDProvider
 	{
 		nextID=4;
@@ -13,9 +13,9 @@ class EditorData
 	class Camera
 	{
 		pos[]={3494.6672,15,1250.1509};
-		dir[]={0.45734489,-0.17364819,0.87217081};
-		up[]={0.080642253,0.98480779,0.15378727};
-		aside[]={0.88562548,7.4505806e-009,-0.46440017};
+		dir[]={0.45734489,-0.17364821,0.87217081};
+		up[]={0.080642261,0.98480779,0.15378729};
+		aside[]={0.88562548,7.4505806e-009,-0.4644002};
 	};
 };
 binarizationWanted=0;
@@ -126,6 +126,7 @@ class Mission
 					class Attributes
 					{
 						description="Granadero";
+						isPlayer=1;
 						isPlayable=1;
 						class Inventory
 						{

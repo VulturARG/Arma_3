@@ -1,5 +1,6 @@
 /*******************************************************************************
                           Realizado por |ArgA|Ignacio
+                          Realizado por |ArgA|Vultur|Cbo¹
 *******************************************************************************/
 
 private _distanciaVision = getMissionConfigValue ["MAX_DIST_VISION", 4000];
@@ -13,15 +14,10 @@ private _enableAutomaticRole = getMissionConfigValue ["PERMITIR_ROL_AUTOMATICO",
 private _rol = "";
 
 if (hasInterface) then {
+  MANDI_ENABLE_DIST = true;
   [_distanciaVision, 800] execVM "scripts\view_distance.sqf";
-  [] execVM "scripts\check_view.sqf";
-  waitUntil {time > 0};
-  if (_intro == 1) then {
-    [] execVM "scripts\intro.sqf";
-  };
-  if (_intro == 2) then {
-    [] execVM "scripts\intro_2.sqf";
-  };
+  execVM "scripts\check_view.sqf";
+  [_intro] execVM "scripts\init_intro.sqf";
   removeGoggles player; //arga_rhs_pm_negro
   if(_initialGoggles != "") then {
     player addGoggles _initialGoggles;
@@ -30,28 +26,7 @@ if (hasInterface) then {
   private _ing = if (_isMedic > 0) then { "arga_ing_medico" } else { "arga_ing_arga" };
   [player, _ing] call BIS_fnc_setUnitInsignia;
 };
-
-player disableAI "MOVE";
-player action ["SwitchWeapon", player, player, 100];
-player setUnitPos "middle";
-enableEngineArtillery (_enableArtilleryComputer == "true");
-
-// Deshabilita las opciones de Cargar y Guardar Equipo en el arsenal
-if(_disableCustomLoadout == 1)then{
-  [missionNamespace, "arsenalOpened", {
-    disableSerialization;
-    params ["_display"];
-    _display displayAddEventHandler ["keydown", "_this select 3"];
-    {
-      (_display displayCtrl _x) ctrlShow false
-    } forEach [44151, 44150, 44146, 44147, 44148, 44149, 44346];
-  }] call BIS_fnc_addScriptedEventHandler;
-};
-
-/*******************************************************************************
-                          Realizado por |ArgA|Vultur|Cbo¹
-*******************************************************************************/
-[format["%1",_enableAutomaticRole]] call BIS_fnc_logFormat;
+systemChat format["%1",_rol];
 if ((_enableAutomaticRole == "true")) then {
   switch (toLower roleDescription player) do {
     case "cacique @comandancia": { _rol = "roles\capitan.sqf"; };
@@ -61,7 +36,7 @@ if ((_enableAutomaticRole == "true")) then {
     case "matrero": { _rol = "roles\tirador_fal.sqf"; };
     case "líder @cóndor": { _rol = "roles\lider_peloton.sqf"; };
     case "líder @yaguar": { _rol = "roles\lider_peloton.sqf"; };
-    case "líder": { _rol = "roles\tirador_mk11.sqf"; };
+    case "líder": { _rol = "roles\lider_peloton.sqf"; };
     case "ametrallador": { _rol = "roles\ametrallador_m240.sqf"; };
     case "ametrallador m240": { _rol = "roles\ametrallador_m240.sqf"; };
     case "ametrallador m249": { _rol = "roles\ametrallador_m249.sqf"; };
@@ -82,7 +57,30 @@ if ((_enableAutomaticRole == "true")) then {
     case "fusilero": {_rol = "roles\fusilero.sqf"; };
     case "fusilero ra": { _rol = "roles\fusilero_ra.sqf"; };
 
-    default {_rol = "roles\fusilero.sqf"; };
+    //default { player execVM "roles\fusilero.sqf"; };
   };
-  [_rol] execVM "scripts\init_roles.sqf"
+  
+  [objNull, _rol] execVM "scripts\init_roles.sqf"
 };
+
+player disableAI "MOVE";
+player action ["SwitchWeapon", player, player, 100];
+player setUnitPos "middle";
+enableEngineArtillery (_enableArtilleryComputer == "true");
+
+// Deshabilita las opciones de Cargar y Guardar Equipo en el arsenal
+if(_disableCustomLoadout == 1)then{
+  [missionNamespace, "arsenalOpened", {
+    disableSerialization;
+    params ["_display"];
+    _display displayAddEventHandler ["keydown", "_this select 3"];
+    {
+      (_display displayCtrl _x) ctrlShow false
+    } forEach [44151, 44150, 44146, 44147, 44148, 44149, 44346];
+  }] call BIS_fnc_addScriptedEventHandler;
+};
+
+/*******************************************************************************
+                          Realizado por |ArgA|Ignacio
+                          Realizado por |ArgA|Vultur|Cbo¹
+*******************************************************************************/

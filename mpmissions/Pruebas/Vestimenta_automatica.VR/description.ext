@@ -26,11 +26,20 @@ class CfgFunctions {
       class makeInfo {
         file = "functions\fnc_makeInfo.sqf";
       };
-      class posicion {
-        file = "functions\fnc_posicion.sqf";
-      };
       class clearEquipment {
         file = "functions\fnc_clearEquipment.sqf";
+      };
+      class getObjects_server {
+        file = "functions\fnc_getObjects_server.sqf";
+      };
+      class displayObject {
+        file = "functions\fnc_displayObject.sqf";
+      };
+      class setStand {
+        file = "functions\fnc_setStand.sqf";
+      };
+      class getRol {
+        file = "functions\fnc_getRol.sqf";
       };
     };
   };

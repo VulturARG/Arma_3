@@ -1,25 +1,24 @@
-if (!isServer) exitWith {};
-private ["_cargoPool","_emptySeats","_vehicle","_debug","_grp","_grpSize"];
+params ["_vehicle","_grpSize","_grp","_faction","_cargoType"];
 
-	_vehicle=(_this select 0);
-	_grpSize=(_this select 1);
-	_grp=(_this select 2);
-	_faction=(_this select 3);
-	_cargoType=(_this select 4);
+if (!isServer) exitWith {};
+	
+	private ["_cargoPool","_emptySeats","_debug"];
+
 	_debug=false;
 
 	_cargoPool=[_faction,_cargoType] call eos_fnc_getunitpool;
-	_side=side (leader _grp);
+	//_side=side (leader _grp);
 
-//systemChat format ["%1, %2, %3, %4, %5, %6", _vehicle, _grpSize, _grp, _faction, _cargoType, _debug];
+//systemChat format ["%1, %2, %3, %4, %5", _vehicle, _grpSize, _grp, _faction, _cargoType];
+//[format ["%1, %2, %3, %4, %5", _vehicle, _grpSize, _grp, _faction, _cargoType]]  call BIS_fnc_logFormat;
+
 
 // FILL EMPTY SEATS
 	_emptySeats=_vehicle emptyPositions "cargo";
 	if (_debug) then {hint format ["%1",_emptySeats];};
 
 //GET MIN MAX GROUP
-	_grpMin=_grpSize select 0;
-	_grpMax=_grpSize select 1;
+	_grpSize params ["_grpMin","_grpMax"];
 	_d=_grpMax-_grpMin;
 	_r=floor(random _d);
 	_grpSize=_r+_grpMin;
@@ -27,7 +26,7 @@ private ["_cargoPool","_emptySeats","_vehicle","_debug","_grp","_grpSize"];
 // IF VEHICLE HAS SEATS
 	if (_emptySeats > 0) then {
 
-// LIMIT SEATS TO FILL TO GROUP SIZE
+		// LIMIT SEATS TO FILL TO GROUP SIZE
 		if 	(_grpSize > _emptySeats) then {_grpSize = _emptySeats};
 		if (_debug) then {hint format ["Seats Filled : %1",_grpSize];};
 

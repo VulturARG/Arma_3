@@ -3,11 +3,11 @@
 *******************************************************************************/
 params ["_group","_marker",["_destination","center"],["_wpType","SAD"],["_wpSpeed","LIMITED"],["_wpBehaviourVehicle","SAFE"],["_wpBehaviourUnit","AWARE"],["_wpFormation","NO CHANGE"],["_wpCombatMode","RED"]];
     
-    //systemChat format ["grupo: %1",_group];
-    _mPos = markerpos _marker;
-    _mkrX = getMarkerSize _marker select 0;
-    _mkrY = getMarkerSize _marker select 1;
-    _mkrSize = 0;
+  private ["_mPos","_mkrX","_mkrY","_mkrSize","_pos","_getToMarker"];
+  
+  _mPos = markerpos _marker;
+  getMarkerSize _marker params ["_mkrX","_mkrY"];
+  _mkrSize = 0;
 	_pos = _mPos;
 	if (_destination=="random") then {
 		if (_mkrX > _mkrY) then {
@@ -21,13 +21,14 @@ params ["_group","_marker",["_destination","center"],["_wpType","SAD"],["_wpSpee
 		};
 	};
     
-    _getToMarker = _group addWaypoint [_pos, 0];
-    _getToMarker setWaypointType _wpType;
-    _getToMarker setWaypointSpeed _wpSpeed;
-    if (vehicle (leader _group) != (leader _group)) then {
-      _getToMarker setWaypointBehaviour _wpBehaviourVehicle;
-    } else {
-      _getToMarker setWaypointBehaviour _wpBehaviourUnit;
-    };
-    _getToMarker setWaypointFormation _wpFormation;
-    _getToMarker setWaypointCombatMode _wpCombatMode;
+  _getToMarker = _group addWaypoint [_pos, 0];
+  _getToMarker setWaypointType _wpType;
+  _getToMarker setWaypointSpeed _wpSpeed;
+  if (vehicle (leader _group) != (leader _group)) then {
+    _getToMarker setWaypointBehaviour _wpBehaviourVehicle;
+  } else {
+    _getToMarker setWaypointBehaviour _wpBehaviourUnit;
+  };
+  _getToMarker setWaypointFormation _wpFormation;
+  _getToMarker setWaypointCombatMode _wpCombatMode;
+  _getToMarker

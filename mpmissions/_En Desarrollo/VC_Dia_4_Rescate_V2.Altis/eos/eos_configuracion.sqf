@@ -68,7 +68,7 @@ EOS_KILLCOUNTER=FALSE;		// Counts killed units
 //PLAYER SIDECHAT (format ["Marker: %1, Angulo: %2, Nº Jug.: %3, Oleadas: %4",_marker,_angle,_jugadores,_waves]);
 //_jugadores  = { alive _x} count  allPlayers;
 //_jugadores = 27;
-hint format["%1",_jugadores];
+//hint format["%1",_jugadores];
 
 //_waves = 1;// Borrar
 private _EOS_FACCION = EAST;
@@ -87,14 +87,14 @@ null=
 
 null = [["patrullas_H"],[0,2,100],[10,1,100],[0,0,0],[0,0],[0],[0,0,00],[5,0,200,_EOS_FACCION,false]] call EOS_Spawn;
 null = [["Hospital"],[10,0,100],[0,1,100],[0,0,0],[0,0],[0],[0,0,00],[5,0,200,_EOS_FACCION,false]] call EOS_Spawn;
-null = [["ZM_1","ZM_2","ZM_3","ZM_4","ZM_5","ZM_6","ZM_7","ZM_8"],[4,3,500],[0,2,500],[0,1500],[0,1,1500],[0,3,1500,600],[0,3,300,5000],[5,0,_EOS_FACCION,FALSE,FALSE],[120,_waves,300,FALSE,FALSE],[_angle]] call Bastion_Spawn;
+null = [["ZM_1","ZM_2","ZM_3","ZM_4","ZM_5","ZM_6","ZM_7","ZM_8"],[4,3,500],[0,2,500],[0,1500],[0,1,1500],[0,3,1500,600],[0,3,300,5000],[5,1,_EOS_FACCION,FALSE,FALSE],[120,_waves,300,FALSE,FALSE],_angle] call Bastion_Spawn;
 
 if (_jugadores <= 10) then {
   null = [[_marker],[0,2,100],[10,2,100],[0,0,0],[0,0],[0],[0,0,00],[5,0,300,_EOS_FACCION,false]] call EOS_Spawn;
   //PLAYER SIDECHAT (format ["Marker %1",_marker]);
   ZSU addEventHandler ["Killed", {
     null = [["ZM_1","ZM_2","ZM_3","ZM_4","ZM_5","ZM_6"],[["patrullas_H",50,"Hospital"],["Hospital",0,""]],EAST] call Bastion_Redirect_WP;//
-    //null = [["Hospital"],[5,2,150],[0,2,1000],[0,1500],[0,1,1500],[0,3,1500,600],[0,3,300,5000],[5,0,EAST,FALSE,FALSE],[120,6,600,FALSE,FALSE],[360]] call Bastion_Spawn;
+    //null = [["Hospital"],[5,2,150],[0,2,1000],[0,1500],[0,1,1500],[0,3,1500,600],[0,3,300,5000],[5,1,EAST,FALSE,FALSE],[120,6,600,FALSE,FALSE],[360]] call Bastion_Spawn;
   }];
 
 };// */

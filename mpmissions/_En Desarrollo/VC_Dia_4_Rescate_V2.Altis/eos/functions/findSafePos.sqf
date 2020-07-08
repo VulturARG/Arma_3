@@ -1,7 +1,7 @@
-_mrk=(_this select 0);
-_radveh	=(_this select 1);
+params ["_mrk","_radveh"];
 
 _pos = [_mkr,true] call SHK_pos;
+// TODO Maff modificacion
 //_pos = [[_mkr],[]] call BIS_fnc_randomPos; //	Maff.
 
 for "_counter" from 0 to 20 do {

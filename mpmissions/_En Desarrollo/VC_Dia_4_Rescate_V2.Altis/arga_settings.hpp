@@ -75,5 +75,6 @@ COMMANDING = 0.75; 		//liderazgo
 ////////////////////////////////////////////////////////////////////////////////
 
 /*******************************************************************************
-                          Realizado por |ArgA|Ignacio
+                         Realizado por |ArgA|Vultur|Cbo¹
 *******************************************************************************/
+PERMITIR_COMPUTADORA_ARTILLERIA = true;  // Habilita computadora artilleria poner true. Para que no aparezca poner false

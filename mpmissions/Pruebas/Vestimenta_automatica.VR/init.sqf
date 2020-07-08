@@ -4,12 +4,6 @@
 
 private _disableGroupIA = getMissionConfigValue ["DESACTIVAR_IA_DE_GRUPO", 1];
 private _disableBluforIA = getMissionConfigValue ["DESACTIVAR_TODO_BLUFOR", 0];
-private _standMedico = getMissionConfigValue ["STAND_MEDICO", objNull];
-private _standIngeniero = getMissionConfigValue ["STAND_INGENIERO", objNull];
-private _standPiloto = getMissionConfigValue ["STAND_PILOTO", objNull];
-_standMedico = missionNamespace getVariable [_standMedico, objNull];
-_standIngeniero = missionNamespace getVariable [_standIngeniero, objNull];
-_standPiloto = missionNamespace getVariable [_standPiloto, objNull];
 
 setTerrainGrid 25;
 
@@ -20,8 +14,6 @@ setTerrainGrid 25;
 if(! isNil "roles") then {
   [roles] execVM "scripts\init_roles.sqf";
 };
-
-[_standMedico, _standIngeniero, _standPiloto] execVM "scripts\init_stands.sqf";
 
 [] execVM "scripts\init_vcom_driving.sqf";
 
