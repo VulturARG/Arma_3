@@ -1,5 +1,5 @@
 /*******************************************************************************
-                          Realizado por |ArgA|Ignacio
+                          Realizado por |ArgA|MIV
 *******************************************************************************/
 
 private _customSkillsIA = getMissionConfigValue ["DIFICULTAD_IA_PERSONALIZADA", 1];
@@ -14,9 +14,9 @@ private _commanding = getMissionConfigValue ["COMMANDING", 0.75];
 private _disableGroupIA = getMissionConfigValue ["DESACTIVAR_IA_DE_GRUPO", 1];
 private _disableBluforIA = getMissionConfigValue ["DESACTIVAR_TODO_BLUFOR", 0];
 
-if(_customSkillsIA == 1)then{
+if(_customSkillsIA == 1) then {
     {
-        if (!(isPlayer  _x))then
+        if (!(isPlayer  _x)) then
         {
             (group _x) setVariable ["VCM_Skilldisable",true];
             _x setSkill ["aimingAccuracy", _aimingAccuracy];
@@ -33,25 +33,29 @@ if(_customSkillsIA == 1)then{
 
 // Deshabilita el movimiento de la IA para todas las IA que 
 // esten en el mismo grupo que un jugador humano
-if(_disableGroupIA == 1)then{
+if (_disableGroupIA == 1) then {
     {
         private _group = (group _x);
         {
+          if (!isPlayer _x) then {
             _x disableAI "MOVE";
             _x action ["SwitchWeapon", _x, _x, 100];
-            _x setUnitPos "middle";
+            // _x enableSimulationGlobal false;
+            // _x hideObjectGlobal true;
+          };
         } forEach units _group;     
     } forEach allPlayers;
 };
 
-if(_disableBluforIA == 1) then {
+if (_disableBluforIA == 1) then {
   {
-    if(side _x == west) then {
+    if(side _x == west && !isPlayer _x) then {
       _x disableAI "MOVE";
       _x action ["SwitchWeapon", _x, _x, 100];
-      _x setUnitPos "middle";
+      // _x enableSimulationGlobal false;
+      // _x hideObjectGlobal true;
     };
-  }foreach allUnits;
+  } foreach allUnits;
 };
 
 execVM "scripts\init_objs_server.sqf";
@@ -61,9 +65,10 @@ execVM "scripts\init_vcom_driving.sqf";
 execVM "scripts\smart_tank\smart.sqf";
 
 if (isDedicated) then {
+  execVM "scripts\spawn_fnc.sqf";
   execVM "scripts\db\init_log_system.sqf";
 };
 
 /*******************************************************************************
-                          Realizado por |ArgA|Ignacio
+                          Realizado por |ArgA|MIV
 *******************************************************************************/

@@ -1,6 +1,7 @@
 /*******************************************************************************
                           Realizado por |ArgA|MIV
 *******************************************************************************/
+if (!isDedicated) exitWith { };
 
 // Llamamos a la db
 call compile preprocessFileLineNumbers "scripts\db\source\oo_extdb3.sqf";

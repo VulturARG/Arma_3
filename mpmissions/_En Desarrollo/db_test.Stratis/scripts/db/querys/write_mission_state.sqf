@@ -4,6 +4,8 @@
 
 params [["_missionState", "mission_end"]];
 
+if (!isDedicated) exitWith { };
+
 private ["_query", "_values"];
 
 _query = "INSERT INTO log (`log_type_id`, `mission_name`, `mission_time`) VALUES";

@@ -4,6 +4,8 @@
 
 params [["_units", allPlayers]];
 
+if (!isDedicated) exitWith { };
+
 private ["_query", "_description", "_newValue"];
 private _values =  " ";
 _query = "INSERT INTO role_alternative_name (`name`) VALUES";
