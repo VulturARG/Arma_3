@@ -79,5 +79,11 @@ player action ["SwitchWeapon", player, player, 100];
 // player hideObjectGlobal false;
 
 /*******************************************************************************
-                             Realizado por |ArgA|MIV
+                          Realizado por |ArgA|Vultur|Cbo¹
 *******************************************************************************/
+// Quito el DARG y el microDARG del inventario de los jugadores
+//player removeItem "ACE_DAGR";
+//player removeItem "ACE_microDAGR";
+
+// GPS en Mapa
+nul = [] execVM 'vultur\GPS_II.sqf';

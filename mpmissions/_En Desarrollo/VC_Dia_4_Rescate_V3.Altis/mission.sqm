@@ -8,7 +8,7 @@ class EditorData
 	toggles=549;
 	class ItemIDProvider
 	{
-		nextID=3720;
+		nextID=3725;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={20269,77.636536,9656.4766};
-		dir[]={0,-0.70710683,0.70710671};
-		up[]={0,0.70710665,0.70710677};
-		aside[]={0.99999994,0,-0};
+		pos[]={16492.287,33.799046,12791.273};
+		dir[]={0.055462461,-0.57502609,0.81625646};
+		up[]={0.038981602,0.81813407,0.57370436};
+		aside[]={0.99770218,-3.2814569e-009,-0.067791186};
 	};
 };
 binarizationWanted=0;
@@ -22110,7 +22110,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=568;
+		items=573;
 		class Item0
 		{
 			dataType="Marker";
@@ -60681,7 +60681,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={16489.857,19.810459,12803.632};
+						position[]={16489.857,19.810463,12803.632};
 						angles[]={0,2.2728202,0};
 					};
 					side="West";
@@ -60689,7 +60689,7 @@ class Mission
 					class Attributes
 					{
 						init="call{this disableAI ""move"";  this setUnitPos ""Middle"";}";
-						description="Granadero-1";
+						description="Granadero #NC";
 						isPlayable=1;
 						class Inventory
 						{
@@ -60869,7 +60869,7 @@ class Mission
 					};
 					id=3684;
 					type="rhsusf_usmc_marpat_d_rifleman_light";
-					atlOffset=3.9816437;
+					atlOffset=3.9816456;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -61161,7 +61161,7 @@ class Mission
 				init="call{{_x addPrimaryWeaponItem ""acc_flashlight"";}foreach units this}";
 			};
 			id=3683;
-			atlOffset=3.9816437;
+			atlOffset=3.9816456;
 		};
 		class Item560
 		{
@@ -63134,6 +63134,92 @@ class Mission
 				};
 				nAttributes=1;
 			};
+		};
+		class Item568
+		{
+			dataType="Trigger";
+			position[]={17320,17.43259,13034};
+			angle=4.1161842;
+			class Attributes
+			{
+				condition="call{this}";
+				onActivation="call{nul = [] execVM ""vultur\detectado.sqf"";}";
+				sizeA=1700;
+				sizeB=1700;
+				activationBy="ANYPLAYER";
+			};
+			id=3720;
+			type="EmptyDetector";
+			atlOffset=1.9073486e-006;
+		};
+		class Item569
+		{
+			dataType="Trigger";
+			position[]={19566.5,93.112656,10322.5};
+			angle=2.2835886;
+			class Attributes
+			{
+				condition="call{this}";
+				onActivation="call{nul = [] execVM ""vultur\detectado.sqf"";}";
+				sizeA=350;
+				sizeB=150;
+				activationBy="ANYPLAYER";
+				isRectangle=1;
+			};
+			id=3721;
+			type="EmptyDetector";
+			atlOffset=7.6293945e-006;
+		};
+		class Item570
+		{
+			dataType="Trigger";
+			position[]={19822,77.995323,9318.5};
+			angle=3.8543851;
+			class Attributes
+			{
+				condition="call{this}";
+				onActivation="call{nul = [] execVM ""vultur\detectado.sqf"";}";
+				sizeA=1000;
+				sizeB=250;
+				activationBy="ANYPLAYER";
+				isRectangle=1;
+			};
+			id=3722;
+			type="EmptyDetector";
+		};
+		class Item571
+		{
+			dataType="Trigger";
+			position[]={20844,65.451866,9217.5};
+			angle=2.2835886;
+			class Attributes
+			{
+				condition="call{this}";
+				onActivation="call{nul = [] execVM ""vultur\detectado.sqf"";}";
+				sizeA=350;
+				sizeB=150;
+				activationBy="ANYPLAYER";
+				isRectangle=1;
+			};
+			id=3723;
+			type="EmptyDetector";
+		};
+		class Item572
+		{
+			dataType="Trigger";
+			position[]={20603.5,34.683258,10205};
+			angle=3.8543851;
+			class Attributes
+			{
+				condition="call{this}";
+				onActivation="call{nul = [] execVM ""vultur\detectado.sqf"";}";
+				sizeA=1000;
+				sizeB=250;
+				activationBy="ANYPLAYER";
+				isRectangle=1;
+			};
+			id=3724;
+			type="EmptyDetector";
 		};
 	};
 	class Connections

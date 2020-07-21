@@ -2,7 +2,7 @@
                           Realizado por |ArgA|Ignacio
 *******************************************************************************/
 
-#define NAME "Regreso a Casa. Día 4. Rescate"   // Colocar nombre de mision
+#define NAME "Regreso a Casa. D4. Rescate"   // Colocar nombre de mision
 #define IMAGE "imgs\portada.jpg"                // Colocar nombre y extension de la imagen de portada, ej "imgs\portada.jpg"
 #define DESCRIPTION "Toco y me voy..."          // Colocar descripcion de la mision entre las comillas
 

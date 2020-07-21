@@ -69,5 +69,7 @@ execVM "scripts\smart_tank\smart.sqf";
 execVM "scripts\db\init_log_system.sqf";
 
 /*******************************************************************************
-                          Realizado por |ArgA|Ignacio
+                          Realizado por |ArgA|Vultur|Cbo¹
 *******************************************************************************/
+
+0 = [] execVM "vultur\inicio_ataque.sqf";
