@@ -4,14 +4,14 @@
 	deleteVehicle _projectile;
 }];*/
 
-//[disparador, 10] execVM "scripts\artySim.sqf";
+[disparador, 10] execVM "scripts\artySim.sqf";
 
 private _minX = 0;
 private _minY = 0;
 private _maxX = 0;
 private _maxY = 0;
 private _liderPos = []:
-{
+/*{
 	
 } forEach allGroups;
 /*{

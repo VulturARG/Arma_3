@@ -60869,7 +60869,7 @@ class Mission
 					};
 					id=3684;
 					type="rhsusf_usmc_marpat_d_rifleman_light";
-					atlOffset=3.9816456;
+					atlOffset=3.9816475;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -61161,7 +61161,7 @@ class Mission
 				init="call{{_x addPrimaryWeaponItem ""acc_flashlight"";}foreach units this}";
 			};
 			id=3683;
-			atlOffset=3.9816456;
+			atlOffset=3.9816475;
 		};
 		class Item560
 		{
@@ -63139,7 +63139,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={17320,17.43259,13034};
-			angle=4.1161842;
+			angle=4.1161838;
 			class Attributes
 			{
 				condition="call{this}";
@@ -63156,7 +63156,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={19566.5,93.112656,10322.5};
-			angle=2.2835886;
+			angle=2.2835879;
 			class Attributes
 			{
 				condition="call{this}";
@@ -63191,7 +63191,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={20844,65.451866,9217.5};
-			angle=2.2835886;
+			angle=2.2835879;
 			class Attributes
 			{
 				condition="call{this}";

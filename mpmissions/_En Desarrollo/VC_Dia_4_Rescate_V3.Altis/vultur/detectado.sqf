@@ -10,7 +10,7 @@ player addEventHandler ["FiredMan",{
 	//TODO ver si pasa algo que la funcion se active mas de una vez
 	if (_weapon != "rhsusf_weap_glock17g4") then {
 	  player setCaptive false;
-	  //systemChat "Si escucharon ese disparo perdimos la cobertura";
+	  systemChat "Si escucharon ese disparo perdimos la cobertura";
 
 	  [] spawn {
   		_radiusPlayerDetected = 50; //Radio de detección en metros
@@ -35,21 +35,21 @@ player addEventHandler ["FiredMan",{
   			  if ((_x knowsAbout player) > 1.4 && !(_playerDetected)) exitWith
   			  {
   				_playerDetected = true;
-  				//systemChat "Algo sabe el enemigo";
+  				systemChat "Algo sabe el enemigo";
   			  };
   			} forEach _listEnemiesNear;
   			_tiempo = diag_tickTime;
   			call {
   			  if (_playerDetected && !(_playerNotified)) exitWith {
     				_timePlayerDetected = diag_tickTime;
-    				//systemChat "Los enemigos sospechan que estamos cerca (>1.4)";
-    				//hint "DETECTADOS";
+    				systemChat "Los enemigos sospechan que estamos cerca (>1.4)";
+    				hint "DETECTADOS";
     				_playerNotified = true;
   			  };
   			  if (_playerDetected && _playerNotified && (_tiempo >= _timePlayerDetected + _detectedTimeLimit)) exitWith {
     				_run = false;
-    				//systemChat "Hemos sido descubiertos. Ya no estamos encubiertos";
-    				//hint "DESCUBIERTOS";
+    				systemChat "Hemos sido descubiertos. Ya no estamos encubiertos";
+    				hint "DESCUBIERTOS";
     				player setCaptive false;
     				stealthStatus = "detected";
     					publicVariable "stealthStatus";
@@ -57,8 +57,8 @@ player addEventHandler ["FiredMan",{
   			  if (!(_playerDetected) && _playerNotified) exitWith {
     				_playerNotified = false;
     				_timePlayerDetected = 0;
-    				//systemChat "SEGUROS";
-    				//hint "SEGUROS";
+    				systemChat "SEGUROS";
+    				hint "SEGUROS";
     				player setCaptive true;
     				_run = false;
   			  };
