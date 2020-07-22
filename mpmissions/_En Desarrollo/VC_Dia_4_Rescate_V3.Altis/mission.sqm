@@ -5,10 +5,10 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=549;
+	toggles=677;
 	class ItemIDProvider
 	{
-		nextID=3725;
+		nextID=3733;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={16492.287,33.799046,12791.273};
-		dir[]={0.055462461,-0.57502609,0.81625646};
-		up[]={0.038981602,0.81813407,0.57370436};
-		aside[]={0.99770218,-3.2814569e-009,-0.067791186};
+		pos[]={20226.322,78.491096,9701.5957};
+		dir[]={0,-0.70710683,0.70710683};
+		up[]={0,0.70710677,0.70710677};
+		aside[]={0.99999994,0,-0};
 	};
 };
 binarizationWanted=0;
@@ -24457,7 +24457,6 @@ class Mission
 					{
 						skill=0.40000001;
 						init="call{this disableAI ""PATH""; }";
-						name="guia";
 					};
 					id=1500;
 					type="rhsusf_usmc_marpat_d_rifleman_m4";
@@ -28375,7 +28374,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={19240.992,51.845398,13013.25};
-						angles[]={0,5.2103496,0};
+						angles[]={0,5.2103491,0};
 					};
 					side="West";
 					flags=5;
@@ -28383,7 +28382,6 @@ class Mission
 					{
 						skill=0.40000001;
 						init="call{this disableAI ""PATH""; }";
-						name="guia_3";
 					};
 					id=2071;
 					type="rhsusf_usmc_marpat_d_rifleman_m4";
@@ -34913,7 +34911,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={14639.741,17.911438,16760.605};
-						angles[]={0,5.2096882,0};
+						angles[]={-0,5.4714875,0};
 					};
 					side="West";
 					flags=6;
@@ -35185,7 +35183,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={14640.817,17.911438,16761.924};
-						angles[]={0,5.2096882,0};
+						angles[]={-0,5.4714875,0};
 					};
 					side="West";
 					flags=4;
@@ -35457,7 +35455,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={14641.696,17.911438,16763.08};
-						angles[]={0,5.4176841,0};
+						angles[]={-0,5.4176841,0};
 					};
 					side="West";
 					flags=4;
@@ -37575,15 +37573,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14642.05,17.911438,16779.242};
-						angles[]={0,2.2728095,0};
+						position[]={14642.05,17.911438,16779.24};
+						angles[]={0,2.2728026,0};
 					};
 					side="West";
 					flags=5;
 					class Attributes
 					{
 						init="call{this disableAI ""move"";  this setUnitPos ""Middle"";}";
-						description="Medico de Combate";
+						description="Médico de Combate";
 						isPlayable=1;
 						class Inventory
 						{
@@ -37890,14 +37888,14 @@ class Mission
 					class PositionInfo
 					{
 						position[]={14640.927,17.911438,16780.262};
-						angles[]={0,2.2728095,0};
+						angles[]={0,2.2728026,0};
 					};
 					side="West";
 					flags=5;
 					class Attributes
 					{
 						init="call{this disableAI ""move"";  this setUnitPos ""Middle"";}";
-						description="Medico de Combate";
+						description="Médico de Combate";
 						isPlayable=1;
 						class Inventory
 						{
@@ -44147,14 +44145,14 @@ class Mission
 					class PositionInfo
 					{
 						position[]={14629.865,17.911438,16765.422};
-						angles[]={0,2.2728095,0};
+						angles[]={0,2.2728026,0};
 					};
 					side="West";
 					flags=5;
 					class Attributes
 					{
 						init="call{this disableAI ""move"";  this setUnitPos ""Middle""; this setVariable [""ace_medical_medicClass"", 2, true];}";
-						description="Medico de Combate";
+						description="Médico de Combate";
 						isPlayable=1;
 						class Inventory
 						{
@@ -44461,14 +44459,14 @@ class Mission
 					class PositionInfo
 					{
 						position[]={14628.74,17.911438,16766.441};
-						angles[]={0,2.2728095,0};
+						angles[]={0,2.2728026,0};
 					};
 					side="West";
 					flags=5;
 					class Attributes
 					{
 						init="call{this disableAI ""move"";  this setUnitPos ""Middle""; this setVariable [""ace_medical_medicClass"", 2, true];}";
-						description="Medico de Combate";
+						description="Médico de Combate";
 						isPlayable=1;
 						class Inventory
 						{
@@ -48674,13 +48672,13 @@ class Mission
 			side="West";
 			class Entities
 			{
-				items=5;
+				items=6;
 				class Item0
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14653.594,17.911438,16779.523};
+						position[]={14654,17.911438,16778.551};
 						angles[]={0,3.8085527,0};
 					};
 					side="West";
@@ -48689,7 +48687,7 @@ class Mission
 					{
 						rank="LIEUTENANT";
 						init="call{this disableAI ""move"";  this setUnitPos ""Middle""; this setVariable [""ACE_GForceCoef"",0.2]; this setVariable [""ACE_IsEngineer"",1,true];}";
-						description="Piloto Ala Fija @Pilotos";
+						description="Piloto@Pilotos";
 						isPlayable=1;
 						class Inventory
 						{
@@ -48957,7 +48955,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14652.283,17.911438,16780.623};
+						position[]={14652.906,17.911438,16779.578};
 						angles[]={0,3.8085527,0};
 					};
 					side="West";
@@ -48966,7 +48964,7 @@ class Mission
 					{
 						rank="LIEUTENANT";
 						init="call{this disableAI ""move"";  this setUnitPos ""Middle""; this setVariable [""ACE_GForceCoef"",0.2]; this setVariable [""ACE_IsEngineer"",1,true];}";
-						description="Piloto Ala Fija";
+						description="Piloto";
 						isPlayable=1;
 						class Inventory
 						{
@@ -49234,7 +49232,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14649.361,17.911438,16783.227};
+						position[]={14649.768,17.911438,16782.254};
 						angles[]={0,3.8085527,0};
 					};
 					side="West";
@@ -49243,7 +49241,7 @@ class Mission
 					{
 						rank="LIEUTENANT";
 						init="call{this disableAI ""move"";  this setUnitPos ""Middle""; this setVariable [""ACE_GForceCoef"",0.4]; this setVariable [""ACE_IsEngineer"",1,true];}";
-						description="Piloto Rot";
+						description="Piloto ";
 						isPlayable=1;
 						class Inventory
 						{
@@ -49511,7 +49509,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14650.357,17.911438,16782.328};
+						position[]={14650.764,17.911438,16781.355};
 						angles[]={0,3.8085527,0};
 					};
 					side="West";
@@ -49520,7 +49518,7 @@ class Mission
 					{
 						rank="LIEUTENANT";
 						init="call{this disableAI ""move"";  this setUnitPos ""Middle""; this setVariable [""ACE_GForceCoef"",0.4]; this setVariable [""ACE_IsEngineer"",1,true];}";
-						description="Piloto Rot";
+						description="Piloto";
 						isPlayable=1;
 						class Inventory
 						{
@@ -49788,7 +49786,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={14651.326,17.911438,16781.455};
+						position[]={14651.732,17.911438,16780.482};
 						angles[]={0,3.8085527,0};
 					};
 					side="West";
@@ -49797,7 +49795,7 @@ class Mission
 					{
 						rank="LIEUTENANT";
 						init="call{this disableAI ""move"";  this setUnitPos ""Middle""; this setVariable [""ACE_GForceCoef"",0.4]; this setVariable [""ACE_IsEngineer"",1,true];}";
-						description="Piloto Ala Rot";
+						description="Piloto";
 						isPlayable=1;
 						class Inventory
 						{
@@ -49812,6 +49810,283 @@ class Mission
 						};
 					};
 					id=3415;
+					type="rhsusf_usmc_marpat_d_rifleman_light";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ENH_HoldAction";
+							expression="			_value params ['_name','_iconIdle','_iconProgress','_conditionShow','_conditionProgress','_codeStart','_codeProgress','_codeCompletion','_codeInterrupt','_duration','_priority','_showUnconscious','_showWindow'];			if (!is3DEN && {!(_name isEqualTo '')}) then			{				[					_this,					_name,					_iconIdle,					_iconProgress,					_conditionShow,					_conditionProgress,					compile _codeStart,					compile _codeProgress,					compile format ['%1 %2','[_this select 0,_this select 2] remoteExecCall [''removeAction'',0]; remoteExecCall ['''',_this select 0];',_codeCompletion],					compile _codeInterrupt,					nil,					_duration,					_priority,					true,					_showUnconscious,					_showWindow				] remoteExecCall ['BIS_fnc_holdActionAdd',0,_this];			};";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"ARRAY"
+										};
+									};
+									class value
+									{
+										items=13;
+										class Item0
+										{
+											class data
+											{
+												class type
+												{
+													type[]=
+													{
+														"STRING"
+													};
+												};
+												value="";
+											};
+										};
+										class Item1
+										{
+											class data
+											{
+												class type
+												{
+													type[]=
+													{
+														"STRING"
+													};
+												};
+												value="\a3\ui_f\data\igui\cfg\holdactions\holdaction_revive_ca.paa";
+											};
+										};
+										class Item2
+										{
+											class data
+											{
+												class type
+												{
+													type[]=
+													{
+														"STRING"
+													};
+												};
+												value="\a3\ui_f\data\igui\cfg\holdactions\holdaction_revive_ca.paa";
+											};
+										};
+										class Item3
+										{
+											class data
+											{
+												class type
+												{
+													type[]=
+													{
+														"STRING"
+													};
+												};
+												value="true";
+											};
+										};
+										class Item4
+										{
+											class data
+											{
+												class type
+												{
+													type[]=
+													{
+														"STRING"
+													};
+												};
+												value="true";
+											};
+										};
+										class Item5
+										{
+											class data
+											{
+												class type
+												{
+													type[]=
+													{
+														"STRING"
+													};
+												};
+												value="";
+											};
+										};
+										class Item6
+										{
+											class data
+											{
+												class type
+												{
+													type[]=
+													{
+														"STRING"
+													};
+												};
+												value="";
+											};
+										};
+										class Item7
+										{
+											class data
+											{
+												class type
+												{
+													type[]=
+													{
+														"STRING"
+													};
+												};
+												value="";
+											};
+										};
+										class Item8
+										{
+											class data
+											{
+												class type
+												{
+													type[]=
+													{
+														"STRING"
+													};
+												};
+												value="";
+											};
+										};
+										class Item9
+										{
+											class data
+											{
+												class type
+												{
+													type[]=
+													{
+														"SCALAR"
+													};
+												};
+												value=10;
+											};
+										};
+										class Item10
+										{
+											class data
+											{
+												class type
+												{
+													type[]=
+													{
+														"SCALAR"
+													};
+												};
+												value=991;
+											};
+										};
+										class Item11
+										{
+											class data
+											{
+												class type
+												{
+													type[]=
+													{
+														"BOOL"
+													};
+												};
+												value=0;
+											};
+										};
+										class Item12
+										{
+											class data
+											{
+												class type
+												{
+													type[]=
+													{
+														"BOOL"
+													};
+												};
+												value=1;
+											};
+										};
+									};
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="ACE_NoVoice";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.01;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item5
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={14648.552,17.911438,16783.129};
+						angles[]={0,3.8085527,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						rank="LIEUTENANT";
+						init="call{this disableAI ""move"";  this setUnitPos ""Middle""; this setVariable [""ACE_GForceCoef"",0.4]; this setVariable [""ACE_IsEngineer"",1,true];}";
+						description="Piloto ";
+						isPlayable=1;
+						class Inventory
+						{
+							class binocular
+							{
+								name="Laserdesignator_01_khk_F";
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ACE_Altimeter";
+							radio="tf_anprc152";
+						};
+					};
+					id=3732;
 					type="rhsusf_usmc_marpat_d_rifleman_light";
 					class CustomAttributes
 					{

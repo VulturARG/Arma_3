@@ -68,8 +68,8 @@ execVM "scripts\smart_tank\smart.sqf";
 
 execVM "scripts\db\init_log_system.sqf";
 
-/*******************************************************************************
-                          Realizado por |ArgA|Vultur|Cbo¹
-*******************************************************************************/
+if (!isDedicated) then {execVM "scripts\check_roles.sqf"};
 
-0 = [] execVM "vultur\inicio_ataque.sqf";
+/*******************************************************************************
+                          Realizado por |ArgA|Ignacio
+*******************************************************************************/

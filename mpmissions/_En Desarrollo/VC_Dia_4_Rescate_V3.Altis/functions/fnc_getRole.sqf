@@ -14,8 +14,9 @@ if (typeName _role != "SCALAR") then {
     if (_role == "desconocido" && !isNil "_unit") then { 
         private ["_code", "_roleName", "_description"];
         _description = ((toLower roleDescription _unit) splitString "@") select 0;
-        if (!(["#nc", _description] call BIS_fnc_inString)) then {
-            if (!isNil "_description") then {
+        //["_description:", _description] call MIV_fnc_log;
+        if (!isNil "_description") then {
+            if (!(["#nc", _description] call BIS_fnc_inString)) then {
                 _description = _description call MANDI_fnc_trim;
                 {  
                     _code = _x select 0;  
@@ -29,12 +30,11 @@ if (typeName _role != "SCALAR") then {
                     if (_description == _roleName) then {
                         _role = _code;
                         _unit setVariable ["MANDI_ROL", _code];
-                        
                     };
                 } forEach _roleList;
-            };
-        } else {
+            } else {
             _role = _description;
+            };
         };
     };
 };

@@ -2,14 +2,14 @@
                           Realizado por |ArgA|Ignacio
 *******************************************************************************/
 
-#define NAME Regreso a Casa-D4-Rescate      // Colocar nombre de mision (un espacio despues de Op. y sin comillas ni nada)
-#define VERSION v3                          // Versión de la misión
-#define IMAGE "imgs\portada.jpg"            // Colocar nombre y extension de la imagen de portada, ej "imgs\portada.jpg"
-#define DESCRIPTION "Toco y me voy..."      // Colocar descripcion de la mision entre las comillas
+#define NAME Op. Template Basico            // Colocar nombre de mision (un espacio despues de Op. y sin comillas ni nada)
+#define VERSION v0.3.3                      // Versión de la misión
+#define IMAGE "imgs\portada.paa"            // Colocar nombre y extension de la imagen de portada, ej "imgs\portada.jpg"
+#define DESCRIPTION ""                      // Colocar descripcion de la mision entre las comillas
 
-author = "|ArgA|Vultur|Cbo¹";               // Editor (Pone tu nombre)
-IMG_LOGO = "imgs\PlacaVulturII.paa";        // Nota: Las imagenes deberian estar en
-COLOR_AUTOR = "#0f67f2";                    // formato .paa y en proporcion 2x1 (1024x512)
+author = "Arga";                            // Editor (Pone tu nombre)
+IMG_LOGO = "imgs\logo.paa";                 // Nota: Las imagenes deberian estar en
+COLOR_AUTOR = "#76a8f7";                    // formato .paa y en proporcion 2x1 (1024x512)
 ES_CAMPANIA = 0;                            // tamaño logo: 323px x 323px
 NOMBRE_CAMPANIA = "";
 INTRO = 2;                                  // Intros: 1 y 2. Para desactivar: 0
@@ -17,6 +17,8 @@ MAX_DIST_VISION = 4000;
 DESACTIVAR_EQUIPAMIENTO_PERSONALIZADO = 1;  // Equipamiento guardado en arsenal virtual
 ACTIVAR_COMPUTADORA_ARTILLERIA = 1;         // Habilita computadora artilleria poner true. Para que no aparezca poner false
 ACTIVAR_ROL_AUTOMATICO = 1;                 // Habilita la carga de rol al entrar a la misión por descripción de rol
+                                            // Para verificar que los roles estan bien escritos activar todas las IAs y entrar
+                                            
 DEBUG = 1;                                  // Habilita el modo debug
 ENABLE_LOG_SYSTEM = 1;                      // Habilita el sistema de log
 ENABLE_LOG_SYSTEM_ONLY_DEDICATED = 1;       // Habilita el sistema de log sólo si el servidor es dedicado (requiere ENABLE_LOG_SYSTEM = 1)
@@ -33,7 +35,7 @@ ENABLE_LOG_SYSTEM_ONLY_DEDICATED = 1;       // Habilita el sistema de log sólo 
 //        Las opciones Personalizada y No editar pueden llevar a comportamientos inesperados.
 //        Por lo que el editor queda a cargo de checkear y revisar el correcto funcionamiento.
 
-CAMUFLAJE = ["Bosque", "Marpat"];
+CAMUFLAJE = ["Desierto", "Marpat"];
 GAFAS_INICIALES = "";
 UNIFORME_PERSONALIZADO = "";
 CASCO_PERSONALIZADO = "";
