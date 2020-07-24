@@ -12,7 +12,7 @@ if ((dayTime > _Sunrise) and (dayTime < _Sunset)) then {_DayTime = True} else {_
 
 if (_Daytime) then
 {
-	_Temp = CreateVehicle [_MarkSmoke, [(_Position select 0), (_Position select 1), ((_Position select 2) + 100)], [], 20, "CAN_COLLIDE"];
+	_Temp = createVehicle [_MarkSmoke, [(_Position select 0), (_Position select 1), ((_Position select 2) + 100)], [], 20, "CAN_COLLIDE"];
 	sleep 1;
 	_Temp SetVelocity [0,0,-50];
 } else {

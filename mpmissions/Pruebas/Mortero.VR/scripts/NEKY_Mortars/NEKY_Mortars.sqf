@@ -208,14 +208,17 @@ if ( !(_OffMap) && (isNil "_Unit") ) exitWith {SystemChat "Error while creating 
 
 While {((Alive _Mortar) && (Alive _Unit) && (_Unit in _Mortar)) or (_OffMap)} do
 {
-	if (_Ammo < 1) ExitWith 
-	{
+	if (_Ammo < 1) ExitWith {
 		SystemChat "Mortar out of ammo, dismounting";
 		[_Unit] call NEKY_MortarAIReset;
 	};	
 	
 	// Random Selector
-	if (_FiringMode == "random") then {_SelectedFiringMode = toLower (_RandomFiringMode call BIS_FNC_SelectRandom)} else {_SelectedFiringMode = _FiringMode};
+	if (_FiringMode == "random") then {
+		_SelectedFiringMode = toLower (_RandomFiringMode call BIS_FNC_SelectRandom)
+	} else {
+		_SelectedFiringMode = _FiringMode
+	};
 	SystemChat Format ["Firing mode: %1",_SelectedFiringMode];
 	
 	// Inaccuracy definer
@@ -319,7 +322,7 @@ While {((Alive _Mortar) && (Alive _Unit) && (_Unit in _Mortar)) or (_OffMap)} do
 				} else {
 					[_TempPos, 0, _MortarType, _Sound, _SoundOn, _TravelTime, _isFlare] Spawn NEKY_MortarShell;
 				};
-		
+
 				_Index = _Index +1;
 				_Ammo = _Ammo -1;
 				if (_Index == _Count) then {
@@ -331,6 +334,7 @@ While {((Alive _Mortar) && (Alive _Unit) && (_Unit in _Mortar)) or (_OffMap)} do
 					if ( ((_TempPos distance _Position) < 20) && (_SleepGuided > 3) ) then {_SleepGuided = 3};
 				};
 			} else {
+				//[format["_TempPos2 %1",_TempPos]] call BIS_fnc_logFormat;
 				[_TempPos, _NewInaccuracy, _MortarType, _Sound, _SoundOn, _TravelTime, _isFlare] Spawn NEKY_MortarShell;
 				_Index = _Index +1;
 				_Ammo = _Ammo -1;
@@ -341,22 +345,24 @@ While {((Alive _Mortar) && (Alive _Unit) && (_Unit in _Mortar)) or (_OffMap)} do
 				} else {
 					sleep (_roundTimeArray select _indexFireMode);
 					if (_SelectedFiringMode == 'screen') then { _TempPos = [_TempPos, 15, _Dir] call BIS_fnc_relPos};
-					/*if (_SelectedFiringMode == 'safe') then { 
-						private _safeDistance = 65;
-						private _posToFireAt = _TempPos;
+					if (_SelectedFiringMode == 'safe') then { 
+						//[format["_TempPos %1",_TempPos]] call BIS_fnc_logFormat;
+						private _safeDistance = 45;
+						private _posToFireAt = [_Position, _safeDistance*1.3, (random 360)] call BIS_fnc_relPos;
 						private _isSafe = False;
 						while {!_isSafe} do {
 							_isSafe = True;
 							{
 								if (((position _x) distance _posToFireAt) < _safeDistance) exitWith {_isSafe = False};
-							} forEach allUnits;
+							} forEach playableUnits;
 							if (!_isSafe) then {
 								_posToFireAt = [_TempPos, _safeDistance*1.3, (random 360)] call BIS_fnc_relPos;
+								//[format["_posToFireAt %1",_posToFireAt]] call BIS_fnc_logFormat;
 							};
 						};
 						_TempPos = _posToFireAt;
 						_NewInaccuracy = 0;
-					};*/
+					};// */
 				};
 			};
 		};

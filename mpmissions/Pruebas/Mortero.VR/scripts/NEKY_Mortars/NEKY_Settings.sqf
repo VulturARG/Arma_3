@@ -49,7 +49,7 @@ _Smoke = "Smoke_120mm_AMOS_White";							// Class name of smoke round.										
 _Flare = "F_40mm_White";									// Class name of flare round.																						String
 */
 
-//Clas round: light           medium         heavy             smoke                    flare 
+//Class round: light           medium         heavy             smoke                    flare 
 _round = ["Sh_82mm_AMOS", "Sh_120mm_HE", "Sh_155mm_AMOS", "Smoke_120mm_AMOS_White", "F_40mm_White"];
 
 _MortarTypeArray = [ "light", "medium", "heavy", "smoke", "flare"];
