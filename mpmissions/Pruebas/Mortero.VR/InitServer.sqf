@@ -4,8 +4,8 @@
 	deleteVehicle _projectile;
 }];*/
 
-[disparador, 10] execVM "scripts\artySim.sqf";
-
+//[m_1, 10,65] execVM "scripts\artySim.sqf";
+/*
 private _minX = 0;
 private _minY = 0;
 private _maxX = 0;
@@ -34,4 +34,4 @@ private _liderPos = []:
 	
 } forEach allGroups;*/
 
-systemChat format ["%1 %2 %3 %4",_minX,_minY,_maxX,_maxY];
+//systemChat format ["%1 %2 %3 %4",_minX,_minY,_maxX,_maxY];

@@ -5,7 +5,7 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=677;
+	toggles=549;
 	class ItemIDProvider
 	{
 		nextID=3733;
@@ -16,9 +16,9 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={20226.322,78.491096,9701.5957};
-		dir[]={0,-0.70710683,0.70710683};
-		up[]={0,0.70710677,0.70710677};
+		pos[]={18025.082,42.519783,13431.515};
+		dir[]={0,-0.70710677,0.70710683};
+		up[]={0,0.70710677,0.70710671};
 		aside[]={0.99999994,0,-0};
 	};
 };
@@ -35545,7 +35545,7 @@ class Mission
 					{
 						rank="SERGEANT";
 						init="call{this disableAI ""move"";  this setUnitPos ""Middle"";}";
-						description="Lider @Alfa";
+						description="Líder Pelotón @Alfa";
 						isPlayable=1;
 						class Inventory
 						{
@@ -42116,7 +42116,7 @@ class Mission
 					{
 						rank="SERGEANT";
 						init="call{this disableAI ""move"";  this setUnitPos ""Middle"";}";
-						description="Lider @Bravo";
+						description="Líder Pelotón @Bravo";
 						isPlayable=1;
 						class Inventory
 						{

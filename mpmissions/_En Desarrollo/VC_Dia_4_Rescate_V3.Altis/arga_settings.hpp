@@ -2,12 +2,12 @@
                           Realizado por |ArgA|Ignacio
 *******************************************************************************/
 
-#define NAME Op. Template Basico            // Colocar nombre de mision (un espacio despues de Op. y sin comillas ni nada)
-#define VERSION v0.3.3                      // Versión de la misión
-#define IMAGE "imgs\portada.paa"            // Colocar nombre y extension de la imagen de portada, ej "imgs\portada.jpg"
-#define DESCRIPTION ""                      // Colocar descripcion de la mision entre las comillas
+#define NAME Regreso a Casa-D4-Rescate      // Colocar nombre de mision (un espacio despues de Op. y sin comillas ni nada)
+#define VERSION v3                          // Versión de la misión
+#define IMAGE "imgs\portada.jpg"            // Colocar nombre y extension de la imagen de portada, ej "imgs\portada.jpg"
+#define DESCRIPTION "Toco y me voy..."      // Colocar descripcion de la mision entre las comillas
 
-author = "Arga";                            // Editor (Pone tu nombre)
+author = "|ArgA|Vultur|Cbo¹";               // Editor (Pone tu nombre)
 IMG_LOGO = "imgs\logo.paa";                 // Nota: Las imagenes deberian estar en
 COLOR_AUTOR = "#76a8f7";                    // formato .paa y en proporcion 2x1 (1024x512)
 ES_CAMPANIA = 0;                            // tamaño logo: 323px x 323px
@@ -35,7 +35,7 @@ ENABLE_LOG_SYSTEM_ONLY_DEDICATED = 1;       // Habilita el sistema de log sólo 
 //        Las opciones Personalizada y No editar pueden llevar a comportamientos inesperados.
 //        Por lo que el editor queda a cargo de checkear y revisar el correcto funcionamiento.
 
-CAMUFLAJE = ["Desierto", "Marpat"];
+CAMUFLAJE = ["Bosque", "Marpat"];
 GAFAS_INICIALES = "";
 UNIFORME_PERSONALIZADO = "";
 CASCO_PERSONALIZADO = "";

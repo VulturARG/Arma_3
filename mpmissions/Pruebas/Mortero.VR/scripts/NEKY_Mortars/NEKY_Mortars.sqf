@@ -1,3 +1,7 @@
+/*******************************************************************************
+                          	Modify by |ArgA|Vultur|Cbo¹
+*******************************************************************************/
+
 //	[MortarName, side, "Firing Mode", "round type", ["position", inaccuracy], minimum range, maximum range, ammo] execVM "Scripts\NEKY_Mortars\NEKY_Mortars.sqf";
 ////////////
 //	
@@ -51,25 +55,29 @@
 //	Version 1.11
 ///////////////////////
 
-Private ["_Ammo","_EnableMarking","_Dir","_ScreenSize","_NewInaccuracy","_ScreenReloadTime","_TempPos","_Roll","_GuidedSize","_GuidedReloadTime","_GuidedInaccuracyMultiplier""_SoundOn","_In","_Sound","_SoundTypes","_Marking","_FriendlyNear","_Danger","_DangerClose","_SelectedFiringMode","_SporadicReloadTime","_PreciseReloadTime","_BarrageReloadTime","_Units","_Scanner","_Gunner","_MinRange","_MaxRange","_Zone","_Unit","_Lock","_Group","_Avoid","_OffMap","_RandomFiringMode","_Temp","_This","_Side","_Position","_FiringMode","_BarrageSize","_PreciseSize","_SporadicSize","_Light","_Medium","_Heavy","_Smoke","_Flare","_TravelTime","_MarkSmoke","_MarkFlare","_RandomFiringMode","_Duration"];
+NEKY_MortarAISequence = compile preprocessFileLineNumbers "scripts\NEKY_Mortars\NEKY_MortarAISequence.sqf";
+NEKY_MortarShell      = compile preprocessFileLineNumbers "scripts\NEKY_Mortars\NEKY_MortarShell.sqf";
+NEKY_MortarMark       = compile preprocessFileLineNumbers "scripts\NEKY_Mortars\NEKY_MortarMark.sqf";
+NEKY_MortarAIReset    = compile preprocessFileLineNumbers "scripts\NEKY_Mortars\NEKY_MortarAIReset.sqf";
+
+Private ["_Ammo","_EnableMarking","_Dir","_NewInaccuracy","_TempPos","_Roll","_inaccuracyMultiplier","_SoundOn","_Sound","_SoundTypes","_Marking","_FriendlyNear"];
+Private ["_Units","_Scanner","_Gunner","_Zone","_Unit","_Lock","_Group","_Avoid","_OffMap","_RandomFiringMode","_Temp","_TravelTime"];
+Private ["_MarkSmoke","_MarkFlare","_RandomFiringMode","_roundSize","_roundTimeArray","_firingMode","_MortarTypeArray","_Danger","_DangerClose","_SelectedFiringMode","_ReloadTime","_isFlare"];
+
 
 if (hasInterface && !isServer) exitWith {false};		// Ensures only server or HC runs this script
 
 #include "NEKY_Settings.sqf"
 
-_Mortar = [_this, 0, objNull, [ObjNull,""]] call BIS_FNC_Param;
-_Side = [_this, 1, sideUnknown, [SideUnknown]] call BIS_FNC_Param;
-_FiringMode = toLower ([_this, 2, "random", [""]] call BIS_FNC_Param);
-_MortarType = toLower ([_this, 3, "", [""]] call BIS_FNC_Param);
-_Position = [_this, 4, [], [[]]] call BIS_FNC_Param;
-_MinRange = [_This, 5, 0, [0]] call BIS_FNC_Param;
-_MaxRange = [_This, 6, 100, [0]] call BIS_FNC_Param;
-_Ammo = [_this, 7, _Ammo, [0]] call BIS_FNC_Param;
+params [["_Mortar",objNull],["_Side",sideUnknown],["_FiringMode","precise"],["_MortarType",""],["_Position",[]],["_MinRange",60],["_MaxRange",250],["_Ammo",_Ammo]];
+
+_FiringMode = toLower _FiringMode;
+_MortarType = toLower _MortarType;
 _Inaccuracy = (_Position select 1);
 _EnableMarking = True;
 
-if (typeName _Mortar == "OBJECT") then {sleep 10};
-	SystemChat "NEKY_Mortars.sqf running.";
+//if (typeName _Mortar == "OBJECT") then {sleep 10};
+SystemChat "NEKY_Mortars.sqf running.";
 
 // Check if AUTO or designated location
 if (typeName (_Position select 0) == "STRING") then 
@@ -93,67 +101,18 @@ if (typeName (_Position select 0) == "STRING") then
 };
 
 // Define Mortar Type
-Switch (_MortarType) do
-{
-	Private ["_SoundOn","_Sound"];
-	case "light":
-	{
-		_MortarType = _Light;
-		_Sound = (_SoundTypes select 0);
-		_SoundOn = (_SoundOn select 0);
-	};
-	
-	case "medium":
-	{
-		_MortarType = _Medium;
-		_Sound = (_SoundTypes select 1);
-		_SoundOn = (_SoundOn select 1);
-	};
-	
-	case "heavy":
-	{
-		_MortarType = _Heavy;
-		_Sound = (_SoundTypes select 2);
-		_SoundOn = (_SoundOn select 2);
-	};
-	
-	case "smoke":
-	{
-		_MortarType = _Smoke;
-		_Sound = (_SoundTypes select 3);
-		_SoundOn = (_SoundOn select 3);
-		_EnableMarking = False;
-	};
-	
-	case "flare":
-	{
-		_MortarType = _Flare;
-		_Sound = "A3\Sounds_F\weapons\Flare_Gun\flaregun_2_shoot.wss";
-		_SoundOn = (_SoundOn select 4);
-		_EnableMarking = False;
-	};
+private _indexSelect = _MortarTypeArray find _MortarType;
+_isFlare = (_MortarType == "flare");
+if (_isFlare) then {
+	_Sound = "a3\missions_f_beta\data\sounds\Showcase_Night\flaregun_shoot.wss";
+} else {
+	_Sound = (_SoundTypes select _indexSelect);
 };
-
-NEKY_MortarAIReset = 
-{
-	Private ["_Unit","_This"];
-	
-	_Unit = (_This select 0);
-	
-	if (Alive _Unit) then
-	{
-		_Unit enableAI "MOVE";
-		_Unit enableAI "AUTOTARGET";
-		_Unit enableAI "FSM";
-		UnassignVehicle _Unit;
-		[_Unit] OrderGetIn False;
-		_Unit setBehaviour "Combat";
-		_Unit setCombatMode "RED";
-		WaitUntil {sleep 30; !Alive _Unit};
-		sleep 600;
-		DeleteVehicle _Unit;
-	};
+_SoundOn = (_SoundOn select _indexSelect);
+if (_MortarType == "smoke" || _MortarType == "flare") then {
+	_EnableMarking = False;
 };
+_MortarType = _round  select _indexSelect;
 
 // AI Spawn 
 if ( (isNil "_Mortar") or (TypeName _Mortar == "STRING") ) then 
@@ -166,8 +125,7 @@ if ( (isNil "_Mortar") or (TypeName _Mortar == "STRING") ) then
 } else {
 	if (Alive _Mortar) then 
 	{
-		if (_Mortar EmptyPositions "Gunner" > 0) then
-		{
+		if (_Mortar EmptyPositions "Gunner" > 0) then {
 			// Define side
 			Switch (_Side) do
 			{
@@ -203,8 +161,7 @@ if ( (isNil "_Mortar") or (TypeName _Mortar == "STRING") ) then
 			sleep 1;
 	
 			// Lock mortar if unit dies or disembarks
-			if (_Lock) then
-			{
+			if (_Lock) then {
 				[_Mortar, _Unit] spawn
 				{
 					Private ["_Mortar","_Unit"];
@@ -213,8 +170,7 @@ if ( (isNil "_Mortar") or (TypeName _Mortar == "STRING") ) then
 			
 					WaitUntil {sleep 20; !(Alive _Unit) or !(_Unit in _Mortar)};
 			
-					if (Alive _Mortar) then
-					{
+					if (Alive _Mortar) then {
 						[[[_Mortar],{(_This select 0) SetVehicleLock "LOCKED"; (_This select 0) setVehicleAmmo 0;}], "BIS_FNC_SPAWN", true] call BIS_FNC_MP;
 						SystemChat "Mortar locked";
 					};
@@ -250,75 +206,6 @@ if ( (isNil "_Mortar") or (TypeName _Mortar == "STRING") ) then
 
 if ( !(_OffMap) && (isNil "_Unit") ) exitWith {SystemChat "Error while creating mortar gunner, script ends"};
 
-NEKY_MortarMark = 
-{
-	Private ["_Daytime","_Temp","_SunRise","_SunSet","_Position"];
-	
-	_Position = _This select 0;	
-	#include "NEKY_Settings.sqf"
-	
-	if ((dayTime > _Sunrise) and (dayTime < _Sunset)) then {_DayTime = True} else {_Daytime = False};
-
-	if (_Daytime) then
-	{
-		_Temp = CreateVehicle [_MarkSmoke, [(_Position select 0), (_Position select 1), ((_Position select 2) + 100)], [], 20, "CAN_COLLIDE"];
-		sleep 1;
-		_Temp SetVelocity [0,0,-50];
-	} else {
-		_Temp = createVehicle [_MarkFlare, [(_Position select 0), (_Position select 1), ((_Position select 2) + 140)], [], 20, "CAN_COLLIDE"];
-		_Temp setVelocity [0,0,-10];
-		UIsleep 3.1;
-		playSound3D ["A3\Sounds_F\weapons\Flare_Gun\flaregun_2_shoot.wss", _Flare, false, [(_Position select 0), (_Position select 1), (_Position select 2) + 140], 8, 1, 300];
-	};					
-};
-
-NEKY_MortarAISequence = 
-{
-	params ["_Mortar","_Unit","_Position"];
-	
-	/*_Mortar = (_This select 0);
-	_Unit = (_This select 1);
-	_Position = (_This select 2);*/
-	Private _Mag = currentMagazine _Mortar;
-	systemChat format ["_Mortar %1 _Unit %2 _Position %3",_Mortar,_Unit,_Position];
-	_Unit doWatch [(_Position select 0),(_Position select 1),((_Position select 2) + 1000)];
-	_Mortar addMagazine _Mag;
-	_Mortar Fire (CurrentWeapon _Mortar)
-};
-
-NEKY_MortarShell = 
-{
-	Private ["_TravelTime","_Position","_Inaccuracy","_MortarType","_SoundOn","_Sound","_Height","_FallSpeed","_Flare"];
-	
-	_Position = (_This select 0);
-	_Inaccuracy = (_This select 1);
-	_MortarType = (_This select 2);
-	_Sound = (_This select 3);
-	_SoundOn = (_This select 4);
-	_TravelTime = (_This select 5);	
-	_Flare = (_This select 6);
-	
-	if (_TravelTime > 2) then {	sleep (_TravelTime - 2) };
-	_Pos = CreateVehicle ["Land_HelipadEmpty_F", [(_Position select 0), (_Position select 1), ((_Position select 2) + 50)], [], _Inaccuracy, "CAN_COLLIDE"];
-	
-	if (_MortarType == _Flare) then 
-	{
-		_Height = 140; 
-		_FallSpeed = -10;
-		UIsleep 3.1;
-		playSound3D [_Sound, _MortarType, false, [((getPosATL _Pos) select 0), ((getPosATL _Pos) select 1), ((GetPosATL _Pos) select 2) + _Height], 8, 1, 300];
-	} else {
-		_Height = 300;
-		_FallSpeed = -400;
-		if ((_SoundOn) && !(_Sound == "")) then {[[[_Pos,_Sound], { (_this select 0) say3D (_This select 1)}], "bis_fnc_call", true] call BIS_fnc_MP;};
-	};
-	
-	sleep 2;
-	_Temp = CreateVehicle [_MortarType, [((getPosATL _Pos) select 0), ((getPosATL _Pos) select 1), ((GetPosATL _Pos) select 2) + _Height], [], 0, "CAN_COLLIDE"];
-	_Temp setVelocity [0,0,_FallSpeed];
-	DeleteVehicle _Pos;
-};
-
 While {((Alive _Mortar) && (Alive _Unit) && (_Unit in _Mortar)) or (_OffMap)} do
 {
 	if (_Ammo < 1) ExitWith 
@@ -332,14 +219,8 @@ While {((Alive _Mortar) && (Alive _Unit) && (_Unit in _Mortar)) or (_OffMap)} do
 	SystemChat Format ["Firing mode: %1",_SelectedFiringMode];
 	
 	// Inaccuracy definer
-	Switch (_SelectedFiringMode) do
-	{
-		Private ["_NewInaccuracy"];
-		case "sporadic":{_NewInaccuracy = (_Inaccuracy * _SporadicInaccuracyMultiplier)};
-		case "barrage":	{_NewInaccuracy = (_Inaccuracy * _BarrageInaccuracyMultiplier)};
-		case "guided":	{_NewInaccuracy = (_Inaccuracy * _GuidedInaccuracyMultiplier)};		
-		default {_NewInaccuracy = _Inaccuracy};
-	};
+	private _indexFireMode = _firingModeArray find _SelectedFiringMode;
+	_NewInaccuracy = _Inaccuracy * (_InaccuracyMultiplier select _indexFireMode);
 
 	//  Scanning
 	if (_Scanner) then 
@@ -377,7 +258,7 @@ While {((Alive _Mortar) && (Alive _Unit) && (_Unit in _Mortar)) or (_OffMap)} do
 		_Position = GetPosATL (_Units call BIS_FNC_SelectRandom);
 		if ( (_Avoid) && ( {((side _x isEqualTo side _Unit)) && (_Unit distance _x > _MinRange) && (_Unit distance _x < _MaxRange) && ((side _Unit) getFriend (side _x) > 0.6) && ((_Position distance _x) < (_NewInaccuracy)) && (Alive _x) } count (list _Zone) > 0) ) then {_FriendlyNear = True} else {_FriendlyNear = False};
 	};
-	//if(true) then
+
 	if ((!(_FriendlyNear) && !(Count _Units isEqualTo 0)) or ((_OffMap) or !(_Scanner))) then 
 	{
 		// Firing modes
@@ -386,205 +267,99 @@ While {((Alive _Mortar) && (Alive _Unit) && (_Unit in _Mortar)) or (_OffMap)} do
 		
 		if !(_OffMap) then {_Unit doWatch [(_Position select 0), (_Position select 1), ((_Position select 2) + 1000)]};
 	
-		switch (_SelectedFiringMode) do
-		{
-			Private ["_Temp","_Count","_TempPos","_SleepGuided","_TempInaccuracy"];
-			case "sporadic": 
-			{
-				_Count = _SporadicSize call BIS_FNC_SelectRandom;
-				while {( !(_Index == _Count) && ((_OffMap) or ((Alive _Mortar) && (Alive _Unit) && (_Unit in _Mortar) && (_Ammo > 0))) )} do
-				{
-					if ((_Index == 0) && (_Marking select 0) && _EnableMarking) then 
-					{
-						[_Position] spawn NEKY_MortarMark;
-						sleep (_TravelTime + 5);
-					};
-			
-					if !(_OffMap) then 
-					{
-						[_Mortar, _Unit, _Position] Spawn NEKY_MortarAISequence;
-					};
-			
-					[_Position, _NewInaccuracy, _MortarType, _Sound, _SoundOn, _TravelTime, _Flare] Spawn NEKY_MortarShell;
-					_Index = _Index +1;
-					_Ammo = _Ammo -1;
-					if (_Index == _Count) then 
-					{
-						if ((_Scanner) && !(_OffMap)) then 
-						{
-							Sleep _SporadicReloadTime;
-						};
-					} else {
-						sleep 8;
-					};
-				};
+		Private ["_Temp","_Count","_TempPos","_SleepGuided","_TempInaccuracy"];
+		_Count = _roundSize call BIS_FNC_SelectRandom;
+		_TempPos = _Position;
+		
+		if (_SelectedFiringMode == 'screen') then { 
+			if (isNil "_Dir") then {_Dir = round (random 360)};
+			_NewInaccuracy = 5;
+		};
+
+		if (_SelectedFiringMode == 'guided') then { 
+			_SleepGuided = (_TravelTime +5);
+		};
+
+		while {( !(_Index == _Count) && ((_OffMap) or ((Alive _Mortar) && (Alive _Unit) && (_Unit in _Mortar) && (_Ammo > 0))) )} do {
+			if ((_Index == 0) && (_Marking select _indexFireMode) && _EnableMarking) then {
+				[_TempPos] spawn NEKY_MortarMark;
+				sleep (_TravelTime + 5);
 			};
-	
-			case "precise":
-			{
-				_Count = _PreciseSize call BIS_FNC_SelectRandom;
-				while {( !(_Index == _Count) && ((_OffMap) or ((Alive _Mortar) && (Alive _Unit) && (_Unit in _Mortar) && (_Ammo > 0))) )} do
-				{
-					if ((_Index == 0) && (_Marking select 1) && _EnableMarking) then 
-					{
-						[_Position] spawn NEKY_MortarMark;
-						sleep (_TravelTime + 5);
-					};
-			
-					if !(_OffMap) then 
-					{
-						[_Mortar, _Unit, _Position] Spawn NEKY_MortarAISequence;
-					};
-			
-					[_Position, _NewInaccuracy, _MortarType, _Sound, _SoundOn, _TravelTime, _Flare] Spawn NEKY_MortarShell;
-					_Index = _Index +1;
-					_Ammo = _Ammo -1;
-					if (_Index == _Count) then 
-					{
-						if ((_Scanner) && !(_OffMap)) then 
-						{
-							Sleep _PreciseReloadTime;
-						};
-					} else {
-						sleep 11;
-					};
-				};
+
+			if !(_OffMap) then {
+				[_Mortar, _Unit, _TempPos] Spawn NEKY_MortarAISequence;
 			};
-	
-			case "barrage":
-			{
-				_Count = _BarrageSize call BIS_FNC_SelectRandom;
-				while {( !(_Index == _Count) && ((_OffMap) or ((Alive _Mortar) && (Alive _Unit) && (_Unit in _Mortar) && (_Ammo > 0))) )} do
-				{
-					if ((_Index == 0) && (_Marking select 2) && _EnableMarking) then 
-					{
-						[_Position] spawn NEKY_MortarMark;
-						sleep (_TravelTime + 5);
-					};
-			
-					if !(_OffMap) then 
-					{
-						[_Mortar, _Unit, _Position] Spawn NEKY_MortarAISequence;
-					};
-			
-					[_Position, _NewInaccuracy, _MortarType, _Sound, _SoundOn, _TravelTime, _Flare] Spawn NEKY_MortarShell;
-					
-					_Index = _Index +1;
-					_Ammo = _Ammo -1;
-					if (_Index == _Count) then 
-					{
-						if ((_Scanner) && !(_OffMap)) then 	
-						{
-							Sleep _BarrageReloadTime;
-						};
-					} else {
-						sleep 4;
-					};
-				};
-			};
-	
-			case "guided":
-			{
-				_Count = _GuidedSize call BIS_FNC_SelectRandom;
-				_SleepGuided = (_TravelTime +5);
-				while {( !(_Index == _Count) && ((_OffMap) or ((Alive _Mortar) && (Alive _Unit) && (_Unit in _Mortar) && (_Ammo > 0))) )} do
-				{
-					if ((_Index == 0) && (_Marking select 3) && _EnableMarking) then 
-					{
-						[_Position] spawn NEKY_MortarMark;
-						sleep (_TravelTime + 5);
-					};
-			
-					if !(_OffMap) then 
-					{
-						[_Mortar, _Unit, _Position] Spawn NEKY_MortarAISequence;
-					};
-			
-					if (_Index == 0) then 
-					{
-						if (_Roll > 30) then
-						{
+
+			if (_SelectedFiringMode == 'guided') then {
+				if (_Index == 0) then {
+					if (_Roll > 30) then {
+						_Temp = CreateVehicle ["Land_HelipadEmpty_F", [(_Position select 0), (_Position select 1), (_Position select 2)], [], _NewInaccuracy, "CAN_COLLIDE"];
+						_TempPos = GetPosATL _Temp;
+						deleteVehicle _Temp;
+						while {((_TempPos distance _Position) < 20)} do {
 							_Temp = CreateVehicle ["Land_HelipadEmpty_F", [(_Position select 0), (_Position select 1), (_Position select 2)], [], _NewInaccuracy, "CAN_COLLIDE"];
 							_TempPos = GetPosATL _Temp;
 							deleteVehicle _Temp;
-							while {((_TempPos distance _Position) < 20)} do
-							{
-								_Temp = CreateVehicle ["Land_HelipadEmpty_F", [(_Position select 0), (_Position select 1), (_Position select 2)], [], _NewInaccuracy, "CAN_COLLIDE"];
-								_TempPos = GetPosATL _Temp;
-								deleteVehicle _Temp;
-								sleep 0.1;
-							};
-						} else {
-							_Temp = CreateVehicle ["Land_HelipadEmpty_F", [(_Position select 0), (_Position select 1), (_Position select 2)], [], _NewInaccuracy, "CAN_COLLIDE"];
-							_TempPos = GetPosATL _Temp;
-						};
-					};
-			
-					if ((_Index > 0) && (_TempPos distance _Position > 20)) then 
-					{
-						_TempInaccuracy = ((_TempPos distance _Position) - 15);
-						_TempPos = CreateVehicle ["Land_HelipadEmpty_F", [(_Position select 0), (_Position select 1), (_Position select 2)], [], _TempInaccuracy, "CAN_COLLIDE"];
-						_TempPos = GetPosATL _TempPos;
-					};
-
-					if (_TempPos distance _Position < 20) then
-					{
-						[_Position, 20, _MortarType, _Sound, _SoundOn, _TravelTime, _Flare] Spawn NEKY_MortarShell;
-					} else {
-						[_TempPos, 0, _MortarType, _Sound, _SoundOn, _TravelTime, _Flare] Spawn NEKY_MortarShell;
-					};
-			
-					_Index = _Index +1;
-					_Ammo = _Ammo -1;
-					if (_Index == _Count) then 
-					{
-						if ((_Scanner) && !(_OffMap)) then 	
-						{
-							Sleep _GuidedReloadTime;
+							sleep 0.1;
 						};
 					} else {
-						sleep _SleepGuided;
-						if ( ((_TempPos distance _Position) < 20) && (_SleepGuided > 3) ) then {_SleepGuided = 3};
+						_Temp = CreateVehicle ["Land_HelipadEmpty_F", [(_Position select 0), (_Position select 1), (_Position select 2)], [], _NewInaccuracy, "CAN_COLLIDE"];
+						_TempPos = GetPosATL _Temp;
 					};
 				};
-			};
-	
-			case "screen":
-			{
-				_Count = _ScreenSize call BIS_FNC_SelectRandom;
-				if (isNil "_Dir") then {_Dir = round (random 360)};
-				_TempPos = _Position;
-				while {( !(_Index == _Count) && ((_OffMap) or ((Alive _Mortar) && (Alive _Unit) && (_Unit in _Mortar) && (_Ammo > 0))) )} do
-				{
-					if ((_Index == 0) && (_Marking select 4) && _EnableMarking) then 
-					{
-						[_TempPos] spawn NEKY_MortarMark;
-						sleep (_TravelTime + 5);
+		
+				if ((_Index > 0) && (_TempPos distance _Position > 20)) then {
+					_TempInaccuracy = ((_TempPos distance _Position) - 15);
+					_TempPos = CreateVehicle ["Land_HelipadEmpty_F", [(_Position select 0), (_Position select 1), (_Position select 2)], [], _TempInaccuracy, "CAN_COLLIDE"];
+					_TempPos = GetPosATL _TempPos;
+				};
+
+				if (_TempPos distance _Position < 20) then {
+					[_Position, 20, _MortarType, _Sound, _SoundOn, _TravelTime, _isFlare] Spawn NEKY_MortarShell;
+				} else {
+					[_TempPos, 0, _MortarType, _Sound, _SoundOn, _TravelTime, _isFlare] Spawn NEKY_MortarShell;
+				};
+		
+				_Index = _Index +1;
+				_Ammo = _Ammo -1;
+				if (_Index == _Count) then {
+					if ((_Scanner) && !(_OffMap)) then {
+						Sleep _GuidedReloadTime;
 					};
-			
-					if !(_OffMap) then 
-					{
-						[_Mortar, _Unit, _TempPos] Spawn NEKY_MortarAISequence;
+				} else {
+					sleep _SleepGuided;
+					if ( ((_TempPos distance _Position) < 20) && (_SleepGuided > 3) ) then {_SleepGuided = 3};
+				};
+			} else {
+				[_TempPos, _NewInaccuracy, _MortarType, _Sound, _SoundOn, _TravelTime, _isFlare] Spawn NEKY_MortarShell;
+				_Index = _Index +1;
+				_Ammo = _Ammo -1;
+				if (_Index == _Count) then {
+					if ((_Scanner) && !(_OffMap)) then {
+						Sleep (_ReloadTime select _indexFireMode);
 					};
-			
-					[_TempPos, 5, _MortarType, _Sound, _SoundOn, _TravelTime, _Flare] Spawn NEKY_MortarShell;
-					
-					_Index = _Index +1;
-					_Ammo = _Ammo -1;
-					if (_Index == _Count) then 
-					{
-						if ((_Scanner) && !(_OffMap)) then 	
-						{
-							Sleep _ScreenReloadTime;
+				} else {
+					sleep (_roundTimeArray select _indexFireMode);
+					if (_SelectedFiringMode == 'screen') then { _TempPos = [_TempPos, 15, _Dir] call BIS_fnc_relPos};
+					/*if (_SelectedFiringMode == 'safe') then { 
+						private _safeDistance = 65;
+						private _posToFireAt = _TempPos;
+						private _isSafe = False;
+						while {!_isSafe} do {
+							_isSafe = True;
+							{
+								if (((position _x) distance _posToFireAt) < _safeDistance) exitWith {_isSafe = False};
+							} forEach allUnits;
+							if (!_isSafe) then {
+								_posToFireAt = [_TempPos, _safeDistance*1.3, (random 360)] call BIS_fnc_relPos;
+							};
 						};
-					} else {
-						sleep 3;
-						_TempPos = [_TempPos, 15, _Dir] call BIS_fnc_relPos;
-					};
+						_TempPos = _posToFireAt;
+						_NewInaccuracy = 0;
+					};*/
 				};
 			};
 		};
-		
 	} else {
 		SystemChat "Friendly too close or no hostiles known to mortar faction, rescanning"; 
 		sleep 10;
@@ -595,4 +370,4 @@ While {((Alive _Mortar) && (Alive _Unit) && (_Unit in _Mortar)) or (_OffMap)} do
 	};
 	DeleteVehicle _Zone;
 };
-	SystemChat "script ending.";
+SystemChat "script ending.";
