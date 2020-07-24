@@ -38,7 +38,7 @@ _ScreenSize = [6,8,10];										// Randomly select number of mortars per "Scree
 _ScreenReloadTime = 30;										// The time it takes for the mortar to prepare for another strike after performing a Screen strike.					Number (Seconds)
 */
 _inaccuracyMultiplier = [4,1,1.75,3,1,1];					// How much more inaccurate the barrage will be compared to a precise (1) strike.									Array of numbers (Multiplier)	
-_ReloadTime = [90,60,70,80,50,45];							// The time it takes for the mortar to prepare for another strike after performing a Screen strike.					Array of numbers (Seconds)
+_ReloadTime = [170,160,710,160,150,120];							// The time it takes for the mortar to prepare for another strike after performing a Screen strike.					Array of numbers (Seconds)
 
 // Class Names
 /*
@@ -61,7 +61,8 @@ _Sunset = 22.00;											// The time it gets dark enough to start using flares
 
 // Crew
 _BLUFORGunner = ["B_Soldier_F"];							// BLUFOR Gunner for the Mortar
-_OPFORGunner = ["O_Soldier_F"];								// OPFOR Gunner for the Mortar
+_OPFORGunner = ["LOP_AFR_OPF_Infantry_GL"];
+//_OPFORGunner = ["O_Soldier_F"];								// OPFOR Gunner for the Mortar
 _INDEPGunner = ["I_Soldier_F"];								// INDEPENDENT Gunner for the Mortar
 
 // _OPFORGunner = EnemyUnits;								// BLUFOR Gunner for the Mortar
