@@ -2,15 +2,15 @@ IF (isnil "server")then{hint "YOU MUST PLACE A GAME LOGIC NAMED SERVER!";};
 eos_fnc_spawnvehicle=compile preprocessfilelinenumbers "scripts\eos\functions\eos_SpawnVehicle.sqf";
 eos_fnc_grouphandlers=compile preprocessfilelinenumbers "scripts\eos\functions\setSkill.sqf";
 eos_fnc_findsafepos=compile preprocessfilelinenumbers "scripts\eos\functions\findSafePos.sqf";
-eos_fnc_spawngroup= compile preprocessfile "scripts\eos\functions\infantry_fnc.sqf";
-eos_fnc_setcargo = compile preprocessfile "scripts\eos\functions\cargo_fnc.sqf";
-eos_fnc_taskpatrol= compile preprocessfile "scripts\eos\functions\shk_patrol.sqf";
-SHK_pos= compile preprocessfile "scripts\eos\functions\shk_pos.sqf";
+eos_fnc_spawngroup= compile preprocessfilelinenumbers "scripts\eos\functions\infantry_fnc.sqf";
+eos_fnc_setcargo = compile preprocessfilelinenumbers "scripts\eos\functions\cargo_fnc.sqf";
+eos_fnc_taskpatrol= compile preprocessfilelinenumbers "scripts\eos\functions\shk_patrol.sqf";
+SHK_pos= compile preprocessfilelinenumbers "scripts\eos\functions\shk_pos.sqf";
 shk_fnc_fillhouse = compile preprocessFileLineNumbers "scripts\eos\Functions\SHK_buildingpos.sqf";
 eos_fnc_getunitpool= compile preprocessfilelinenumbers "scripts\eos\UnitPools.sqf";
 call compile preprocessfilelinenumbers "scripts\eos\AI_Skill.sqf";
 // Vultur /////////////////////////////////////////////////////
-eos_fnc_infInv= compile preprocessfile "scripts\eos\functions\infantry_inventory.sqf";
+eos_fnc_infInv= compile preprocessfilelinenumbers "scripts\eos\functions\infantry_inventory.sqf";
 FNC_newWaypoint=compile preprocessfilelinenumbers "scripts\eos\functions\FNC_newWaypoint.sqf";
 ///////////////////////////////////////////////////////////////
 
@@ -74,7 +74,7 @@ paraLandSafeHA = {
 /*******************************************************************************
                             Created by |ArgA|Vultur|Cbo¹
 *******************************************************************************/
-EOS_VUL_Debug = {
+/*EOS_VUL_Debug = {
 	params ["_strData"];
 	private _data = MissionName;
 	//systemChat format["%1",_strData];
@@ -84,4 +84,32 @@ EOS_VUL_Debug = {
 	} forEach _strData;
 	//systemChat format["%1",_data];
 	[format ["%1",_data]] call BIS_fnc_logFormat;
+};
+*/
+
+EOS_VUL_Debug = {
+	params ["_strData"];
+	_strData = _this;
+hint 'BIS_fnc_log '+ _strData;
+	if (!(getMissionConfigValue ["DEBUG", 0] == 1)) exitWith { };
+
+	private _data = "";
+
+	if (typeName _strData != "ARRAY") then {
+		_strData = [_strData];
+	};
+
+	_strData = _strData apply {
+							if (isNil "_x") then {
+								"isNil";
+							} else {
+								if (typeName _x != "STRING") then { str _x } else { _x };
+							};
+						};
+
+	{
+		_data = _data + " " + _x;
+	} forEach _strData;
+
+	_data call BIS_fnc_log;
 };

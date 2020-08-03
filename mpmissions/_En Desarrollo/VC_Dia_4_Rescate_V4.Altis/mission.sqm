@@ -8,7 +8,7 @@ class EditorData
 	toggles=549;
 	class ItemIDProvider
 	{
-		nextID=3733;
+		nextID=3739;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={16825.389,38.342827,10300.215};
-		dir[]={-0.5603621,-0.30225033,0.77114427};
-		up[]={-0.17768364,0.95322788,0.24451976};
-		aside[]={0.80898005,-6.420305e-008,0.58785677};
+		pos[]={17553.756,45.159279,13215.189};
+		dir[]={0.056640357,-0.37755862,0.92432612};
+		up[]={0.023097482,0.92596209,0.37691954};
+		aside[]={0.99819642,6.1685023e-007,-0.061169289};
 	};
 };
 binarizationWanted=0;
@@ -99,13 +99,14 @@ addons[]=
 	"A3_Structures_F_Civ_Accessories",
 	"A3_Modules_F_ObjectModifiers",
 	"ace_huntir",
-	"CUP_CAStructuresHouse_A_Hospital"
+	"CUP_CAStructuresHouse_A_Hospital",
+	"A3_Static_F_Mortar_01"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=63;
+		items=64;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -532,6 +533,13 @@ class AddonsMetaData
 		{
 			className="CUP_CAStructuresHouse_A_Hospital";
 			name="CUP_CAStructuresHouse_A_Hospital";
+		};
+		class Item63
+		{
+			className="A3_Static_F";
+			name="Arma 3 Alpha - Turrets";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
 		};
 	};
 };
@@ -22080,7 +22088,6 @@ class Mission
 		year=2019;
 		day=22;
 		hour=4;
-		minute=-30;
 		startFogDecay=0.014;
 		forecastFogDecay=0.014;
 		class CustomAttributes
@@ -22110,7 +22117,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=573;
+		items=577;
 		class Item0
 		{
 			dataType="Marker";
@@ -25306,8 +25313,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={17486.961,16.286922,13133.103};
-				angles[]={0.067895547,5.3910551,6.2631865};
+				position[]={17447.039,17.459213,13058.63};
+				angles[]={0.0026520467,5.3910551,0.0053265258};
 			};
 			side="Empty";
 			flags=4;
@@ -25317,7 +25324,7 @@ class Mission
 			};
 			id=1640;
 			type="B_Truck_01_fuel_F";
-			atlOffset=-0.003660202;
+			atlOffset=-0.0046815872;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -60345,16 +60352,16 @@ class Mission
 		class Item542
 		{
 			dataType="Marker";
-			position[]={17644,12.309372,13281.5};
+			position[]={17644,12.309,13281.5};
 			name="ZM_4";
 			markerType="RECTANGLE";
 			type="rectangle";
 			colorName="ColorYellow";
 			a=100;
 			b=150;
-			angle=224.99979;
+			angle=224.99991;
 			id=3664;
-			atlOffset=0.0040273666;
+			atlOffset=0.0036554337;
 		};
 		class Item543
 		{
@@ -60961,11 +60968,11 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={16489.857,19.810463,12803.632};
-						angles[]={0,2.2728202,0};
+						position[]={17694,14.527381,13395.05};
+						angles[]={0,3.8436167,0};
 					};
 					side="West";
-					flags=3;
+					flags=7;
 					class Attributes
 					{
 						init="call{this disableAI ""move"";  this setUnitPos ""Middle"";}";
@@ -61149,7 +61156,6 @@ class Mission
 					};
 					id=3684;
 					type="rhsusf_usmc_marpat_d_rifleman_light";
-					atlOffset=3.9816475;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -61358,6 +61364,25 @@ class Mission
 						};
 						class Attribute1
 						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute2
+						{
 							property="speaker";
 							expression="_this setspeaker _value;";
 							class Value
@@ -61375,7 +61400,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute2
+						class Attribute3
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -61394,7 +61419,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute3
+						class Attribute4
 						{
 							property="ENH_setCaptive";
 							expression="_this setCaptive _value";
@@ -61413,7 +61438,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute4
+						class Attribute5
 						{
 							property="ENH_addGunLight";
 							expression="if (!is3DEN) then {_this addPrimaryWeaponItem 'acc_flashlight'; _this enableGunLights 'forceOn'}";
@@ -61432,7 +61457,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=5;
+						nAttributes=6;
 					};
 				};
 			};
@@ -61441,7 +61466,6 @@ class Mission
 				init="call{{_x addPrimaryWeaponItem ""acc_flashlight"";}foreach units this}";
 			};
 			id=3683;
-			atlOffset=3.9816475;
 		};
 		class Item560
 		{
@@ -63423,7 +63447,7 @@ class Mission
 			class Attributes
 			{
 				condition="call{this}";
-				onActivation="call{nul = [] execVM ""vultur\detectado.sqf"";}";
+				onActivation="call{nul = [] execVM ""scripts\detectado.sqf"";}";
 				sizeA=1700;
 				sizeB=1700;
 				activationBy="ANYPLAYER";
@@ -63440,7 +63464,7 @@ class Mission
 			class Attributes
 			{
 				condition="call{this}";
-				onActivation="call{nul = [] execVM ""vultur\detectado.sqf"";}";
+				onActivation="call{nul = [] execVM ""scripts\detectado.sqf"";}";
 				sizeA=350;
 				sizeB=150;
 				activationBy="ANYPLAYER";
@@ -63458,7 +63482,7 @@ class Mission
 			class Attributes
 			{
 				condition="call{this}";
-				onActivation="call{nul = [] execVM ""vultur\detectado.sqf"";}";
+				onActivation="call{nul = [] execVM ""scripts\detectado.sqf"";}";
 				sizeA=1000;
 				sizeB=250;
 				activationBy="ANYPLAYER";
@@ -63475,7 +63499,7 @@ class Mission
 			class Attributes
 			{
 				condition="call{this}";
-				onActivation="call{nul = [] execVM ""vultur\detectado.sqf"";}";
+				onActivation="call{nul = [] execVM ""scripts\detectado.sqf"";}";
 				sizeA=350;
 				sizeB=150;
 				activationBy="ANYPLAYER";
@@ -63492,7 +63516,7 @@ class Mission
 			class Attributes
 			{
 				condition="call{this}";
-				onActivation="call{nul = [] execVM ""vultur\detectado.sqf"";}";
+				onActivation="call{nul = [] execVM ""scripts\detectado.sqf"";}";
 				sizeA=1000;
 				sizeB=250;
 				activationBy="ANYPLAYER";
@@ -63500,6 +63524,69 @@ class Mission
 			};
 			id=3724;
 			type="EmptyDetector";
+		};
+		class Item573
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={17435.514,15.361468,13140.505};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="mortero_1";
+			};
+			id=3733;
+			type="O_Mortar_01_F";
+			atlOffset=-0.00015830994;
+		};
+		class Item574
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={17549.504,13.730763,13244.016};
+				angles[]={0.012000273,0,0.0053265258};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="mortero_2";
+			};
+			id=3734;
+			type="O_Mortar_01_F";
+			atlOffset=-8.5830688e-005;
+		};
+		class Item575
+		{
+			dataType="Trigger";
+			position[]={17438.5,14.588549,13154.5};
+			class Attributes
+			{
+				name="ac_mortero_380";
+				sizeA=380;
+				sizeB=380;
+				activationBy="ANYPLAYER";
+			};
+			id=3737;
+			type="EmptyDetectorAreaR250";
+		};
+		class Item576
+		{
+			dataType="Trigger";
+			position[]={17429.5,14.399295,13162};
+			class Attributes
+			{
+				name="ac_mortero_250";
+				sizeA=250;
+				sizeB=250;
+				activationBy="ANYPLAYER";
+			};
+			id=3738;
+			type="EmptyDetectorAreaR250";
 		};
 	};
 	class Connections

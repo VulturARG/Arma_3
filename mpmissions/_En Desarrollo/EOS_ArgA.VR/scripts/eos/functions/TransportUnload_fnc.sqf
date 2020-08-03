@@ -6,6 +6,8 @@ _mPos=getMarkerPos _mkr;
 _debug=false;
 _veh params ["_vehicle","_nada","_grp","_cargoGrp"];
 
+format ["_vehicle: %1 | _nada: %2 | _grp: %3 | _cargoGrp: %4",_vehicle,_nada,_grp,_cargoGrp] call BIS_fnc_log;
+
 //Modificado por Vultur
 _dir_atk= _mPos getDir _vehicle;
 _minDist = 200;

@@ -11,7 +11,6 @@ publicVariable "stealthStatus";
 // Destruye los camiones en la base Pyrgos
 {_x setDamage 1;} forEach [camion_1, camion_2,camion_3,camion_4,BP_1,BP_2,BP_3,BP_4,BP_5,BP_6];
 
-
 private _Nro_Jugadores = 0;
 //Cuento los jugadores a los 10 minutos de iniciado la partida
 //TODO poner el tiempo en 600

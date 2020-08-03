@@ -25,16 +25,20 @@ EXAMPLE CALL - EOS
 
 //EXAMPLE CALL - BASTION
 null=
-[["M1","M2","M3"],
-[PATROL GROUPS,SIZE OF GROUPS,DISTANCIA APARICION],
-[LIGHT VEHICLES,SIZE OF CARGO,DISTANCIA APARICION],
-[ARMOURED VEHICLES,DISTANCIA APARICION],
-[HELICOPTERS,SIZE OF HELICOPTER CARGO,DISTANCIA APARICION], //Si SIZE OF HELICOPTER es cero aparecen helis de ataque
-[PARACAIDISTAS,SIZE OF HELICOPTER CARGO,DISTANCIA APARICION,ALTURA SALTO],
-[HALO,SIZE OF GROUPS,DISTANCIA APARICION,ALTURA SALTO],
-[FACTION,MARKERTYPE,SIDE,HEIGHTLIMIT,hint_DEBUG,BIS_fnc_logFormat_DEBUG],
-[INITIAL PAUSE, NUMBER OF WAVES, DELAY BETWEEN WAVES, INTEGRATE EOS, SHOW HINTS],
-[angulo]] call Bastion_Spawn;
+[
+  ["M1","M2","M3"],
+  [
+    [PATROL GROUPS,SIZE OF GROUPS,APPEARANCE DISTANCE],
+    [LIGHT VEHICLES,SIZE OF CARGO,APPEARANCE DISTANCE],
+    [ARMOURED VEHICLES,null,APPEARANCE DISTANCE],
+    [HELICOPTERS,SIZE OF HELICOPTER CARGO,APPEARANCE DISTANCE], 
+    [PARACAIDISTAS,SIZE OF HELICOPTER CARGO,APPEARANCE DISTANCE,JUMP HEIGHT],
+    [HALO,SIZE OF GROUPS,APPEARANCE DISTANCE,JUMP HEIGHT]
+  ]
+  [FACTION,MARKERTYPE,SIDE,HEIGHTLIMIT,hint_DEBUG,BIS_fnc_logFormat_DEBUG],
+  [INITIAL PAUSE, NUMBER OF WAVES, DELAY BETWEEN WAVES, INTEGRATE EOS, SHOW HINTS],
+  [angle]
+] call Bastion_Spawn;
 
 //EXAMPLE CALL - REDIRECT WP BASTION
 //Borra todos los WP de las unidades del bando y luego crea otros
@@ -47,18 +51,20 @@ null=
 ] call Redirect_WP_Bastion_Spawn;
 
 */
-params ["_marker",["_waves",0],["_jugadores",1],["_angle",360]];
-//_marker: Nombre del marker _angle activar
-//_waves: Número de oleadas
-//_jugadores: Número de jugadores
-//_angle: Ángulo del arco de ataque
+params ["_marker",["_waves",0],["_players",1],["_angle",360]];
+//_marker: Marker name
+//_waves: waves number
+//_players: players number
+//_angle: Enemy attack arc angle from marker direction
 
-//systemChat format ["_marker %1 _waves  %2 _jugadores %3 _angle %4",_marker,_waves,_jugadores,_angle];
+//systemChat format ["_marker %1 _waves  %2 _players %3 _angle %4",_marker,_waves,_players,_angle];
 /////////////////////////////////////////////////////////////////*/
 
-EOS_Spawn = compile preprocessfilelinenumbers "scripts\eos\core\eos_launch.sqf";
-Bastion_Spawn=compile preprocessfilelinenumbers "scripts\eos\core\b_launch.sqf";
-Bastion_Redirect_WP=compile preprocessfilelinenumbers "scripts\eos\core\b_redirijoUnidades.sqf";
+'Open Me' call BIS_fnc_log;
+
+EOS_Spawn           = compile preprocessfile "scripts\eos\core\eos_launch.sqf";
+Bastion_Spawn       = compile preprocessfile "scripts\eos\core\b_launch.sqf";
+Bastion_Redirect_WP = compile preprocessfile "scripts\eos\core\b_redirijoUnidades.sqf";
 null=[] execVM "scripts\eos\core\spawn_fnc.sqf";
 
 onplayerConnected {[] execVM "scripts\eos\Functions\EOS_Markers.sqf";};
@@ -73,17 +79,29 @@ bastionColor="colorBLUFOR";	// Colour for bastion marker
 EOS_DAMAGE_MULTIPLIER=1;	// 1 is default
 EOS_KILLCOUNTER=FALSE;		// Counts killed units
 
-//_jugadores = 31; // TODO Comentar
-//hint format["%1",_jugadores];
+DEFAULT_INFANTERY_MIN_DIST      =  500;
+DEFAULT_VEHICLES_MIN_DIST       =  800;
+DEFAULT_ARMOR_MIN_DIST          =  800;
+DEFAULT_ATTACK_CHOPPER_MIN_DIST = 1400;
+DEFAULT_CHOPPER_MIN_DIST        = 1400;
+DEFAULT_CHOPPER_JUMP_MIN_DIST   = 1400;
+DEFAULT_CHOPPER_JUMP_HEIGHT     =  400;
+DEFAULT_HALO_MIN_DIST           =  200;
+DEFAULT_HALO_JUMP_HEIGHT        =  600;
+
+DELETE_DISTANCE               =  950;  //Delete _EOS_FACCION unit outside this distance from marker's center 
+
+//_players = 31; // TODO Comentar
+//hint format["%1",_players];
 
 //_waves = 3;// Borrar // TODO Comentar
 private _EOS_FACCION = EAST;
 
-null = [["patrullas_H"],[0,2,100],[10,1,100],[0,0,0],[0,0],[0],[0,0,00],[5,0,200,_EOS_FACCION,false]] call EOS_Spawn;
-null = [["Hospital"],[10,0,100],[0,1,100],[0,0,0],[0,0],[0],[0,0,00],[5,0,200,_EOS_FACCION,false]] call EOS_Spawn;
-null = [["ZM_1","ZM_2","ZM_3","ZM_4","ZM_5","ZM_6","ZM_7","ZM_8"],[4,3,500],[0,2,500],[0,1500],[0,1,1500],[0,3,1500,600],[0,3,300,5000],[5,1,_EOS_FACCION,FALSE,FALSE],[120,_waves,300,FALSE,FALSE],_angle] call Bastion_Spawn;
-
-if (_jugadores <= 10) then {
+//null = [["patrullas_H"],[0,2,100],[10,1,100],[0,0,0],[0,0],[0],[0,0,00],[5,0,200,_EOS_FACCION,false]] call EOS_Spawn;
+//null = [["Hospital"],[10,0,100],[0,1,100],[0,0,0],[0,0],[0],[0,0,00],[5,0,200,_EOS_FACCION,false]] call EOS_Spawn;
+//null = [["ZM_1","ZM_2","ZM_3","ZM_4","ZM_5","ZM_6","ZM_7","ZM_8"],[4,3,500],[0,2,500],[0,1500],[0,1,1500],[0,3,1500,600],[0,3,300,5000],[5,1,_EOS_FACCION,FALSE,FALSE],[120,_waves,300,FALSE,FALSE],_angle] call Bastion_Spawn;
+/*
+if (_players <= 10) then {
   null = [[_marker],[0,2,100],[10,2,100],[0,0,0],[0,0],[0],[0,0,00],[5,0,300,_EOS_FACCION,false]] call EOS_Spawn;
   //PLAYER SIDECHAT (format ["Marker %1",_marker]);
   ZSU addEventHandler ["Killed", {
@@ -92,19 +110,23 @@ if (_jugadores <= 10) then {
   }];
 
 };// */
-if (_jugadores > 10 && _jugadores <= 15) then {
+
+//null = [["marker_0"],[[5,2,150],[0,2,1000],[0,0,1500],[0,1,1500],[0,3,1500,600],[0,3,300,5000]],[5,1,EAST,FALSE,FALSE],[120,6,600,FALSE,FALSE],[360]] call Bastion_Spawn;
+null = [["marker_0"],[0,2,150],[0,2,1000],[0,0,1500],[2,2,1500],[0,3,1500,600],[0,3,300,5000],[5,1,EAST,FALSE,FALSE],[1,1,600,FALSE,FALSE],360] call Bastion_Spawn;
+
+if (_players > 10 && _players <= 15) then {
 
 };
-if (_jugadores > 15 && _jugadores <= 20) then {
+if (_players > 15 && _players <= 20) then {
 
 };
-if (_jugadores > 20 && _jugadores <= 25) then {
+if (_players > 20 && _players <= 25) then {
 
 };
-if (_jugadores > 25 && _jugadores <= 30) then {
+if (_players > 25 && _players <= 30) then {
 
 };
-if (_jugadores > 30) then {
+if (_players > 30) then {
 
 };
 

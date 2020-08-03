@@ -7,3 +7,5 @@ call compile preprocessFile "core\events\initPlayerServer.sqf";
 /*******************************************************************************
                           Realizado por |ArgA|MIV
 *******************************************************************************/
+
+player addItemToUniform "ACE_Flashlight_XL50";

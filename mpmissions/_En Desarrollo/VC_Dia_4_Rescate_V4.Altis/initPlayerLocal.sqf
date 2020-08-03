@@ -11,5 +11,6 @@ call compile preprocessFile "core\events\initPlayerLocal.sqf";
 //player removeItem "ACE_DAGR";
 //player removeItem "ACE_microDAGR";
 
+
 // GPS en Mapa
-nul = [] execVM 'vultur\GPS_II.sqf';
+nul = [] execVM 'scripts\GPS_II.sqf';
