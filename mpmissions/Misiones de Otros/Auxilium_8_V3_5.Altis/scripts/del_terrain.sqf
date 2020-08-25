@@ -1,2 +1,0 @@
-
-private _color = "Default";
