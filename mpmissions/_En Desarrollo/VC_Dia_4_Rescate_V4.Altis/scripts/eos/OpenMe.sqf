@@ -84,7 +84,7 @@ null = [["Hospital"],[10,0,100],[0,1,100],[0,0,0],[0,0],[0],[0,0,00],[5,0,200,_E
 null = [["ZM_1","ZM_2","ZM_3","ZM_4","ZM_5","ZM_6","ZM_7","ZM_8"],[4,3,500],[0,2,500],[0,1500],[0,1,1500],[0,3,1500,600],[0,3,300,5000],[5,1,_EOS_FACCION,FALSE,FALSE],[120,_waves,300,FALSE,FALSE],_angle] call Bastion_Spawn;
 
 if (_jugadores <= 10) then {
-  null = [[_marker],[0,2,100],[10,2,100],[0,0,0],[0,0],[0],[0,0,00],[5,0,300,_EOS_FACCION,false]] call EOS_Spawn;
+  null = [[_marker],[0,2,100],[10,2,100],[0,0,0],[0,0],[0],[0,0,00],[5,0,500,_EOS_FACCION,false]] call EOS_Spawn;
   //PLAYER SIDECHAT (format ["Marker %1",_marker]);
   ZSU addEventHandler ["Killed", {
     null = [["ZM_1","ZM_2","ZM_3","ZM_4","ZM_5","ZM_6"],[["patrullas_H",50,"Hospital"],["Hospital",0,""]],EAST] call Bastion_Redirect_WP;//
