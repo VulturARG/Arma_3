@@ -1,5 +1,5 @@
 version=53;
-center[]={7330.2397,33.19281,10772.802};
+center[]={22867.102,3.1900001,18626.1};
 class items
 {
 	items=1;
@@ -15,8 +15,8 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={0.59375,0.074386597,0.46875};
-					angles[]={0,5.7106824,0};
+					position[]={-0.7265625,0.0014388561,0.060546875};
+					angles[]={0,3.1964724,0};
 				};
 				side="West";
 				flags=7;
@@ -57,7 +57,7 @@ class items
 							isBackpack=0;
 							class ItemCargo
 							{
-								items=15;
+								items=16;
 								class Item0
 								{
 									name="ACE_EarPlugs";
@@ -65,79 +65,84 @@ class items
 								};
 								class Item1
 								{
-									name="ACE_CableTie";
-									count=2;
-								};
-								class Item2
-								{
 									name="ACE_morphine";
 									count=3;
 								};
-								class Item3
+								class Item2
 								{
 									name="ACE_epinephrine";
 									count=3;
 								};
-								class Item4
+								class Item3
 								{
 									name="ACE_EntrenchingTool";
 									count=1;
 								};
-								class Item5
+								class Item4
 								{
 									name="adv_aceSplint_splint";
-									count=4;
+									count=3;
 								};
-								class Item6
+								class Item5
 								{
 									name="ACE_Flashlight_XL50";
 									count=1;
 								};
-								class Item7
+								class Item6
 								{
 									name="ACE_MapTools";
 									count=1;
 								};
-								class Item8
+								class Item7
 								{
 									name="ACE_tourniquet";
-									count=4;
+									count=3;
+								};
+								class Item8
+								{
+									name="ACE_IR_Strobe_Item";
+									count=1;
 								};
 								class Item9
 								{
-									name="ACE_IR_Strobe_Item";
-									count=2;
+									name="ACE_elasticBandage";
+									count=7;
 								};
 								class Item10
 								{
-									name="ACE_elasticBandage";
-									count=8;
+									name="ACE_packingBandage";
+									count=7;
 								};
 								class Item11
-								{
-									name="ACE_packingBandage";
-									count=8;
-								};
-								class Item12
 								{
 									name="ACE_Kestrel4500";
 									count=1;
 								};
-								class Item13
+								class Item12
 								{
 									name="ACE_RangeCard";
 									count=1;
 								};
-								class Item14
+								class Item13
 								{
 									name="ACE_ATragMX";
+									count=1;
+								};
+								class Item14
+								{
+									name="ACRE_PRC343";
+									count=1;
+								};
+								class Item15
+								{
+									name="ACE_CableTie";
 									count=1;
 								};
 							};
 						};
 						class vest
 						{
-							typeName="arga_c_mdesert";
+							typeName="arga_c_pesado_bosque_multicam";
 							isBackpack=0;
 							class MagazineCargo
 							{
@@ -158,7 +163,7 @@ class items
 						};
 						class backpack
 						{
-							typeName="arga_m_mdesert_p";
+							typeName="B_Carryall_cbr";
 							isBackpack=1;
 							class MagazineCargo
 							{
@@ -166,13 +171,13 @@ class items
 								class Item0
 								{
 									name="rhsusf_mag_10Rnd_STD_50BMG_M33";
-									count=6;
+									count=7;
 									ammoLeft=10;
 								};
 								class Item1
 								{
 									name="HandGrenade";
-									count=2;
+									count=1;
 									ammoLeft=1;
 								};
 								class Item2
@@ -188,16 +193,24 @@ class items
 									ammoLeft=1;
 								};
 							};
+							class ItemCargo
+							{
+								items=1;
+								class Item0
+								{
+									name="rhsusf_acc_M8541_mrds";
+									count=1;
+								};
+							};
 						};
 						map="ItemMap";
 						compass="ItemCompass";
 						watch="ItemWatch";
-						radio="tf_anprc152";
-						headgear="arga_cas_mdesert";
+						headgear="arga_cas_combate_bosque_multicam";
 					};
 				};
-				id=7942;
-				type="arga_bmarpat_base";
+				id=90;
+				type="arga_s_base_gen3_bosque_multicam";
 				class CustomAttributes
 				{
 					class Attribute0
@@ -246,8 +259,8 @@ class items
 				dataType="Object";
 				class PositionInfo
 				{
-					position[]={-0.59375,0.0014381409,-0.36914063};
-					angles[]={0,5.7106824,0};
+					position[]={0.7265625,0.0014388561,0.041015625};
+					angles[]={0,3.1964724,0};
 				};
 				side="West";
 				flags=5;
@@ -261,6 +274,7 @@ class items
 						class primaryWeapon
 						{
 							name="ACFAA_FAMTD_CL";
+							optics="optic_AMS";
 							class primaryMuzzleMag
 							{
 								name="20Rnd_762x51_Mag";
@@ -366,7 +380,7 @@ class items
 						};
 						class vest
 						{
-							typeName="arga_c_mdesert";
+							typeName="arga_c_pesado_bosque_multicam";
 							isBackpack=0;
 							class MagazineCargo
 							{
@@ -408,7 +422,7 @@ class items
 						};
 						class backpack
 						{
-							typeName="arga_m_mdesert_a";
+							typeName="arga_m_petate_bosque_multicam";
 							isBackpack=1;
 							class MagazineCargo
 							{
@@ -422,16 +436,26 @@ class items
 								class Item1
 								{
 									name="ACE_M84";
-									count=2;
+									count=1;
 									ammoLeft=1;
 								};
 							};
 							class ItemCargo
 							{
-								items=1;
+								items=3;
 								class Item0
 								{
 									name="ACE_HuntIR_monitor";
+									count=1;
+								};
+								class Item1
+								{
+									name="ACRE_PRC77";
+									count=1;
+								};
+								class Item2
+								{
+									name="ACRE_PRC343";
 									count=1;
 								};
 							};
@@ -439,12 +463,11 @@ class items
 						map="ItemMap";
 						compass="ItemCompass";
 						watch="ItemWatch";
-						radio="tf_anprc152";
-						headgear="arga_cas_mdesert";
+						headgear="arga_cas_combate_bosque_multicam";
 					};
 				};
-				id=7943;
-				type="arga_bmarpat_base";
+				id=91;
+				type="arga_s_base_gen3_bosque_multicam";
 				class CustomAttributes
 				{
 					class Attribute0
@@ -492,6 +515,6 @@ class items
 		class Attributes
 		{
 		};
-		id=7941;
+		id=89;
 	};
 };

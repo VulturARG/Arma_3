@@ -1,0 +1,1810 @@
+version=53;
+center[]={22914.578,3.1900001,18599.213};
+class items
+{
+	items=2;
+	class Item0
+	{
+		dataType="Group";
+		side="West";
+		class Entities
+		{
+			items=3;
+			class Item0
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-2.2128906,0.0014388561,-0.13085938};
+					angles[]={0,4.6891413,0};
+				};
+				side="West";
+				flags=7;
+				class Attributes
+				{
+					rank="LIEUTENANT";
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle""; this setVariable [""ACE_GForceCoef"",0.4]; this setVariable [""ACE_IsEngineer"",1,true];}";
+					description="Piloto Rot @MedEvac";
+					isPlayable=1;
+					class Inventory
+					{
+						class primaryWeapon
+						{
+							name="acfaa_mp5sd_base";
+							class primaryMuzzleMag
+							{
+								name="acfaa_32Rnd_9x19_FMJ_Mag";
+								ammoLeft=32;
+							};
+						};
+						class handgun
+						{
+							name="rhsusf_weap_glock17g4";
+							class primaryMuzzleMag
+							{
+								name="rhsusf_mag_17Rnd_9x19_JHP";
+								ammoLeft=17;
+							};
+						};
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						class uniform
+						{
+							typeName="arga_u_coverall_verde_liso";
+							isBackpack=0;
+							class ItemCargo
+							{
+								items=11;
+								class Item0
+								{
+									name="ACE_packingBandage";
+									count=6;
+								};
+								class Item1
+								{
+									name="ACE_elasticBandage";
+									count=6;
+								};
+								class Item2
+								{
+									name="ACE_EarPlugs";
+									count=1;
+								};
+								class Item3
+								{
+									name="ACE_CableTie";
+									count=1;
+								};
+								class Item4
+								{
+									name="ACE_morphine";
+									count=3;
+								};
+								class Item5
+								{
+									name="ACE_epinephrine";
+									count=3;
+								};
+								class Item6
+								{
+									name="ACE_EntrenchingTool";
+									count=1;
+								};
+								class Item7
+								{
+									name="adv_aceSplint_splint";
+									count=2;
+								};
+								class Item8
+								{
+									name="ACE_Flashlight_XL50";
+									count=1;
+								};
+								class Item9
+								{
+									name="ACE_MapTools";
+									count=1;
+								};
+								class Item10
+								{
+									name="ACE_tourniquet";
+									count=2;
+								};
+							};
+						};
+						class vest
+						{
+							typeName="arga_c_pesado_negro_liso";
+							isBackpack=0;
+							class MagazineCargo
+							{
+								items=8;
+								class Item0
+								{
+									name="rhsusf_mag_17Rnd_9x19_JHP";
+									count=2;
+									ammoLeft=17;
+								};
+								class Item1
+								{
+									name="SmokeShellRed";
+									count=1;
+									ammoLeft=1;
+								};
+								class Item2
+								{
+									name="ACE_HandFlare_Green";
+									count=2;
+									ammoLeft=1;
+								};
+								class Item3
+								{
+									name="HandGrenade";
+									count=1;
+									ammoLeft=1;
+								};
+								class Item4
+								{
+									name="SmokeShellBlue";
+									count=4;
+									ammoLeft=1;
+								};
+								class Item5
+								{
+									name="SmokeShellOrange";
+									count=1;
+									ammoLeft=1;
+								};
+								class Item6
+								{
+									name="acfaa_32Rnd_9x19_FMJ_Mag";
+									count=7;
+									ammoLeft=32;
+								};
+								class Item7
+								{
+									name="SmokeShellGreen";
+									count=1;
+									ammoLeft=1;
+								};
+							};
+							class ItemCargo
+							{
+								items=1;
+								class Item0
+								{
+									name="ACRE_PRC152";
+									count=1;
+								};
+							};
+						};
+						class backpack
+						{
+							typeName="B_Parachute";
+							isBackpack=1;
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ItemWatch";
+						gps="ItemGPS";
+						headgear="arga_cas_helicoptero_abierto";
+					};
+				};
+				id=1555;
+				type="arga_s_base_gen3_bosque_multicam";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="ENH_HoldAction";
+						expression="			_value params ['_name','_iconIdle','_iconProgress','_conditionShow','_conditionProgress','_codeStart','_codeProgress','_codeCompletion','_codeInterrupt','_duration','_priority','_showUnconscious','_showWindow'];			if (!is3DEN && {!(_name isEqualTo '')}) then			{				[					_this,					_name,					_iconIdle,					_iconProgress,					_conditionShow,					_conditionProgress,					compile _codeStart,					compile _codeProgress,					compile format ['%1 %2','[_this select 0,_this select 2] remoteExecCall [''removeAction'',0]; remoteExecCall ['''',_this select 0];',_codeCompletion],					compile _codeInterrupt,					nil,					_duration,					_priority,					true,					_showUnconscious,					_showWindow				] remoteExecCall ['BIS_fnc_holdActionAdd',0,_this];			};";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"ARRAY"
+									};
+								};
+								class value
+								{
+									items=13;
+									class Item0
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="";
+										};
+									};
+									class Item1
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="\a3\ui_f\data\igui\cfg\holdactions\holdaction_revive_ca.paa";
+										};
+									};
+									class Item2
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="\a3\ui_f\data\igui\cfg\holdactions\holdaction_revive_ca.paa";
+										};
+									};
+									class Item3
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="true";
+										};
+									};
+									class Item4
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="true";
+										};
+									};
+									class Item5
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="";
+										};
+									};
+									class Item6
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="";
+										};
+									};
+									class Item7
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="";
+										};
+									};
+									class Item8
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="";
+										};
+									};
+									class Item9
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=10;
+										};
+									};
+									class Item10
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=991;
+										};
+									};
+									class Item11
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"BOOL"
+												};
+											};
+											value=0;
+										};
+									};
+									class Item12
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"BOOL"
+												};
+											};
+											value=1;
+										};
+									};
+								};
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="ENH_unitTraits_engineer";
+						expression="_this setUnitTrait ['Engineer',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"BOOL"
+									};
+								};
+								value=1;
+							};
+						};
+					};
+					class Attribute2
+					{
+						property="ace_isEngineer";
+						expression="if !(_value == ([0,1] select (_this getUnitTrait 'engineer'))|| {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1;
+							};
+						};
+					};
+					class Attribute3
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="ACE_NoVoice";
+							};
+						};
+					};
+					class Attribute4
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					class Attribute5
+					{
+						property="ENH_unitTrait_UAVHacker";
+						expression="_this setUnitTrait ['UAVHacker',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"BOOL"
+									};
+								};
+								value=1;
+							};
+						};
+					};
+					nAttributes=6;
+				};
+			};
+			class Item1
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-2.3164063,0.0014388561,-1.5566406};
+					angles[]={0,4.6891413,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					rank="LIEUTENANT";
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle""; this setVariable [""ACE_GForceCoef"",0.4]; this setVariable [""ACE_IsEngineer"",1,true];}";
+					description="Piloto Rot @MedEvac";
+					isPlayable=1;
+					class Inventory
+					{
+						class primaryWeapon
+						{
+							name="acfaa_mp5sd_base";
+							class primaryMuzzleMag
+							{
+								name="acfaa_32Rnd_9x19_FMJ_Mag";
+								ammoLeft=32;
+							};
+						};
+						class handgun
+						{
+							name="rhsusf_weap_glock17g4";
+							class primaryMuzzleMag
+							{
+								name="rhsusf_mag_17Rnd_9x19_JHP";
+								ammoLeft=17;
+							};
+						};
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						class uniform
+						{
+							typeName="arga_u_coverall_verde_liso";
+							isBackpack=0;
+							class ItemCargo
+							{
+								items=11;
+								class Item0
+								{
+									name="ACE_packingBandage";
+									count=6;
+								};
+								class Item1
+								{
+									name="ACE_elasticBandage";
+									count=6;
+								};
+								class Item2
+								{
+									name="ACE_EarPlugs";
+									count=1;
+								};
+								class Item3
+								{
+									name="ACE_CableTie";
+									count=1;
+								};
+								class Item4
+								{
+									name="ACE_morphine";
+									count=3;
+								};
+								class Item5
+								{
+									name="ACE_epinephrine";
+									count=3;
+								};
+								class Item6
+								{
+									name="ACE_EntrenchingTool";
+									count=1;
+								};
+								class Item7
+								{
+									name="adv_aceSplint_splint";
+									count=2;
+								};
+								class Item8
+								{
+									name="ACE_Flashlight_XL50";
+									count=1;
+								};
+								class Item9
+								{
+									name="ACE_MapTools";
+									count=1;
+								};
+								class Item10
+								{
+									name="ACE_tourniquet";
+									count=2;
+								};
+							};
+						};
+						class vest
+						{
+							typeName="arga_c_pesado_negro_liso";
+							isBackpack=0;
+							class MagazineCargo
+							{
+								items=8;
+								class Item0
+								{
+									name="rhsusf_mag_17Rnd_9x19_JHP";
+									count=2;
+									ammoLeft=17;
+								};
+								class Item1
+								{
+									name="SmokeShellRed";
+									count=1;
+									ammoLeft=1;
+								};
+								class Item2
+								{
+									name="ACE_HandFlare_Green";
+									count=2;
+									ammoLeft=1;
+								};
+								class Item3
+								{
+									name="HandGrenade";
+									count=1;
+									ammoLeft=1;
+								};
+								class Item4
+								{
+									name="SmokeShellBlue";
+									count=4;
+									ammoLeft=1;
+								};
+								class Item5
+								{
+									name="SmokeShellOrange";
+									count=1;
+									ammoLeft=1;
+								};
+								class Item6
+								{
+									name="acfaa_32Rnd_9x19_FMJ_Mag";
+									count=7;
+									ammoLeft=32;
+								};
+								class Item7
+								{
+									name="SmokeShellGreen";
+									count=1;
+									ammoLeft=1;
+								};
+							};
+							class ItemCargo
+							{
+								items=1;
+								class Item0
+								{
+									name="ACRE_PRC152";
+									count=1;
+								};
+							};
+						};
+						class backpack
+						{
+							typeName="B_Parachute";
+							isBackpack=1;
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ItemWatch";
+						gps="ItemGPS";
+						headgear="arga_cas_helicoptero_abierto";
+					};
+				};
+				id=1556;
+				type="arga_s_base_gen3_bosque_multicam";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="ENH_HoldAction";
+						expression="			_value params ['_name','_iconIdle','_iconProgress','_conditionShow','_conditionProgress','_codeStart','_codeProgress','_codeCompletion','_codeInterrupt','_duration','_priority','_showUnconscious','_showWindow'];			if (!is3DEN && {!(_name isEqualTo '')}) then			{				[					_this,					_name,					_iconIdle,					_iconProgress,					_conditionShow,					_conditionProgress,					compile _codeStart,					compile _codeProgress,					compile format ['%1 %2','[_this select 0,_this select 2] remoteExecCall [''removeAction'',0]; remoteExecCall ['''',_this select 0];',_codeCompletion],					compile _codeInterrupt,					nil,					_duration,					_priority,					true,					_showUnconscious,					_showWindow				] remoteExecCall ['BIS_fnc_holdActionAdd',0,_this];			};";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"ARRAY"
+									};
+								};
+								class value
+								{
+									items=13;
+									class Item0
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="";
+										};
+									};
+									class Item1
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="\a3\ui_f\data\igui\cfg\holdactions\holdaction_revive_ca.paa";
+										};
+									};
+									class Item2
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="\a3\ui_f\data\igui\cfg\holdactions\holdaction_revive_ca.paa";
+										};
+									};
+									class Item3
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="true";
+										};
+									};
+									class Item4
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="true";
+										};
+									};
+									class Item5
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="";
+										};
+									};
+									class Item6
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="";
+										};
+									};
+									class Item7
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="";
+										};
+									};
+									class Item8
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="";
+										};
+									};
+									class Item9
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=10;
+										};
+									};
+									class Item10
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=991;
+										};
+									};
+									class Item11
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"BOOL"
+												};
+											};
+											value=0;
+										};
+									};
+									class Item12
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"BOOL"
+												};
+											};
+											value=1;
+										};
+									};
+								};
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="ENH_unitTraits_engineer";
+						expression="_this setUnitTrait ['Engineer',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"BOOL"
+									};
+								};
+								value=1;
+							};
+						};
+					};
+					class Attribute2
+					{
+						property="ace_isEngineer";
+						expression="if !(_value == ([0,1] select (_this getUnitTrait 'engineer'))|| {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1;
+							};
+						};
+					};
+					class Attribute3
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="ACE_NoVoice";
+							};
+						};
+					};
+					class Attribute4
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					class Attribute5
+					{
+						property="ENH_unitTrait_UAVHacker";
+						expression="_this setUnitTrait ['UAVHacker',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"BOOL"
+									};
+								};
+								value=1;
+							};
+						};
+					};
+					nAttributes=6;
+				};
+			};
+			class Item2
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-2.3574219,0.0014388561,1.4140625};
+					angles[]={0,4.575171,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle""; this setVariable [""ace_medical_medicClass"", 2, true];}";
+					description="Medico MedEvac";
+					isPlayable=1;
+					class Inventory
+					{
+						class primaryWeapon
+						{
+							name="ACFAA_FAMCA";
+							optics="optic_Hamr";
+							class primaryMuzzleMag
+							{
+								name="ACE_20Rnd_762x51_Mk319_Mod_0_Mag";
+								ammoLeft=20;
+							};
+						};
+						class handgun
+						{
+							name="rhsusf_weap_glock17g4";
+							class primaryMuzzleMag
+							{
+								name="rhsusf_mag_17Rnd_9x19_JHP";
+								ammoLeft=17;
+							};
+						};
+						class uniform
+						{
+							typeName="arga_u_coverall_verde_liso";
+							isBackpack=0;
+							class ItemCargo
+							{
+								items=11;
+								class Item0
+								{
+									name="ACE_packingBandage";
+									count=6;
+								};
+								class Item1
+								{
+									name="ACE_elasticBandage";
+									count=6;
+								};
+								class Item2
+								{
+									name="ACE_tourniquet";
+									count=4;
+								};
+								class Item3
+								{
+									name="ACE_EarPlugs";
+									count=1;
+								};
+								class Item4
+								{
+									name="ACE_morphine";
+									count=3;
+								};
+								class Item5
+								{
+									name="ACE_epinephrine";
+									count=3;
+								};
+								class Item6
+								{
+									name="adv_aceSplint_splint";
+									count=2;
+								};
+								class Item7
+								{
+									name="ACE_Flashlight_XL50";
+									count=1;
+								};
+								class Item8
+								{
+									name="ACE_MapTools";
+									count=1;
+								};
+								class Item9
+								{
+									name="ACRE_PRC343";
+									count=1;
+								};
+								class Item10
+								{
+									name="ACE_CableTie";
+									count=1;
+								};
+							};
+						};
+						class vest
+						{
+							typeName="arga_c_pesado_negro_liso";
+							isBackpack=0;
+							class MagazineCargo
+							{
+								items=3;
+								class Item0
+								{
+									name="ACE_20Rnd_762x51_Mk319_Mod_0_Mag";
+									count=5;
+									ammoLeft=20;
+								};
+								class Item1
+								{
+									name="SmokeShellBlue";
+									count=4;
+									ammoLeft=1;
+								};
+								class Item2
+								{
+									name="rhsusf_mag_17Rnd_9x19_FMJ";
+									count=1;
+									ammoLeft=17;
+								};
+							};
+							class ItemCargo
+							{
+								items=3;
+								class Item0
+								{
+									name="ACE_DAGR";
+									count=1;
+								};
+								class Item1
+								{
+									name="adv_aceCPR_AED";
+									count=1;
+								};
+								class Item2
+								{
+									name="ACE_surgicalKit";
+									count=1;
+								};
+							};
+						};
+						class backpack
+						{
+							typeName="arga_m_petate_negro_liso";
+							isBackpack=1;
+							class MagazineCargo
+							{
+								items=1;
+								class Item0
+								{
+									name="SmokeShellGreen";
+									count=5;
+									ammoLeft=1;
+								};
+							};
+							class ItemCargo
+							{
+								items=15;
+								class Item0
+								{
+									name="ACE_elasticBandage";
+									count=21;
+								};
+								class Item1
+								{
+									name="ACE_packingBandage";
+									count=21;
+								};
+								class Item2
+								{
+									name="adv_aceSplint_splint";
+									count=10;
+								};
+								class Item3
+								{
+									name="ACE_tourniquet";
+									count=6;
+								};
+								class Item4
+								{
+									name="ACE_epinephrine";
+									count=15;
+								};
+								class Item5
+								{
+									name="ACE_morphine";
+									count=15;
+								};
+								class Item6
+								{
+									name="ACE_CableTie";
+									count=2;
+								};
+								class Item7
+								{
+									name="ACE_bloodIV_500";
+									count=5;
+								};
+								class Item8
+								{
+									name="ACE_bloodIV";
+									count=5;
+								};
+								class Item9
+								{
+									name="ACE_bodyBag";
+									count=1;
+								};
+								class Item10
+								{
+									name="ACE_salineIV_500";
+									count=2;
+								};
+								class Item11
+								{
+									name="ACE_plasmaIV_500";
+									count=2;
+								};
+								class Item12
+								{
+									name="ACE_plasmaIV";
+									count=2;
+								};
+								class Item13
+								{
+									name="ACE_salineIV";
+									count=2;
+								};
+								class Item14
+								{
+									name="ACRE_PRC152";
+									count=1;
+								};
+							};
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						headgear="arga_cas_helicoptero_abierto_medico";
+					};
+				};
+				id=1557;
+				type="arga_s_base_gen3_bosque_multicam";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="ace_isMedic";
+						expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=2;
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="ENH_HoldAction";
+						expression="			_value params ['_name','_iconIdle','_iconProgress','_conditionShow','_conditionProgress','_codeStart','_codeProgress','_codeCompletion','_codeInterrupt','_duration','_priority','_showUnconscious','_showWindow'];			if (!is3DEN && {!(_name isEqualTo '')}) then			{				[					_this,					_name,					_iconIdle,					_iconProgress,					_conditionShow,					_conditionProgress,					compile _codeStart,					compile _codeProgress,					compile format ['%1 %2','[_this select 0,_this select 2] remoteExecCall [''removeAction'',0]; remoteExecCall ['''',_this select 0];',_codeCompletion],					compile _codeInterrupt,					nil,					_duration,					_priority,					true,					_showUnconscious,					_showWindow				] remoteExecCall ['BIS_fnc_holdActionAdd',0,_this];			};";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"ARRAY"
+									};
+								};
+								class value
+								{
+									items=13;
+									class Item0
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="";
+										};
+									};
+									class Item1
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="\a3\ui_f\data\igui\cfg\holdactions\holdaction_revive_ca.paa";
+										};
+									};
+									class Item2
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="\a3\ui_f\data\igui\cfg\holdactions\holdaction_revive_ca.paa";
+										};
+									};
+									class Item3
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="true";
+										};
+									};
+									class Item4
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="true";
+										};
+									};
+									class Item5
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="";
+										};
+									};
+									class Item6
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="";
+										};
+									};
+									class Item7
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="";
+										};
+									};
+									class Item8
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="";
+										};
+									};
+									class Item9
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=10;
+										};
+									};
+									class Item10
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=991;
+										};
+									};
+									class Item11
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"BOOL"
+												};
+											};
+											value=0;
+										};
+									};
+									class Item12
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"BOOL"
+												};
+											};
+											value=1;
+										};
+									};
+								};
+							};
+						};
+					};
+					class Attribute2
+					{
+						property="ENH_unitTraits_medic";
+						expression="_this setUnitTrait ['Medic',_value]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"BOOL"
+									};
+								};
+								value=1;
+							};
+						};
+					};
+					class Attribute3
+					{
+						property="ace_advanced_fatigue_performanceFactor";
+						expression="_this setVariable [""ace_advanced_fatigue_performanceFactor"",_value,true]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=2;
+							};
+						};
+					};
+					class Attribute4
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute5
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=6;
+				};
+			};
+		};
+		class Attributes
+		{
+		};
+		id=1554;
+	};
+	class Item1
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={9.1015625,2.7194147,0.6015625};
+			angles[]={-0,4.7426529,0};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			textures="hidf_olv";
+		};
+		id=1558;
+		type="RHS_UH60M_MEV2";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ENH_HoldAction";
+				expression="			_value params ['_name','_iconIdle','_iconProgress','_conditionShow','_conditionProgress','_codeStart','_codeProgress','_codeCompletion','_codeInterrupt','_duration','_priority','_showUnconscious','_showWindow'];			if (!is3DEN && {!(_name isEqualTo '')}) then			{				[					_this,					_name,					_iconIdle,					_iconProgress,					_conditionShow,					_conditionProgress,					compile _codeStart,					compile _codeProgress,					compile format ['%1 %2','[_this select 0,_this select 2] remoteExecCall [''removeAction'',0]; remoteExecCall ['''',_this select 0];',_codeCompletion],					compile _codeInterrupt,					nil,					_duration,					_priority,					true,					_showUnconscious,					_showWindow				] remoteExecCall ['BIS_fnc_holdActionAdd',0,_this];			};";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"ARRAY"
+							};
+						};
+						class value
+						{
+							items=13;
+							class Item0
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+							class Item1
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="\a3\ui_f\data\igui\cfg\holdactions\holdaction_revive_ca.paa";
+								};
+							};
+							class Item2
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="\a3\ui_f\data\igui\cfg\holdactions\holdaction_revive_ca.paa";
+								};
+							};
+							class Item3
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="true";
+								};
+							};
+							class Item4
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="true";
+								};
+							};
+							class Item5
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+							class Item6
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+							class Item7
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+							class Item8
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+							class Item9
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=10;
+								};
+							};
+							class Item10
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=991;
+								};
+							};
+							class Item11
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+							class Item12
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+					};
+				};
+			};
+			class Attribute1
+			{
+				property="ammoBox";
+				expression="[_this,_value] call bis_fnc_initAmmoBox;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="[[[[""rhs_weap_M136_hedp"",""rhs_weap_M136"",""ACFAA_FAMCA""],[1,1,2]],[[""SmokeShellBlue"",""rhsusf_200rnd_556x45_mixed_box"",""Chemlight_green"",""ACE_HandFlare_Green"",""rhsusf_100Rnd_762x51_m80a1epr"",""rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"",""1Rnd_HE_Grenade_shell"",""ACE_HuntIR_M203"",""rhs_mag_M397_HET"",""rhs_mag_M433_HEDP"",""rhs_mag_M585_white"",""ACE_20Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_20Rnd_762x51_Mk319_Mod_0_Mag""],[10,3,10,10,3,10,5,2,3,3,5,10,10]],[[""ACE_epinephrine"",""ToolKit"",""ACE_morphine"",""ACE_CableTie"",""ACE_elasticBandage"",""ACE_packingBandage"",""adv_aceSplint_splint"",""ACE_wirecutter"",""MineDetector"",""ItemGPS"",""ACE_DefusalKit"",""ItemMap"",""ACE_HuntIR_monitor"",""ACE_tourniquet"",""ACE_plasmaIV"",""ACE_plasmaIV_500"",""ACE_bloodIV"",""ACE_bloodIV_500"",""ACE_salineIV"",""ACE_salineIV_500"",""ACE_surgicalKit"",""adv_aceCPR_AED""],[20,1,20,10,50,50,20,1,1,1,1,1,1,10,10,10,20,20,10,10,1,1]],[[""B_Parachute""],[5]]],false]";
+					};
+				};
+			};
+			class Attribute2
+			{
+				property="ace_fastroping_equipFRIES";
+				expression="[_this] call ace_fastroping_fnc_equipFRIES";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=1;
+					};
+				};
+			};
+			nAttributes=3;
+		};
+	};
+};

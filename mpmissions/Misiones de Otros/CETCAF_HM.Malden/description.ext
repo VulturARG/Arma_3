@@ -1,0 +1,112 @@
+
+loadScreen = "core\img\standby.jpg";
+author = "[CETCAF] TEAM";
+onLoadName = CETCAF_HM_Malden;
+onLoadMission = "Hearts and Minds moded";
+
+class Header
+{
+	gameType =  RPG;	// Game type
+	minPlayers =  1;	// minimum number of players the mission supports
+	maxPlayers = 40;	// maximum number of players the mission supports
+};
+
+enabledebugconsole 				= 1;  									//0 - Default behavior, available only in editor 1 - Available in SP and for hosts / logged in admins in MP 2 - Available for everyone
+forceRotorLibSimulation			= 1;   									//0 - based on player's options /1 - enabled (advanced mode) /2 - disabled (default flight mode)
+respawnButton 					= 0;
+respawn 						= 3; 									// Players respawn at base
+respawnDelay 					= 60; 									// Players spectate for 5 minutes(300s) between respawns
+respawnTemplates[] 				= {"Counter"}; 							// Enables the spectator template for all  ace_spectator
+cba_settings_hasSettingsFile	= 1;
+disableChannels[] 				= {0,1,2,3,4,6};    					// 0 = Global | 1 = Side | 2 = Command | 3 = Group | 4 = Vehicle | 5 = Direct | 6 = System
+
+#include "core\fnc\common\dlg.hpp"
+#include "core\fnc\fob\dlg.hpp"
+#include "core\fnc\log\dlg.hpp"
+#include "core\fnc\debug\defines.hpp"
+#include "scripts\SATCOM\main\init_interface.hpp"
+#include "scripts\MED_TREINAMENTO\fnc\content.hpp"
+
+showHUD[] = {
+	1,	// Scripted HUD (same as showHUD command)
+	1,	// Vehicle and unit info
+	1,	// Vehicle radar [HIDDEN]
+	1,	// Vehicle compass [HIDDEN]
+	1,	// Tank direction indicator
+	1,	// Commanding menu
+	1,	// Group info bar
+	1,	// HUD weapon cursors
+	1,	// Vehicle display panels
+	1	// "x killed by y" systemChat messages
+};
+taskManagement_markers2D = 0;
+taskManagement_markers3D = 0;
+taskManagement_propagate = 0;
+taskManagement_drawDist = 0;
+
+onPauseScript = "scripts\noAbort.sqf";
+
+class RscTitles {
+    class Default {
+        idd = -1;
+        fadein = 0;
+        fadeout = 0;
+        duration = 0;
+    };
+    #include "core\fnc\lift\rsc.hpp"
+    #include "core\fnc\debug\dlg.hpp"
+};
+
+#include "core\def\param.hpp"
+#include "core\fnc\mil\aiskill.hpp"
+#include "core\fnc\task\taskTypes.hpp"
+#include "scripts\taw_vd\GUI.h"
+
+class CfgFunctions {
+    #include "core\fnc\eh\functions.hpp"
+	#include "scripts\taw_vd\CfgFunctions.hpp"
+	#include "vcom\cfgFunctions.hpp"
+	#include "INC_undercover\cfgFunctions.hpp"
+    // add your own functions below
+};
+
+class CfgRemoteExec{
+	class Functions{
+		mode = 2;
+		jip = 1;	
+		
+		class vcm_serverask { allowedTargets = 0;jip = 1; };
+		class VCM_PublicScript { allowedTargets = 0;jip = 1; };
+		class BIS_fnc_debugConsoleExec { allowedTargets = 0;jip = 1; };
+		class SpawnScript { allowedTargets = 0;jip = 1; };
+		class enableSimulationGlobal { allowedTargets = 0;jip = 1; };
+		class VCM_fnc_KnowAbout { allowedTargets = 0;jip = 1; };
+		
+		#include "INC_undercover\functionsWhitelist.hpp"
+	};		
+};
+
+// CBA XEH
+class Extended_PreInit_EventHandlers {
+    #include "core\fnc\eh\xeh_PreInit_EH.hpp"
+	VCM_CBASettings = call compile preprocessFileLineNumbers "Vcom\Functions\VCM_Functions\fn_CBASettings.sqf";
+};
+
+class Extended_InitPost_EventHandlers {
+    class LandVehicle {
+        #include "core\fnc\eh\xeh_InitPost_EH_Vehicle.hpp"
+    };
+    class Air {
+        #include "core\fnc\eh\xeh_InitPost_EH_Vehicle.hpp"
+    };
+    class Ship {
+        #include "core\fnc\eh\xeh_InitPost_EH_Vehicle.hpp"
+    };
+	class CAManBase {
+		init = "_this call (compile preprocessFileLineNumbers 'postInitXEH.sqf')";
+	};
+};
+
+// Disable BI wreck system (H&M handle it internally)
+wreckManagerMode = 0;
+corpseManagerMode = 0;

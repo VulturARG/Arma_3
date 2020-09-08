@@ -1,0 +1,1529 @@
+version=53;
+center[]={8272.2559,28.879959,10059.336};
+class items
+{
+	items=39;
+	class Item0
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-1.8417969,0.4475975,4.9775391};
+			angles[]={-0,1.6036947,6.282495};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+		};
+		id=7986;
+		type="Land_PortableDesk_01_black_F";
+	};
+	class Item1
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-0.33886719,0.44639397,3.9609375};
+			angles[]={-0,3.1743085,6.282495};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+		};
+		id=7987;
+		type="Land_PortableDesk_01_black_F";
+	};
+	class Item2
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-0.26953125,0.44633865,5.3183594};
+			angles[]={-0,0.057766385,6.282495};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+		};
+		id=7988;
+		type="Land_PortableDesk_01_black_F";
+	};
+	class Item3
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={1.2734375,0.44529724,4.8769531};
+			angles[]={6.282495,1.6036947,0};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+		};
+		id=7989;
+		type="Land_PortableDesk_01_black_F";
+	};
+	class Item4
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-0.28710938,0.44635201,4.6552734};
+			angles[]={-0,0.034540363,6.282495};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+		};
+		id=7990;
+		type="Land_PortableDesk_01_black_F";
+	};
+	class Item5
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-0.23730469,0.44631386,5.8564453};
+			angles[]={-0,0.057766385,6.282495};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+		};
+		id=7991;
+		type="Land_PortableDesk_01_black_F";
+	};
+	class Item6
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={0.09765625,-0.0030117035,-5.5068359};
+			angles[]={0,6.2704272,6.2824869};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+		};
+		id=7992;
+		type="Land_BriefingRoomDesk_01_F";
+		atlOffset=-1.9073486e-006;
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ObjectTextureCustom0";
+				expression="_this setObjectTextureGlobal [0,_value]";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="imgs\argaar.jpg";
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
+	class Item7
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={0.74511719,0.67679024,0.76074219};
+			angles[]={-0,6.2657447,6.282495};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			init="call{this addAction [""<t color='#529DCC'>Sentarse</t>"",""scripts\sitdown.sqf"", [false],1,false,true,"""",""(_target distance _this) < 1.5""];}";
+		};
+		id=7993;
+		type="Land_OfficeChair_01_F";
+		atlOffset=0.00073242188;
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ace_isMedicalFacility";
+				expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
+	class Item8
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-0.640625,0.42514992,-0.1875};
+			angles[]={-0,3.1241512,6.282495};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			name="teclado_16";
+		};
+		id=7994;
+		type="OfficeTable_01_new_F";
+		atlOffset=-1.9073486e-006;
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ammoBox";
+				expression="[_this,_value] call bis_fnc_initAmmoBox;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="[[[[],[]],[[],[]],[[],[]],[[],[]]],true]";
+					};
+				};
+			};
+			class Attribute1
+			{
+				property="ace_isMedicalFacility";
+				expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			nAttributes=2;
+		};
+	};
+	class Item9
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={0.68066406,0.42409325,-0.16796875};
+			angles[]={-0,3.1241512,6.282495};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			name="teclado_17";
+		};
+		id=7995;
+		type="OfficeTable_01_new_F";
+		atlOffset=-1.9073486e-006;
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ammoBox";
+				expression="[_this,_value] call bis_fnc_initAmmoBox;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="[[[[],[]],[[],[]],[[],[]],[[],[]]],true]";
+					};
+				};
+			};
+			class Attribute1
+			{
+				property="ace_isMedicalFacility";
+				expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			nAttributes=2;
+		};
+	};
+	class Item10
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={0.69140625,0.42408371,-0.85742188};
+			angles[]={-0,6.2657442,6.282495};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			name="teclado_18";
+		};
+		id=7996;
+		type="OfficeTable_01_new_F";
+		atlOffset=-1.9073486e-006;
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ammoBox";
+				expression="[_this,_value] call bis_fnc_initAmmoBox;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="[[[[],[]],[[],[]],[[],[]],[[],[]]],true]";
+					};
+				};
+			};
+			class Attribute1
+			{
+				property="ace_isMedicalFacility";
+				expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			nAttributes=2;
+		};
+	};
+	class Item11
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-0.63085938,0.42514229,-0.87988281};
+			angles[]={-0,6.2657442,6.282495};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			name="teclado_19";
+		};
+		id=7997;
+		type="OfficeTable_01_new_F";
+		atlOffset=-1.9073486e-006;
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ammoBox";
+				expression="[_this,_value] call bis_fnc_initAmmoBox;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="[[[[],[]],[[],[]],[[],[]],[[],[]]],true]";
+					};
+				};
+			};
+			class Attribute1
+			{
+				property="ace_isMedicalFacility";
+				expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			nAttributes=2;
+		};
+	};
+	class Item12
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-0.65625,0.67717743,0.77929688};
+			angles[]={-0,6.2717323,6.282495};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			init="call{this addAction [""<t color='#529DCC'>Sentarse</t>"",""scripts\sitdown.sqf"", [false],1,false,true,"""",""(_target distance _this) < 1.5""];}";
+		};
+		id=7998;
+		type="Land_OfficeChair_01_F";
+		atlOffset=-1.9073486e-006;
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ace_isMedicalFacility";
+				expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
+	class Item13
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={0.6953125,0.67609787,-1.6923828};
+			angles[]={-0,3.1201131,6.282495};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			init="call{this addAction [""<t color='#529DCC'>Sentarse</t>"",""scripts\sitdown.sqf"", [false],1,false,true,"""",""(_target distance _this) < 1.5""];}";
+		};
+		id=7999;
+		type="Land_OfficeChair_01_F";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ace_isMedicalFacility";
+				expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
+	class Item14
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-0.91113281,0.67738152,-1.7998047};
+			angles[]={-0,3.1483843,6.282495};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			init="call{this addAction [""<t color='#529DCC'>Sentarse</t>"",""scripts\sitdown.sqf"", [false],1,false,true,"""",""(_target distance _this) < 1.5""];}";
+		};
+		id=8000;
+		type="Land_OfficeChair_01_F";
+		atlOffset=-1.9073486e-006;
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ace_isMedicalFacility";
+				expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
+	class Item15
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-1.6367188,0.42594528,-0.54882813};
+			angles[]={-0,1.5533526,6.282495};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			name="teclado_20";
+		};
+		id=8001;
+		type="OfficeTable_01_new_F";
+		atlOffset=-1.9073486e-006;
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ammoBox";
+				expression="[_this,_value] call bis_fnc_initAmmoBox;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="[[[[],[]],[[],[]],[[],[]],[[],[]]],true]";
+					};
+				};
+			};
+			class Attribute1
+			{
+				property="ace_isMedicalFacility";
+				expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			nAttributes=2;
+		};
+	};
+	class Item16
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={1.6914063,0.47676277,-0.49804688};
+			angles[]={-0,4.6949482,6.282495};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			name="teclado_21";
+		};
+		id=8002;
+		type="OfficeTable_01_new_F";
+		atlOffset=0.053476334;
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ammoBox";
+				expression="[_this,_value] call bis_fnc_initAmmoBox;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="[[[[],[]],[[],[]],[[],[]],[[],[]]],true]";
+					};
+				};
+			};
+			class Attribute1
+			{
+				property="ace_isMedicalFacility";
+				expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			nAttributes=2;
+		};
+	};
+	class Item17
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-2.5888672,0.67872238,-0.50585938};
+			angles[]={-0,4.6416664,6.282495};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			init="call{this addAction [""<t color='#529DCC'>Sentarse</t>"",""scripts\sitdown.sqf"", [false],1,false,true,"""",""(_target distance _this) < 1.5""];}";
+		};
+		id=8003;
+		type="Land_OfficeChair_01_F";
+		atlOffset=-1.9073486e-006;
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ace_isMedicalFacility";
+				expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
+	class Item18
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={2.5205078,0.67536736,-0.54003906};
+			angles[]={-0,1.5927753,6.282495};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			init="call{this addAction [""<t color='#529DCC'>Sentarse</t>"",""scripts\sitdown.sqf"", [false],1,false,true,"""",""(_target distance _this) < 1.5""];}";
+		};
+		id=8004;
+		type="Land_OfficeChair_01_F";
+		atlOffset=0.00073051453;
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ace_isMedicalFacility";
+				expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
+	class Item19
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={1.6708984,0.15696907,-0.13964844};
+			angles[]={-0,2.0200028,6.282495};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			createAsSimpleObject=1;
+			disableSimulation=1;
+		};
+		id=8006;
+		type="Land_Laptop_unfolded_F";
+		atlOffset=-1.9073486e-006;
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="allowDamage";
+				expression="_this allowdamage _value;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
+	class Item20
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={0.8046875,0.03575325,-0.044921875};
+			angles[]={-0,6.1477785,6.282495};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			createAsSimpleObject=1;
+			disableSimulation=1;
+		};
+		id=8007;
+		type="Land_Tablet_02_F";
+		atlOffset=-1.9073486e-006;
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="allowDamage";
+				expression="_this allowdamage _value;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
+	class Item21
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={0.020507813,0.32953453,-0.51660156};
+		};
+		side="Empty";
+		class Attributes
+		{
+		};
+		id=8016;
+		type="Land_Camping_Light_F";
+		atlOffset=0.20864296;
+	};
+	class Item22
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={0.60644531,0.67731667,6.7363281};
+			angles[]={6.282495,6.2657447,0};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			init="call{this addAction [""<t color='#529DCC'>Sentarse</t>"",""scripts\sitdown.sqf"", [false],1,false,true,"""",""(_target distance _this) < 1.5""];}";
+		};
+		id=8017;
+		type="Land_OfficeChair_01_F";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ace_isMedicalFacility";
+				expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
+	class Item23
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-0.79492188,0.67732811,6.7548828};
+			angles[]={6.282495,6.2717323,0};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			init="call{this addAction [""<t color='#529DCC'>Sentarse</t>"",""scripts\sitdown.sqf"", [false],1,false,true,"""",""(_target distance _this) < 1.5""];}";
+		};
+		id=8018;
+		type="Land_OfficeChair_01_F";
+		atlOffset=-1.9073486e-006;
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ace_isMedicalFacility";
+				expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
+	class Item24
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={2.0712891,0.67530632,4.2255859};
+			angles[]={6.282495,1.5249637,0};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			init="call{this addAction [""<t color='#529DCC'>Sentarse</t>"",""scripts\sitdown.sqf"", [false],1,false,true,"""",""(_target distance _this) < 1.5""];}";
+		};
+		id=8019;
+		type="Land_OfficeChair_01_F";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ace_isMedicalFacility";
+				expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
+	class Item25
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={2.0498047,0.67642593,5.6269531};
+			angles[]={6.282495,1.5309514,0};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			init="call{this addAction [""<t color='#529DCC'>Sentarse</t>"",""scripts\sitdown.sqf"", [false],1,false,true,"""",""(_target distance _this) < 1.5""];}";
+		};
+		id=8020;
+		type="Land_OfficeChair_01_F";
+		atlOffset=-1.9073486e-006;
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ace_isMedicalFacility";
+				expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
+	class Item26
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-2.7070313,0.67881775,5.671875};
+			angles[]={-0,4.6739306,6.282495};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			init="call{this addAction [""<t color='#529DCC'>Sentarse</t>"",""scripts\sitdown.sqf"", [false],1,false,true,"""",""(_target distance _this) < 1.5""];}";
+		};
+		id=8021;
+		type="Land_OfficeChair_01_F";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ace_isMedicalFacility";
+				expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
+	class Item27
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-2.6962891,0.67881012,4.2705078};
+			angles[]={-0,4.6799183,6.282495};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			init="call{this addAction [""<t color='#529DCC'>Sentarse</t>"",""scripts\sitdown.sqf"", [false],1,false,true,"""",""(_target distance _this) < 1.5""];}";
+		};
+		id=8022;
+		type="Land_OfficeChair_01_F";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ace_isMedicalFacility";
+				expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
+	class Item28
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-0.98730469,0.75363541,3.2041016};
+			angles[]={-0,3.1247191,6.282495};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			init="call{this addAction [""<t color='#529DCC'>Sentarse</t>"",""scripts\sitdown.sqf"", [false],1,false,true,"""",""(_target distance _this) < 1.5""];}";
+		};
+		id=8023;
+		type="Land_OfficeChair_01_F";
+		atlOffset=0.076192856;
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ace_isMedicalFacility";
+				expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
+	class Item29
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={0.4140625,0.67632294,3.1845703};
+			angles[]={-0,3.1307068,6.282495};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			init="call{this addAction [""<t color='#529DCC'>Sentarse</t>"",""scripts\sitdown.sqf"", [false],1,false,true,"""",""(_target distance _this) < 1.5""];}";
+		};
+		id=8024;
+		type="Land_OfficeChair_01_F";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ace_isMedicalFacility";
+				expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
+	class Item30
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={0.092773438,-0.0030059814,-6.9951172};
+			angles[]={0,3.1518726,6.2824869};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+		};
+		id=8025;
+		type="Land_BriefingRoomDesk_01_F";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ObjectTextureCustom0";
+				expression="_this setObjectTextureGlobal [0,_value]";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="imgs\argaab.jpg";
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
+	class Item31
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={1.0966797,0.67577744,-8.3574219};
+			angles[]={-0,3.1201131,6.282495};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			init="call{this addAction [""<t color='#529DCC'>Sentarse</t>"",""scripts\sitdown.sqf"", [false],1,false,true,"""",""(_target distance _this) < 1.5""];}";
+		};
+		id=8027;
+		type="Land_OfficeChair_01_F";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ace_isMedicalFacility";
+				expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
+	class Item32
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-0.60058594,0.67713547,-8.4414063};
+			angles[]={-0,3.1483843,6.282495};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			init="call{this addAction [""<t color='#529DCC'>Sentarse</t>"",""scripts\sitdown.sqf"", [false],1,false,true,"""",""(_target distance _this) < 1.5""];}";
+		};
+		id=8028;
+		type="Land_OfficeChair_01_F";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ace_isMedicalFacility";
+				expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
+	class Item33
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={2.7949219,0.6744175,-5.5224609};
+			angles[]={-0,1.6038628,6.282495};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			init="call{this addAction [""<t color='#529DCC'>Sentarse</t>"",""scripts\sitdown.sqf"", [false],1,false,true,"""",""(_target distance _this) < 1.5""];}";
+		};
+		id=8029;
+		type="Land_OfficeChair_01_F";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ace_isMedicalFacility";
+				expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
+	class Item34
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={2.7431641,0.67445946,-6.984375};
+			angles[]={-0,1.632134,6.282495};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			init="call{this addAction [""<t color='#529DCC'>Sentarse</t>"",""scripts\sitdown.sqf"", [false],1,false,true,"""",""(_target distance _this) < 1.5""];}";
+		};
+		id=8030;
+		type="Land_OfficeChair_01_F";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ace_isMedicalFacility";
+				expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
+	class Item35
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-0.60449219,0.67713928,-3.9804688};
+			angles[]={-0,6.2553339,6.282495};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			init="call{this addAction [""<t color='#529DCC'>Sentarse</t>"",""scripts\sitdown.sqf"", [false],1,false,true,"""",""(_target distance _this) < 1.5""];}";
+		};
+		id=8031;
+		type="Land_OfficeChair_01_F";
+		atlOffset=1.9073486e-006;
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ace_isMedicalFacility";
+				expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
+	class Item36
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={1.0009766,0.67585373,-3.8632813};
+			angles[]={-0,0.00041977502,6.282495};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			init="call{this addAction [""<t color='#529DCC'>Sentarse</t>"",""scripts\sitdown.sqf"", [false],1,false,true,"""",""(_target distance _this) < 1.5""];}";
+		};
+		id=8032;
+		type="Land_OfficeChair_01_F";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ace_isMedicalFacility";
+				expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
+	class Item37
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-2.6152344,0.67874527,-7.2382813};
+			angles[]={-0,4.6891432,6.282495};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			init="call{this addAction [""<t color='#529DCC'>Sentarse</t>"",""scripts\sitdown.sqf"", [false],1,false,true,"""",""(_target distance _this) < 1.5""];}";
+		};
+		id=8033;
+		type="Land_OfficeChair_01_F";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ace_isMedicalFacility";
+				expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
+	class Item38
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-2.7255859,0.67883492,-5.6318359};
+			angles[]={-0,4.7174144,6.282495};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+			init="call{this addAction [""<t color='#529DCC'>Sentarse</t>"",""scripts\sitdown.sqf"", [false],1,false,true,"""",""(_target distance _this) < 1.5""];}";
+		};
+		id=8034;
+		type="Land_OfficeChair_01_F";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ace_isMedicalFacility";
+				expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"BOOL"
+							};
+						};
+						value=0;
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
+};

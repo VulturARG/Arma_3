@@ -1,0 +1,1 @@
+ASLToAGL getPosASL  area_dano nearEntities ["Man", 1] select 0;
