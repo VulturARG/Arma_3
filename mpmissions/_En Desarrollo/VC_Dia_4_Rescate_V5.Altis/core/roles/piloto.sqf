@@ -29,6 +29,7 @@ _unit addItemToBackpack "arga_h_norm";
 _unit addItemToBackpack "arga_ca_bomber";
 
 _unit linkItem "tf_microdagr";
+_unit linkItem "ACE_NVG_Wide";
 
 /*******************************************************************************
                           Realizado por |ArgA|Ignacio

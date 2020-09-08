@@ -8,7 +8,7 @@ class EditorData
 	toggles=549;
 	class ItemIDProvider
 	{
-		nextID=3748;
+		nextID=3751;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={20246.58,77.812149,9687.8887};
-		dir[]={0.70379746,-0.61467642,0.35619798};
-		up[]={0.54843378,0.78877664,0.27756679};
-		aside[]={0.45157683,-5.595939e-007,-0.89225149};
+		pos[]={14626.889,19.398031,16778.566};
+		dir[]={-0.74756169,-0.60100228,0.28283995};
+		up[]={-0.5621112,0.79924679,0.21267475};
+		aside[]={0.35387847,-1.7031562e-007,0.93531966};
 	};
 };
 binarizationWanted=0;
@@ -105,7 +105,8 @@ addons[]=
 	"A3_Modules_F_ObjectModifiers",
 	"CUP_CAStructuresHouse_A_Hospital",
 	"A3_Static_F_Mortar_01",
-	"ace_huntir"
+	"ace_huntir",
+	"A3_Weapons_F_Ammoboxes"
 };
 class AddonsMetaData
 {
@@ -22158,7 +22159,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=580;
+		items=582;
 		class Item0
 		{
 			dataType="Marker";
@@ -63805,6 +63806,85 @@ class Mission
 			id=3744;
 			type="EmptyDetectorAreaR250";
 			atlOffset=9.5367432e-007;
+		};
+		class Item580
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14625.5,18.194054,16779};
+				angles[]={-0,0.78539819,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=3749;
+			type="ACE_Box_Ammo";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[],[]],[[],[]],[[""ACRE_PRC117F"",""ACRE_PRC148"",""ACRE_PRC343""],[5,10,60]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item581
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14617.5,18.927422,16799.5};
+				angles[]={0,5.4977875,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="call{0=[""AmmoboxInit"",[this,true]] spawn BIS_fnc_arsenal;}";
+			};
+			id=3750;
+			type="I_supplyCrate_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""launch_NLAW_F"",""arifle_Mk20_F"",""LMG_Mk200_F"",""FirstAidKit""],[1,2,1,10]],[[""9Rnd_45ACP_Mag"",""30Rnd_9x21_Mag"",""20Rnd_762x51_Mag"",""30Rnd_556x45_Stanag"",""200Rnd_65x39_cased_Box"",""1Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareYellow_F"",""UGL_FlareGreen_F"",""ACE_SpareBarrel"",""ACE_30Rnd_556x45_Stanag_M995_AP_mag"",""ACE_30Rnd_556x45_Stanag_Mk262_mag"",""ACE_30Rnd_556x45_Stanag_Mk318_mag""],[6,6,6,24,3,6,2,2,6,2,6,6,2,2,2,2,2,4,4,4]],[[""Laserdesignator_03"",""acc_flashlight"",""bipod_03_F_blk"",""ACE_Chemlight_Shield"",""ACE_EarPlugs""],[1,2,1,12,12]],[[""B_FieldPack_oli""],[2]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 	};
 	class Connections

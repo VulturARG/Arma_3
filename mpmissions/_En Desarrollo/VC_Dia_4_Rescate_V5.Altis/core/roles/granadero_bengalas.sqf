@@ -31,7 +31,7 @@ for "_i" from 1 to 10 do {_unit addItemToBackpack "rhs_mag_30Rnd_556x45_M855A1_S
 for "_i" from 1 to 34 do {_unit addItemToBackpack "1Rnd_HE_Grenade_shell";};
 for "_i" from 1 to 12 do {_unit addItemToBackpack "UGL_FlareWhite_F";};
 
-_unit linkItem "ACE_NVG_Wide";
+//_unit linkItem "ACE_NVG_Wide";
 
 /*******************************************************************************
                           Realizado por |ArgA|Ignacio

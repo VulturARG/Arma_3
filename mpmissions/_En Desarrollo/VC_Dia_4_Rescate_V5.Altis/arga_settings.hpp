@@ -23,7 +23,7 @@ DESACTIVAR_EQUIPAMIENTO_PERSONALIZADO = 1;          // Equipamiento guardado en 
 ACTIVAR_COMPUTADORA_ARTILLERIA = 1;                 // Habilita computadora artilleria poner true. Para que no aparezca poner false
 ACTIVAR_ROL_AUTOMATICO = 1;                         // Habilita la carga de rol al entrar a la misión por descripción de rol
                                                     // Para verificar que los roles estan bien escritos activar todas las IAs y entrar
-COLOCAR_GPS = 1;                                    // Agrega GPS vanilla en rol automático o caja. 1: agrega, 0: remueve
+COLOCAR_GPS = 0;                                    // Agrega GPS vanilla en rol automático o caja. 1: agrega, 0: remueve
 
 ACTIVAR_INSIGNIA_AUTOMATICO = 0;                    // Añadir a arga_settings
 INSIGNIA_IR = 0;                                    // Establece si las insignias son IR o normales

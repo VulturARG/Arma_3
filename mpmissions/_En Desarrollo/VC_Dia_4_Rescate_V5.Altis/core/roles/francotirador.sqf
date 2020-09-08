@@ -26,7 +26,7 @@ _unit addWeapon "Laserdesignator_03";
 _unit addItemToVest "MineDetector";
 _unit addItemToVest "ACE_Kestrel4500";
 _unit addItemToVest "ACE_ATragMX";
-_unit addItemToVest "ACE_DAGR";
+//_unit addItemToVest "ACE_DAGR";
 for "_i" from 1 to 5 do {_unit addItemToVest "SmokeShellBlue";};
 for "_i" from 1 to 4 do {_unit addItemToVest "ACE_5Rnd_127x99_AMAX_Mag";};
 for "_i" from 1 to 2 do {_unit addItemToVest "ACE_HandFlare_White";};
