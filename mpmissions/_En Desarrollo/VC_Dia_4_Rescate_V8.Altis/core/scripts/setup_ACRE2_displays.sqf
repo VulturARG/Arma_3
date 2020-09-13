@@ -2,8 +2,6 @@
                              Realizado por |ArgA|MIV
 *******************************************************************************/
 
-if (!isDedicated) exitWith {};
-
 private _enableAcreSetup   = getMissionConfigValue ["ACTIVAR_SETUP_PERSONALIZADO_RADIOS",  1] == 1;
 
 if (!_enableAcreSetup) exitWith {};
@@ -21,6 +19,7 @@ private _channelCompare     = '';
 	_platoon append [_x call MIV_fnc_getGroup];
 
 } foreach playableUnits;
+
 _platoon = _platoon arrayIntersect _platoon;
 
 {
@@ -39,22 +38,29 @@ _platoon = _platoon arrayIntersect _platoon;
         private _fixedName     = '';
         
         _channeArray append [_channelNumber];
-        _fixedName = (_fixedChannelName select {(toLower _channelText) in (toLower _x)}) select 0 ;
-        
+        _fixedName = (_fixedChannelName select {(toLower _channelText) in (toLower _x)}) select 0;
         if (isNil "_fixedName") then {
             _argaPlatoon = (( _argaPlatoonList select {(tolower _channelText) in (_x select 1) } ) select 0) select 0;
-            _channelCompare = (_platoon select {(toLower _argaPlatoon) in (toLower _x) } select 0);
+            _channelCompare = (_extraPlatoons select {(toLower _argaPlatoon) in (toLower _x) } select 0);
             if (isNil "_channelCompare" ) then { 
-                _channelText = _platoon select _platoonNumber;
-                _platoonNumber = _platoonNumber + 1;
-                _extraPlatoons = _extraPlatoons - [_channelText];
+                if (count(_extraPlatoons) > _platoonNumber) then {
+                    _channelText = _extraPlatoons select _platoonNumber;
+                    _platoonNumber = _platoonNumber + 1;
+                    if (!isNil "_channelText") then {
+                        _extraPlatoons = _extraPlatoons - [_channelText];
+                    };
+                } else {
+                    _channelText = nil;
+                };
+            } else {
+                if (!isNil "_argaPlatoon" ) then { 
+                    _extraPlatoons = _extraPlatoons - [_argaPlatoon];
+                };
             };
-            if (!isNil "_argaPlatoon" ) then { 
-                _extraPlatoons = _extraPlatoons - [_argaPlatoon];
-            };
+                
         };
 
-        if (!isNil "_description") then {
+        if (!isNil "_description" && !isNil "_channelText") then {
             [_radioType, "default", _channelNumber, _description, _channelText] call acre_api_fnc_setPresetChannelField;
         };       
         
@@ -65,7 +71,6 @@ _platoon = _platoon arrayIntersect _platoon;
         if (!isNil "_description") then {
             _channelText = _extraPlatoons select (_channelNumber-1);
             [_radioType, "default", _channelNumber+_channelMax, _description, _channelText] call acre_api_fnc_setPresetChannelField;
-            ["radioType",_radioType,"channelNumber",_channelNumber+_channelMax,"description",_description,"channelText",_channelText] call MIV_fnc_log;
         }; 
     };
 } forEach _radioChannelName;

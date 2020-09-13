@@ -16,9 +16,9 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={16492.799,33.663918,12768.233};
-		dir[]={0,-0.70710683,0.70710683};
-		up[]={0,0.70710677,0.70710677};
+		pos[]={20256.99,77.521103,9663.5166};
+		dir[]={0,-0.70710683,0.70710671};
+		up[]={0,0.70710665,0.70710677};
 		aside[]={0.99999994,0,-0};
 	};
 };
@@ -77,23 +77,22 @@ addons[]=
 	"ace_captives",
 	"ace_flashlights",
 	"acre_sys_prc117f",
-	"acre_sys_prc152",
+	"acre_sys_prc343",
 	"ace_scopes",
 	"ace_overheating",
 	"ace_grenades",
-	"acre_sys_prc343",
 	"ace_maptools",
-	"ace_dagr",
 	"adv_aceSplint",
 	"adv_aceCPR",
-	"ace_trenches",
-	"ace_attach",
 	"ace_minedetector",
 	"A3_Weapons_F_Orange",
 	"ace_explosives",
 	"A3_Weapons_F_Items",
-	"acfaa_unif",
-	"arg_unifs",
+	"ace_trenches",
+	"arga_casco",
+	"arga_uniforme",
+	"ace_attach",
+	"arga_chaleco",
 	"A3_Signs_F",
 	"po_factions_afr",
 	"ace_compat_rhs_afrf3",
@@ -103,15 +102,13 @@ addons[]=
 	"A3_Structures_F_Civ_Accessories",
 	"A3_Modules_F_ObjectModifiers",
 	"CUP_CAStructuresHouse_A_Hospital",
-	"A3_Static_F_Mortar_01",
-	"A3_Weapons_F_Ammoboxes",
-	"A3_Characters_F_Exp_Civil"
+	"A3_Static_F_Mortar_01"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=69;
+		items=67;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -417,8 +414,8 @@ class AddonsMetaData
 		};
 		class Item44
 		{
-			className="acre_sys_prc152";
-			name="ACRE2 - AN/PRC-152";
+			className="acre_sys_prc343";
+			name="ACRE2 - AN/PRC-343";
 			author="ACRE2Team";
 			url="https://github.com/IDI-Systems/acre2";
 		};
@@ -445,140 +442,123 @@ class AddonsMetaData
 		};
 		class Item48
 		{
-			className="acre_sys_prc343";
-			name="ACRE2 - AN/PRC-343";
-			author="ACRE2Team";
-			url="https://github.com/IDI-Systems/acre2";
-		};
-		class Item49
-		{
 			className="ace_maptools";
 			name="ACE3 - Map Tools";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item50
-		{
-			className="ace_dagr";
-			name="ACE3 - DAGR";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
-		};
-		class Item51
+		class Item49
 		{
 			className="adv_aceSplint";
 			name="adv_aceSplint";
 			author="[SeL] Belbo // Adrian";
 		};
-		class Item52
+		class Item50
 		{
 			className="adv_aceCPR";
 			name="adv_aceCPR";
 			author="[SeL] Belbo // Adrian";
 		};
-		class Item53
-		{
-			className="ace_trenches";
-			name="ACE3 - Trenches";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
-		};
-		class Item54
-		{
-			className="ace_attach";
-			name="ACE3 - Attach";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
-		};
-		class Item55
+		class Item51
 		{
 			className="ace_minedetector";
 			name="ACE3 - Mine Detector";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item56
+		class Item52
 		{
 			className="A3_Weapons_F_Orange";
 			name="Arma 3 Orange - Weapons and Accessories";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item57
+		class Item53
 		{
 			className="ace_explosives";
 			name="ACE3 - Explosives";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
+		class Item54
+		{
+			className="ace_trenches";
+			name="ACE3 - Trenches";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
+		class Item55
+		{
+			className="arga_casco";
+			name="arga_casco";
+		};
+		class Item56
+		{
+			className="arga_uniforme";
+			name="arga_uniforme";
+		};
+		class Item57
+		{
+			className="ace_attach";
+			name="ACE3 - Attach";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
 		class Item58
 		{
-			className="acfaa_unif";
-			name="acfaa_unif";
-			author="FAA mod";
+			className="arga_chaleco";
+			name="arga_chaleco";
 		};
 		class Item59
-		{
-			className="arg_unifs";
-			name="arg_unifs";
-		};
-		class Item60
 		{
 			className="A3_Signs_F";
 			name="Arma 3 - Signs";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item61
+		class Item60
 		{
 			className="po_factions_afr";
 			name="po_factions_afr";
 			author="Leight, Keeway";
 		};
-		class Item62
+		class Item61
 		{
 			className="ace_compat_rhs_afrf3";
 			name="ACE3 - RHS AFRF Compatibility";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item63
+		class Item62
 		{
 			className="A3_Structures_F_EPB";
 			name="Arma 3 Adapt Episode - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item64
+		class Item63
 		{
 			className="ace_interaction";
 			name="ACE3 - Interaction";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item65
+		class Item64
 		{
 			className="ace_dragging";
 			name="ACE3 - Dragging";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item66
+		class Item65
 		{
 			className="CUP_CAStructuresHouse_A_Hospital";
 			name="CUP_CAStructuresHouse_A_Hospital";
 		};
-		class Item67
+		class Item66
 		{
 			className="A3_Static_F";
 			name="Arma 3 Alpha - Turrets";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
-		class Item68
-		{
-			className="A3_Characters_F_Exp";
-			name="Arma 3 Apex - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -22128,7 +22108,7 @@ class Mission
 		windForced=1;
 		year=2019;
 		day=22;
-		hour=6;
+		hour=4;
 		minute=-30;
 		startFogDecay=0.014;
 		forecastFogDecay=0.014;
@@ -22159,7 +22139,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=576;
+		items=574;
 		class Item0
 		{
 			dataType="Marker";
@@ -24757,7 +24737,6 @@ class Mission
 			markerType="ELLIPSE";
 			type="ellipse";
 			colorName="ColorEAST";
-			alpha=0;
 			a=200;
 			b=200;
 			id=1575;
@@ -24861,7 +24840,6 @@ class Mission
 			markerType="ELLIPSE";
 			type="ellipse";
 			colorName="ColorEAST";
-			alpha=0;
 			a=500;
 			b=500;
 			id=1584;
@@ -31878,7 +31856,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[[[[],[]],[[""ACE_20Rnd_762x51_Mag_Tracer"",""ACE_20Rnd_762x51_Mag_Tracer_Dim"",""ACE_20Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_20Rnd_762x51_M118LR_Mag"",""ACE_20Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_M993_AP_Mag"",""ACE_20Rnd_762x51_Mag_SD"",""ACE_HuntIR_M203"",""1Rnd_HE_Grenade_shell"",""rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"",""HandGrenade"",""SmokeShellBlue"",""ACE_M84"",""rhsusf_100Rnd_556x45_M855_mixed_soft_pouch_coyote"",""rhsusf_100Rnd_762x51_m62_tracer"",""ACE_10Rnd_338_API526_Mag""],[50,50,50,50,50,50,50,10,50,50,50,50,50,20,20,20]],[[""ACE_fieldDressing"",""ACE_morphine"",""ACE_epinephrine"",""ACE_bloodIV"",""ACE_bloodIV_500"",""ACE_bloodIV_250"",""ACE_bodyBag"",""adv_aceSplint_splint"",""ACE_personalAidKit"",""ACE_elasticBandage"",""ACE_packingBandage"",""adv_aceCPR_AED"",""ACE_wirecutter"",""ACE_surgicalKit"",""ACE_plasmaIV"",""ACE_plasmaIV_250"",""ACE_plasmaIV_500"",""ACE_salineIV"",""ACE_salineIV_250"",""ACE_salineIV_500"",""ACE_microDAGR"",""ACE_NVG_Wide""],[30,30,30,20,20,20,10,30,30,60,60,7,2,7,10,5,10,10,5,10,1,2]],[[],[]]],false]";
+							value="[[[[],[]],[[""ACE_20Rnd_762x51_Mag_Tracer"",""ACE_20Rnd_762x51_Mag_Tracer_Dim"",""ACE_20Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_20Rnd_762x51_M118LR_Mag"",""ACE_20Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_M993_AP_Mag"",""ACE_20Rnd_762x51_Mag_SD"",""ACE_HuntIR_M203"",""1Rnd_HE_Grenade_shell"",""rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"",""HandGrenade"",""SmokeShellBlue"",""ACE_M84"",""rhsusf_100Rnd_556x45_M855_mixed_soft_pouch_coyote"",""rhsusf_100Rnd_762x51_m62_tracer"",""ACE_10Rnd_338_API526_Mag""],[50,50,50,50,50,50,50,10,50,50,50,50,50,20,20,20]],[[""ACE_fieldDressing"",""ACE_morphine"",""ACE_epinephrine"",""ACE_bloodIV"",""ACE_bloodIV_500"",""ACE_bloodIV_250"",""ACE_bodyBag"",""adv_aceSplint_splint"",""ACE_personalAidKit"",""ACE_elasticBandage"",""ACE_packingBandage"",""adv_aceCPR_AED"",""ACE_wirecutter"",""ACE_surgicalKit"",""ACE_plasmaIV"",""ACE_plasmaIV_250"",""ACE_plasmaIV_500"",""ACE_salineIV"",""ACE_salineIV_250"",""ACE_salineIV_500""],[30,30,30,20,20,20,10,30,30,60,60,7,2,7,10,5,10,10,5,10]],[[],[]]],false]";
 						};
 					};
 				};
@@ -31939,7 +31917,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[[[[],[]],[[""ACE_20Rnd_762x51_Mag_Tracer"",""ACE_20Rnd_762x51_Mag_Tracer_Dim"",""ACE_20Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_20Rnd_762x51_M118LR_Mag"",""ACE_20Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_M993_AP_Mag"",""ACE_20Rnd_762x51_Mag_SD"",""ACE_HuntIR_M203"",""1Rnd_HE_Grenade_shell"",""rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"",""HandGrenade"",""SmokeShellBlue"",""ACE_M84"",""rhsusf_100Rnd_556x45_M855_mixed_soft_pouch_coyote"",""rhsusf_100Rnd_762x51_m62_tracer"",""ACE_10Rnd_338_API526_Mag""],[50,50,50,50,50,50,50,10,50,50,50,50,50,20,20,20]],[[""ACE_fieldDressing"",""ACE_morphine"",""ACE_epinephrine"",""ACE_bloodIV"",""ACE_bloodIV_500"",""ACE_bloodIV_250"",""ACE_bodyBag"",""adv_aceSplint_splint"",""ACE_personalAidKit"",""ACE_elasticBandage"",""ACE_packingBandage"",""adv_aceCPR_AED"",""ACE_wirecutter"",""ACE_surgicalKit"",""ACE_plasmaIV"",""ACE_plasmaIV_250"",""ACE_plasmaIV_500"",""ACE_salineIV"",""ACE_salineIV_250"",""ACE_salineIV_500"",""ACE_microDAGR"",""ACE_NVG_Wide""],[30,30,30,20,20,20,10,30,30,60,60,7,2,7,10,5,10,10,5,10,1,2]],[[],[]]],false]";
+							value="[[[[],[]],[[""ACE_20Rnd_762x51_Mag_Tracer"",""ACE_20Rnd_762x51_Mag_Tracer_Dim"",""ACE_20Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_20Rnd_762x51_M118LR_Mag"",""ACE_20Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_M993_AP_Mag"",""ACE_20Rnd_762x51_Mag_SD"",""ACE_HuntIR_M203"",""1Rnd_HE_Grenade_shell"",""rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"",""HandGrenade"",""SmokeShellBlue"",""ACE_M84"",""rhsusf_100Rnd_556x45_M855_mixed_soft_pouch_coyote"",""rhsusf_100Rnd_762x51_m62_tracer"",""ACE_10Rnd_338_API526_Mag""],[50,50,50,50,50,50,50,10,50,50,50,50,50,20,20,20]],[[""ACE_fieldDressing"",""ACE_morphine"",""ACE_epinephrine"",""ACE_bloodIV"",""ACE_bloodIV_500"",""ACE_bloodIV_250"",""ACE_bodyBag"",""adv_aceSplint_splint"",""ACE_personalAidKit"",""ACE_elasticBandage"",""ACE_packingBandage"",""adv_aceCPR_AED"",""ACE_wirecutter"",""ACE_surgicalKit"",""ACE_plasmaIV"",""ACE_plasmaIV_250"",""ACE_plasmaIV_500"",""ACE_salineIV"",""ACE_salineIV_250"",""ACE_salineIV_500""],[30,30,30,20,20,20,10,30,30,60,60,7,2,7,10,5,10,10,5,10]],[[],[]]],false]";
 						};
 					};
 				};
@@ -31987,7 +31965,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={14679.174,20.703863,16724.035};
+				position[]={14679.174,20.703804,16724.035};
 				angles[]={0,2.3373625,0};
 			};
 			side="Empty";
@@ -31999,7 +31977,7 @@ class Mission
 			};
 			id=3062;
 			type="RHS_UH60M";
-			atlOffset=0.078058243;
+			atlOffset=0.077999115;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -32017,7 +31995,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[[[[],[]],[[""ACE_20Rnd_762x51_Mag_Tracer"",""ACE_20Rnd_762x51_Mag_Tracer_Dim"",""ACE_20Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_20Rnd_762x51_M118LR_Mag"",""ACE_20Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_M993_AP_Mag"",""ACE_20Rnd_762x51_Mag_SD"",""ACE_HuntIR_M203"",""1Rnd_HE_Grenade_shell"",""rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"",""HandGrenade"",""SmokeShellBlue"",""ACE_M84"",""rhsusf_100Rnd_556x45_M855_mixed_soft_pouch_coyote"",""rhsusf_100Rnd_762x51_m62_tracer"",""ACE_10Rnd_338_API526_Mag""],[50,50,50,50,50,50,50,10,50,50,50,50,50,20,20,20]],[[""ACE_fieldDressing"",""ACE_morphine"",""ACE_epinephrine"",""ACE_bloodIV"",""ACE_bloodIV_500"",""ACE_bloodIV_250"",""ACE_bodyBag"",""adv_aceSplint_splint"",""ACE_personalAidKit"",""ACE_elasticBandage"",""ACE_packingBandage"",""adv_aceCPR_AED"",""ACE_wirecutter"",""ACE_surgicalKit"",""optic_ERCO_blk_F"",""ACE_plasmaIV"",""ACE_plasmaIV_250"",""ACE_plasmaIV_500"",""ACE_salineIV"",""ACE_salineIV_250"",""ACE_salineIV_500"",""ACE_microDAGR"",""ACE_NVG_Wide""],[30,30,30,20,20,20,10,30,30,60,60,7,2,7,5,10,5,10,10,5,10,1,2]],[[],[]]],false]";
+							value="[[[[],[]],[[""ACE_20Rnd_762x51_Mag_Tracer"",""ACE_20Rnd_762x51_Mag_Tracer_Dim"",""ACE_20Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_20Rnd_762x51_M118LR_Mag"",""ACE_20Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_M993_AP_Mag"",""ACE_20Rnd_762x51_Mag_SD"",""ACE_HuntIR_M203"",""1Rnd_HE_Grenade_shell"",""rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"",""HandGrenade"",""SmokeShellBlue"",""ACE_M84"",""rhsusf_100Rnd_556x45_M855_mixed_soft_pouch_coyote"",""rhsusf_100Rnd_762x51_m62_tracer"",""ACE_10Rnd_338_API526_Mag""],[50,50,50,50,50,50,50,10,50,50,50,50,50,20,20,20]],[[""ACE_fieldDressing"",""ACE_morphine"",""ACE_epinephrine"",""ACE_bloodIV"",""ACE_bloodIV_500"",""ACE_bloodIV_250"",""ACE_bodyBag"",""adv_aceSplint_splint"",""ACE_personalAidKit"",""ACE_elasticBandage"",""ACE_packingBandage"",""adv_aceCPR_AED"",""ACE_wirecutter"",""ACE_surgicalKit"",""optic_ERCO_blk_F"",""ACE_plasmaIV"",""ACE_plasmaIV_250"",""ACE_plasmaIV_500"",""ACE_salineIV"",""ACE_salineIV_250"",""ACE_salineIV_500""],[30,30,30,20,20,20,10,30,30,60,60,7,2,7,5,10,5,10,10,5,10]],[[],[]]],false]";
 						};
 					};
 				};
@@ -32078,7 +32056,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[[[[],[]],[[""ACE_20Rnd_762x51_Mag_Tracer"",""ACE_20Rnd_762x51_Mag_Tracer_Dim"",""ACE_20Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_20Rnd_762x51_M118LR_Mag"",""ACE_20Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_M993_AP_Mag"",""ACE_20Rnd_762x51_Mag_SD"",""ACE_HuntIR_M203"",""1Rnd_HE_Grenade_shell"",""rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"",""HandGrenade"",""SmokeShellBlue"",""ACE_M84"",""rhsusf_100Rnd_556x45_M855_mixed_soft_pouch_coyote"",""rhsusf_100Rnd_762x51_m62_tracer"",""ACE_10Rnd_338_API526_Mag""],[50,50,50,50,50,50,50,10,50,50,50,50,50,20,20,20]],[[""ACE_fieldDressing"",""ACE_morphine"",""ACE_epinephrine"",""ACE_bloodIV"",""ACE_bloodIV_500"",""ACE_bloodIV_250"",""ACE_bodyBag"",""adv_aceSplint_splint"",""ACE_personalAidKit"",""ACE_elasticBandage"",""ACE_packingBandage"",""adv_aceCPR_AED"",""ACE_wirecutter"",""ACE_surgicalKit"",""ACE_plasmaIV"",""ACE_plasmaIV_250"",""ACE_plasmaIV_500"",""ACE_salineIV"",""ACE_salineIV_250"",""ACE_salineIV_500"",""ACE_microDAGR"",""ACE_NVG_Wide""],[30,30,30,20,20,20,10,30,30,60,60,7,2,7,10,5,10,10,5,10,1,2]],[[],[]]],false]";
+							value="[[[[],[]],[[""ACE_20Rnd_762x51_Mag_Tracer"",""ACE_20Rnd_762x51_Mag_Tracer_Dim"",""ACE_20Rnd_762x51_Mk316_Mod_0_Mag"",""ACE_20Rnd_762x51_M118LR_Mag"",""ACE_20Rnd_762x51_Mk319_Mod_0_Mag"",""ACE_20Rnd_762x51_M993_AP_Mag"",""ACE_20Rnd_762x51_Mag_SD"",""ACE_HuntIR_M203"",""1Rnd_HE_Grenade_shell"",""rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"",""HandGrenade"",""SmokeShellBlue"",""ACE_M84"",""rhsusf_100Rnd_556x45_M855_mixed_soft_pouch_coyote"",""rhsusf_100Rnd_762x51_m62_tracer"",""ACE_10Rnd_338_API526_Mag""],[50,50,50,50,50,50,50,10,50,50,50,50,50,20,20,20]],[[""ACE_fieldDressing"",""ACE_morphine"",""ACE_epinephrine"",""ACE_bloodIV"",""ACE_bloodIV_500"",""ACE_bloodIV_250"",""ACE_bodyBag"",""adv_aceSplint_splint"",""ACE_personalAidKit"",""ACE_elasticBandage"",""ACE_packingBandage"",""adv_aceCPR_AED"",""ACE_wirecutter"",""ACE_surgicalKit"",""ACE_plasmaIV"",""ACE_plasmaIV_250"",""ACE_plasmaIV_500"",""ACE_salineIV"",""ACE_salineIV_250"",""ACE_salineIV_500"",""ACRE_PRC117F"",""ACRE_PRC343""],[30,30,30,20,20,20,10,30,30,60,60,7,2,7,10,5,10,10,5,10,1,5]],[[],[]]],false]";
 						};
 					};
 				};
@@ -39067,7 +39045,7 @@ class Mission
 									};
 									class Item1
 									{
-										name="ACRE_PRC152";
+										name="ACRE_PRC343";
 										count=1;
 									};
 								};
@@ -39768,13 +39746,8 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=2;
+									items=1;
 									class Item0
-									{
-										name="ACE_DAGR";
-										count=1;
-									};
-									class Item1
 									{
 										name="ACE_Flashlight_XL50";
 										count=1;
@@ -39785,19 +39758,9 @@ class Mission
 							{
 								typeName="B_FieldPack_blk";
 								isBackpack=1;
-								class MagazineCargo
-								{
-									items=1;
-									class Item0
-									{
-										name="SmokeShellGreen";
-										count=5;
-										ammoLeft=1;
-									};
-								};
 								class ItemCargo
 								{
-									items=12;
+									items=7;
 									class Item0
 									{
 										name="ACE_elasticBandage";
@@ -39830,32 +39793,7 @@ class Mission
 									};
 									class Item6
 									{
-										name="ACE_bodyBag";
-										count=2;
-									};
-									class Item7
-									{
 										name="ACE_epinephrine";
-										count=15;
-									};
-									class Item8
-									{
-										name="ACE_morphine";
-										count=15;
-									};
-									class Item9
-									{
-										name="ACE_CableTie";
-										count=5;
-									};
-									class Item10
-									{
-										name="ACE_EarPlugs";
-										count=1;
-									};
-									class Item11
-									{
-										name="ACE_salineIV_500";
 										count=2;
 									};
 								};
@@ -39863,7 +39801,6 @@ class Mission
 							map="ItemMap";
 							compass="ItemCompass";
 							watch="ACE_Altimeter";
-							radio="tf_anprc152_2";
 							headgear="LOP_H_Villager_cap";
 						};
 					};
@@ -40042,13 +39979,8 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=2;
+									items=1;
 									class Item0
-									{
-										name="ACE_DAGR";
-										count=1;
-									};
-									class Item1
 									{
 										name="ACE_Flashlight_XL50";
 										count=1;
@@ -40079,7 +40011,6 @@ class Mission
 							map="ItemMap";
 							compass="ItemCompass";
 							watch="ItemWatch";
-							radio="tf_anprc152";
 							headgear="LOP_H_Villager_cap";
 						};
 					};
@@ -40220,13 +40151,8 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=2;
+									items=1;
 									class Item0
-									{
-										name="ACE_DAGR";
-										count=1;
-									};
-									class Item1
 									{
 										name="ACE_Flashlight_XL50";
 										count=1;
@@ -40257,7 +40183,6 @@ class Mission
 							map="ItemMap";
 							compass="ItemCompass";
 							watch="ItemWatch";
-							radio="tf_anprc152";
 							headgear="LOP_H_Villager_cap";
 						};
 					};
@@ -40348,7 +40273,7 @@ class Mission
 								isBackpack=0;
 								class ItemCargo
 								{
-									items=12;
+									items=5;
 									class Item0
 									{
 										name="ACE_packingBandage";
@@ -40372,41 +40297,6 @@ class Mission
 									class Item4
 									{
 										name="ACE_morphine";
-										count=3;
-									};
-									class Item5
-									{
-										name="ACE_epinephrine";
-										count=3;
-									};
-									class Item6
-									{
-										name="ACE_EntrenchingTool";
-										count=1;
-									};
-									class Item7
-									{
-										name="adv_aceSplint_splint";
-										count=3;
-									};
-									class Item8
-									{
-										name="ACE_Flashlight_XL50";
-										count=1;
-									};
-									class Item9
-									{
-										name="ACE_MapTools";
-										count=1;
-									};
-									class Item10
-									{
-										name="ACE_tourniquet";
-										count=3;
-									};
-									class Item11
-									{
-										name="ACE_IR_Strobe_Item";
 										count=1;
 									};
 								};
@@ -40417,39 +40307,18 @@ class Mission
 								isBackpack=0;
 								class MagazineCargo
 								{
-									items=4;
+									items=2;
 									class Item0
 									{
 										name="ACE_20Rnd_762x51_Mk316_Mod_0_Mag";
-										count=7;
+										count=5;
 										ammoLeft=20;
 									};
 									class Item1
 									{
 										name="SmokeShellBlue";
-										count=4;
+										count=2;
 										ammoLeft=1;
-									};
-									class Item2
-									{
-										name="rhsusf_mag_17Rnd_9x19_JHP";
-										count=3;
-										ammoLeft=17;
-									};
-									class Item3
-									{
-										name="rhs_mag_m67";
-										count=1;
-										ammoLeft=1;
-									};
-								};
-								class ItemCargo
-								{
-									items=1;
-									class Item0
-									{
-										name="ACE_DAGR";
-										count=1;
 									};
 								};
 							};
@@ -40477,7 +40346,6 @@ class Mission
 							map="ItemMap";
 							compass="ItemCompass";
 							watch="ItemWatch";
-							radio="tf_anprc152";
 							headgear="LOP_H_Villager_cap";
 						};
 					};
@@ -40618,13 +40486,8 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=2;
+									items=1;
 									class Item0
-									{
-										name="ACE_DAGR";
-										count=1;
-									};
-									class Item1
 									{
 										name="ACE_Flashlight_XL50";
 										count=1;
@@ -40655,7 +40518,6 @@ class Mission
 							map="ItemMap";
 							compass="ItemCompass";
 							watch="ItemWatch";
-							radio="tf_anprc152";
 							headgear="LOP_H_Villager_cap";
 						};
 					};
@@ -40796,13 +40658,8 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=2;
+									items=1;
 									class Item0
-									{
-										name="ACE_DAGR";
-										count=1;
-									};
-									class Item1
 									{
 										name="ACE_Flashlight_XL50";
 										count=1;
@@ -40833,7 +40690,6 @@ class Mission
 							map="ItemMap";
 							compass="ItemCompass";
 							watch="ItemWatch";
-							radio="tf_anprc152";
 							headgear="LOP_H_Villager_cap";
 						};
 					};
@@ -41308,7 +41164,7 @@ class Mission
 							};
 							class uniform
 							{
-								typeName="acfaa_PATAGONICO_ARG3";
+								typeName="arga_u_gen3_bosque_marpat";
 								isBackpack=0;
 								class ItemCargo
 								{
@@ -41367,7 +41223,7 @@ class Mission
 							};
 							class vest
 							{
-								typeName="PlateCarrier_Tanargir";
+								typeName="arga_c_pesado_bosque_marpat";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -41388,7 +41244,7 @@ class Mission
 							};
 							class backpack
 							{
-								typeName="acfaa_Carryall_patagonico";
+								typeName="arga_m_petate_bosque_marpat";
 								isBackpack=1;
 								class MagazineCargo
 								{
@@ -41404,8 +41260,7 @@ class Mission
 							map="ItemMap";
 							compass="ItemCompass";
 							watch="ACE_Altimeter";
-							radio="tf_anprc152";
-							headgear="Casco_ECHPatagonico";
+							headgear="arga_cas_combate_bosque_marpat";
 						};
 					};
 					id=3571;
@@ -41457,7 +41312,7 @@ class Mission
 			class Attributes
 			{
 				name="encubiertos";
-				init="call{{_x addItemToBackpack ""Casco_ECHPatagonico""; _x addPrimaryWeaponItem ""acc_flashlight""; _x addHandgunItem ""rhsusf_acc_omega9k""; " \n "_x addHandgunItem ""acc_flashlight_pistol"";}foreach units this;}";
+				init="call{{_x addPrimaryWeaponItem ""acc_flashlight""; _x addHandgunItem ""rhsusf_acc_omega9k""; " \n "_x addHandgunItem ""acc_flashlight_pistol"";}foreach units this;}";
 			};
 			id=3487;
 		};
@@ -43049,7 +42904,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={18222,48.022659,12672.5};
-			angle=5.7595849;
+			angle=5.759584;
 			class Attributes
 			{
 				condition="call{this}";
@@ -44421,46 +44276,6 @@ class Mission
 		};
 		class Item571
 		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={14617.5,18.927422,16799.5};
-				angles[]={0,5.4977875,0};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				init="call{0=[""AmmoboxInit"",[this,true]] spawn BIS_fnc_arsenal;}";
-			};
-			id=3750;
-			type="I_supplyCrate_F";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="[[[[""launch_NLAW_F"",""arifle_Mk20_F"",""LMG_Mk200_F"",""FirstAidKit""],[1,2,1,10]],[[""9Rnd_45ACP_Mag"",""30Rnd_9x21_Mag"",""20Rnd_762x51_Mag"",""30Rnd_556x45_Stanag"",""200Rnd_65x39_cased_Box"",""1Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareYellow_F"",""UGL_FlareGreen_F"",""ACE_SpareBarrel"",""ACE_30Rnd_556x45_Stanag_M995_AP_mag"",""ACE_30Rnd_556x45_Stanag_Mk262_mag"",""ACE_30Rnd_556x45_Stanag_Mk318_mag""],[6,6,6,24,3,6,2,2,6,2,6,6,2,2,2,2,2,4,4,4]],[[""Laserdesignator_03"",""acc_flashlight"",""bipod_03_F_blk"",""ACE_Chemlight_Shield"",""ACE_EarPlugs""],[1,2,1,12,12]],[[""B_FieldPack_oli""],[2]]],false]";
-						};
-					};
-				};
-				nAttributes=1;
-			};
-		};
-		class Item572
-		{
 			dataType="Marker";
 			position[]={16813.105,0.66514778,11944.972};
 			name="marker_38";
@@ -44470,7 +44285,7 @@ class Mission
 			id=3751;
 			atlOffset=-5.3548241;
 		};
-		class Item573
+		class Item572
 		{
 			dataType="Marker";
 			position[]={17056.5,15.648,12920.5};
@@ -44485,7 +44300,7 @@ class Mission
 			id=1729;
 			atlOffset=1.9073486e-006;
 		};
-		class Item574
+		class Item573
 		{
 			dataType="Object";
 			class PositionInfo
@@ -44499,37 +44314,6 @@ class Mission
 			};
 			id=3762;
 			type="Land_Camping_Light_F";
-		};
-		class Item575
-		{
-			dataType="Group";
-			side="Civilian";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={16489.207,19.810917,12799.483};
-					};
-					side="Civilian";
-					flags=7;
-					class Attributes
-					{
-						isPlayer=1;
-					};
-					id=3766;
-					type="C_man_1";
-					atlOffset=1.5258789e-005;
-				};
-			};
-			class Attributes
-			{
-			};
-			id=3765;
-			atlOffset=1.5258789e-005;
 		};
 	};
 	class Connections
