@@ -19,9 +19,7 @@ if (_Daytime) then
 	_Temp = createVehicle [_MarkFlare, [(_Position select 0), (_Position select 1), ((_Position select 2) + 140)], [], 20, "CAN_COLLIDE"];
 	_Temp setVelocity [0,0,-10];
 	UIsleep 3.1;
-	//playSound3D ["A3\Sounds_F\weapons\Flare_Gun\flaregun_2_shoot.wss", _Flare, false, [(_Position select 0), (_Position select 1), (_Position select 2) + 140], 8, 1, 300];
-	playSound3D ["a3\missions_f_beta\data\sounds\Showcase_Night\flaregun_shoot.wss", _Flare, false, [(_Position select 0), (_Position select 1), (_Position select 2) + 140], 8, 1, 300];
-	
+	playSound3D ["a3\missions_f_beta\data\sounds\Showcase_Night\flaregun_shoot.wss", _round select 4, false, [(_Position select 0), (_Position select 1), (_Position select 2) + 140], 8, 1, 300];
 };
 
 /*******************************************************************************
