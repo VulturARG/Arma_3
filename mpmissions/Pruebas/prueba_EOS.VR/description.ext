@@ -1,0 +1,32 @@
+/*******************************************************************************
+                          Realizado por |ArgA|MIV
+*******************************************************************************/
+
+#include "core\private_settings.hpp"
+#include "arga_settings.hpp"
+#include "core\pre_description.hpp"
+
+class CfgFunctions {
+  #include "core\functions.hpp"
+};
+
+class CfgSounds {
+	sounds[] = {};
+  #include "core\sounds.hpp"
+  class Beeper2{
+    name = "Beeper2"; 
+    sound[] = {\sounds\Beeper2.ogg, 1, 1.0};
+    titles[] = {0, ""};
+  };
+  class intro{
+    name = "intro"; 
+    sound[] = {\sounds\effect_intro.ogg, 1, 1.0};
+    titles[] = {0, ""};
+  };
+};
+
+#include "core\post_description.hpp"
+
+/*******************************************************************************
+                          Realizado por |ArgA|MIV
+*******************************************************************************/

@@ -1,0 +1,7 @@
+
+OnLoadName = "Headless Client";
+OnLoadMission = "An Arma3 headless client tutorial";
+Author = "Monsoon";
+overviewpicture = "hhm.paa";
+
+enableDebugConsole = 1;

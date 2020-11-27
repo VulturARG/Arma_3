@@ -34493,7 +34493,7 @@ class Mission
 			markerType="RECTANGLE";
 			type="rectangle";
 			colorName="ColorYellow";
-			alpha=0;
+			alpha=0.98288691;
 			a=100;
 			b=150;
 			angle=224.99979;
@@ -34508,7 +34508,7 @@ class Mission
 			markerType="RECTANGLE";
 			type="rectangle";
 			colorName="ColorYellow";
-			alpha=0;
+			alpha=0.98288691;
 			a=100;
 			b=150;
 			angle=224.99979;
@@ -34523,7 +34523,7 @@ class Mission
 			markerType="RECTANGLE";
 			type="rectangle";
 			colorName="ColorYellow";
-			alpha=0;
+			alpha=0.98288691;
 			a=100;
 			b=150;
 			angle=224.99979;
@@ -34538,7 +34538,7 @@ class Mission
 			markerType="RECTANGLE";
 			type="rectangle";
 			colorName="ColorYellow";
-			alpha=0;
+			alpha=0.98288691;
 			a=100;
 			b=150;
 			angle=224.99979;
@@ -34553,7 +34553,7 @@ class Mission
 			markerType="RECTANGLE";
 			type="rectangle";
 			colorName="ColorYellow";
-			alpha=0;
+			alpha=0.98288691;
 			a=100;
 			b=150;
 			angle=224.99979;
@@ -34568,7 +34568,7 @@ class Mission
 			markerType="RECTANGLE";
 			type="rectangle";
 			colorName="ColorYellow";
-			alpha=0;
+			alpha=0.98288691;
 			a=100;
 			b=150;
 			angle=224.99979;
@@ -34583,7 +34583,7 @@ class Mission
 			markerType="RECTANGLE";
 			type="rectangle";
 			colorName="ColorYellow";
-			alpha=0;
+			alpha=0.98288691;
 			a=100;
 			b=200;
 			angle=314.99988;
@@ -34598,7 +34598,7 @@ class Mission
 			markerType="RECTANGLE";
 			type="rectangle";
 			colorName="ColorYellow";
-			alpha=0;
+			alpha=0.98288691;
 			a=100;
 			b=200;
 			angle=314.99988;
@@ -35632,7 +35632,7 @@ class Mission
 			markerType="ELLIPSE";
 			type="ellipse";
 			colorName="ColorBlack";
-			alpha=0;
+			alpha=0.99559486;
 			a=500;
 			b=800;
 			angle=233.61798;

@@ -1,0 +1,6337 @@
+version=53;
+center[]={916.27588,13.16,2997.7012};
+class items
+{
+	items=7;
+	class Item0
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-6.3549805,0,-6.2885742};
+			angles[]={0,0.96018934,0};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+		};
+		id=701;
+		type="ACE_medicalSupplyCrate";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ammoBox";
+				expression="[_this,_value] call bis_fnc_initAmmoBox;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="[[[[],[]],[[],[]],[[""ACE_fieldDressing"",""ACE_morphine"",""ACE_epinephrine"",""ACE_bloodIV"",""ACE_bloodIV_500"",""ACE_bloodIV_250"",""ACE_bodyBag"",""adv_aceSplint_splint"",""ACE_personalAidKit"",""ACE_elasticBandage"",""ACE_packingBandage"",""adv_aceCPR_AED"",""ACE_surgicalKit"",""ACE_plasmaIV"",""ACE_plasmaIV_250"",""ACE_plasmaIV_500"",""ACE_salineIV"",""ACE_salineIV_250"",""ACE_salineIV_500""],[30,30,30,20,20,20,10,30,30,60,60,8,8,10,5,10,10,5,10]],[[],[]]],false]";
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
+	class Item1
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-5.2878418,0.28405476,-8.0898438};
+			angles[]={0,5.7382898,0};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+		};
+		id=702;
+		type="ACE_Box_Ammo";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ammoBox";
+				expression="[_this,_value] call bis_fnc_initAmmoBox;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="[[[[],[]],[[],[]],[[""ACRE_PRC117F"",""ACRE_PRC343"",""ACRE_PRC152""],[10,60,10]],[[""arga_m_petate_bosque_multicam""],[5]]],false]";
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
+	class Item2
+	{
+		dataType="Group";
+		side="West";
+		class Entities
+		{
+			items=3;
+			class Item0
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={12.401917,0.0014390945,3.0522461};
+					angles[]={0,4.1411934,0};
+				};
+				side="West";
+				flags=6;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle"";}";
+					description="Lider @Comandancia";
+					isPlayable=1;
+					class Inventory
+					{
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ItemWatch";
+						radio="ItemRadio";
+					};
+				};
+				id=705;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item1
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={11.377869,0.0014390945,4.411377};
+					angles[]={0,4.1411915,0};
+				};
+				side="West";
+				flags=4;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle"";}";
+					description="Sub Líder";
+					isPlayable=1;
+					class Inventory
+					{
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ItemWatch";
+						radio="ItemRadio";
+					};
+				};
+				id=706;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item2
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={10.464233,0.0014390945,5.5405273};
+					angles[]={0,4.0873899,0};
+				};
+				side="West";
+				flags=4;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle"";}";
+					description="Radio Operador";
+					isPlayable=1;
+					class Inventory
+					{
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ItemWatch";
+						radio="ItemRadio";
+					};
+				};
+				id=707;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+		};
+		class Attributes
+		{
+			init="call{{_x addPrimaryWeaponItem ""acc_flashlight"";}foreach units this}";
+		};
+		id=704;
+	};
+	class Item3
+	{
+		dataType="Group";
+		side="West";
+		class Entities
+		{
+			items=35;
+			class Item0
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={11.091492,0.0014390945,-7.609375};
+					angles[]={0,0.94250393,0};
+				};
+				side="West";
+				flags=7;
+				class Attributes
+				{
+					rank="SERGEANT";
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle"";}";
+					description="Líder Pelotón @Cóndor";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=709;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item1
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={10.41394,0.0014390945,-9.2636719};
+					angles[]={0,0.9925164,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle"";}";
+					description="Líder Escuadra 1@Cóndor";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=1014;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="ace_isEngineer";
+						expression="if !(_value == ([0,1] select (_this getUnitTrait 'engineer'))|| {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=2;
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute2
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					class Attribute3
+					{
+						property="ace_advanced_fatigue_performanceFactor";
+						expression="_this setVariable [""ace_advanced_fatigue_performanceFactor"",_value,true]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=2;
+							};
+						};
+					};
+					nAttributes=4;
+				};
+			};
+			class Item2
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={9.3601685,0.0014390945,-7.8769531};
+					angles[]={0,0.9925164,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle"";}";
+					description="Líder Escuadra 2@Cóndor";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=1015;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="ace_isEngineer";
+						expression="if !(_value == ([0,1] select (_this getUnitTrait 'engineer'))|| {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=2;
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute2
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					class Attribute3
+					{
+						property="ace_advanced_fatigue_performanceFactor";
+						expression="_this setVariable [""ace_advanced_fatigue_performanceFactor"",_value,true]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=2;
+							};
+						};
+					};
+					nAttributes=4;
+				};
+			};
+			class Item3
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={7.1000977,0.0014390945,-10.349121};
+					angles[]={0,0.9425301,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle"";}";
+					description="Radio Operador@Cóndor";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=1017;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item4
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={9.6921387,0.0014390945,-11.349121};
+					angles[]={0,0.9425301,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle"";}";
+					description="Ametrallador 556@Cóndor";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=1018;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item5
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={8.4341431,0.0014390945,-12.199219};
+					angles[]={0,0.9425301,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle"";}";
+					description="Ametrallador 556@Cóndor";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=1019;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item6
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={8.9661255,0.0014390945,-10.365234};
+					angles[]={0,0.9425301,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle"";}";
+					description="Ametrallador 762@Cóndor";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=1020;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item7
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={7.7091064,0.0014390945,-11.213135};
+					angles[]={0,0.9425301,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle"";}";
+					description="Ametrallador 762@Cóndor";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=1021;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item8
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={7.7211304,0.0014390945,-8.4240723};
+					angles[]={0,0.9925164,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle""; this setVariable [""ACE_IsEngineer"",1,true]; this setVariable [""ACE_isEOD"",true,true];}";
+					description="Ingeniero@Cóndor";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=1022;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="ace_isEngineer";
+						expression="if !(_value == ([0,1] select (_this getUnitTrait 'engineer'))|| {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=2;
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute2
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					class Attribute3
+					{
+						property="ace_advanced_fatigue_performanceFactor";
+						expression="_this setVariable [""ace_advanced_fatigue_performanceFactor"",_value,true]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=2;
+							};
+						};
+					};
+					nAttributes=4;
+				};
+			};
+			class Item9
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={6.4611206,0.0014390945,-9.2722168};
+					angles[]={0,0.9925164,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle""; this setVariable [""ACE_IsEngineer"",1,true]; this setVariable [""ACE_isEOD"",true,true];}";
+					description="Ingeniero@Cóndor";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=1023;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="ace_isEngineer";
+						expression="if !(_value == ([0,1] select (_this getUnitTrait 'engineer'))|| {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=2;
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute2
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					class Attribute3
+					{
+						property="ace_advanced_fatigue_performanceFactor";
+						expression="_this setVariable [""ace_advanced_fatigue_performanceFactor"",_value,true]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=2;
+							};
+						};
+					};
+					nAttributes=4;
+				};
+			};
+			class Item10
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={6.9451294,0.0014390945,-7.4890137};
+					angles[]={0,0.9425301,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle"";}";
+					description="Granadero@Cóndor";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=1024;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item11
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={5.6871338,0.0014390945,-8.3381348};
+					angles[]={0,0.9425301,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle"";}";
+					description="Granadero@Cóndor";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=1025;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item12
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={6.2930908,0.0014390945,-6.5231934};
+					angles[]={0,0.9425301,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle""; this setVariable [""ace_medical_medicClass"", 2, true];}";
+					description="Enfermero@Cóndor";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=1026;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="ace_isMedic";
+						expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=2;
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="ace_advanced_fatigue_performanceFactor";
+						expression="_this setVariable [""ace_advanced_fatigue_performanceFactor"",_value,true]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=2;
+							};
+						};
+					};
+					class Attribute2
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute3
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=4;
+				};
+			};
+			class Item13
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={5.0331421,0.0014390945,-7.3701172};
+					angles[]={0,0.9425301,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle""; this setVariable [""ace_medical_medicClass"", 2, true];}";
+					description="Enfermero@Cóndor";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=1027;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="ace_isMedic";
+						expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=2;
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="ace_advanced_fatigue_performanceFactor";
+						expression="_this setVariable [""ace_advanced_fatigue_performanceFactor"",_value,true]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=2;
+							};
+						};
+					};
+					class Attribute2
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="ACE_NoVoice";
+							};
+						};
+					};
+					class Attribute3
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=4;
+				};
+			};
+			class Item14
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={5.3721313,0.0014390945,-5.3920898};
+					angles[]={0,0.94251269,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle""; this setVariable [""ace_medical_medicClass"", 2, true];}";
+					description="Médico de Combate@Cóndor";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=1028;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="ace_isMedic";
+						expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=2;
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="ace_advanced_fatigue_performanceFactor";
+						expression="_this setVariable [""ace_advanced_fatigue_performanceFactor"",_value,true]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=2;
+							};
+						};
+					};
+					class Attribute2
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute3
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=4;
+				};
+			};
+			class Item15
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={4.1141357,0.0014390945,-6.2421875};
+					angles[]={0,0.94251269,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle""; this setVariable [""ace_medical_medicClass"", 2, true];}";
+					description="Médico de Combate@Cóndor";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=1029;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="ace_isMedic";
+						expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=2;
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="ace_advanced_fatigue_performanceFactor";
+						expression="_this setVariable [""ace_advanced_fatigue_performanceFactor"",_value,true]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=2;
+							};
+						};
+					};
+					class Attribute2
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute3
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=4;
+				};
+			};
+			class Item16
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={4.5041504,0.0014390945,-4.0490723};
+					angles[]={0,0.94251269,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle""; this setVariable [""ace_medical_medicClass"", 2, true];}";
+					description="Medico@Cóndor";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=1030;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="ace_isMedic";
+						expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=2;
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="ace_advanced_fatigue_performanceFactor";
+						expression="_this setVariable [""ace_advanced_fatigue_performanceFactor"",_value,true]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=2;
+							};
+						};
+					};
+					class Attribute2
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute3
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=4;
+				};
+			};
+			class Item17
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={3.2590942,0.0014390945,-5.0041504};
+					angles[]={0,0.94251269,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle""; this setVariable [""ace_medical_medicClass"", 2, true];}";
+					description="Medico@Cóndor";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=1031;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="ace_isMedic";
+						expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=2;
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="ace_advanced_fatigue_performanceFactor";
+						expression="_this setVariable [""ace_advanced_fatigue_performanceFactor"",_value,true]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=2;
+							};
+						};
+					};
+					class Attribute2
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute3
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=4;
+				};
+			};
+			class Item18
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={2.4581299,0.0014390945,-3.7580566};
+					angles[]={0,0.9425301,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle"";}";
+					description="Fusilero AA@Cóndor";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=1032;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item19
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={3.5991211,0.0014390945,-2.8540039};
+					angles[]={0,0.9425301,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle"";}";
+					description="Fusilero AA@Cóndor";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=1033;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item20
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={2.7120972,0.0014390945,-1.5852051};
+					angles[]={0,0.9425301,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle"";}";
+					description="Fusilero AT@Cóndor";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=1034;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item21
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={1.4541016,0.0014390945,-2.4321289};
+					angles[]={0,0.9425301,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle"";}";
+					description="Fusilero AT@Cóndor";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=1035;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item22
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={1.9121094,0.0014390945,-0.31811523};
+					angles[]={0,0.9695304,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle"";}";
+					description="Tirador Designado@Cóndor";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=1046;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item23
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={0.65515137,0.0014390945,-1.1660156};
+					angles[]={0,0.9695304,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle"";}";
+					description="Tirador Designado@Cóndor";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=1047;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item24
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={5.5870972,0.0014390945,-11.279053};
+					angles[]={0,0.9425301,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle"";}";
+					description="Fusilero@Cóndor";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=1050;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item25
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={7.1321411,0.0014390945,-13.367188};
+					angles[]={0,0.9425301,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle"";}";
+					description="Fusilero@Cóndor";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=1051;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item26
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={4.0870972,0.0014390945,-9.3762207};
+					angles[]={0,0.9425301,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle"";}";
+					description="Fusilero@Cóndor";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=1052;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item27
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={4.9051514,0.0014390945,-10.40918};
+					angles[]={0,0.9425301,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle"";}";
+					description="Fusilero@Cóndor";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=1053;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item28
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={2.6470947,0.0014390945,-7.1030273};
+					angles[]={0,0.94251269,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle"";}";
+					description="Fusilero@Cóndor";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=1054;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item29
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={3.4421387,0.0014390945,-8.1611328};
+					angles[]={0,0.94251269,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle"";}";
+					description="Fusilero@Cóndor";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=1055;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item30
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={1.7971191,0.0014390945,-6.0681152};
+					angles[]={0,0.94251269,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle"";}";
+					description="Fusilero@Cóndor";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=1056;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item31
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={0.18511963,0.0014390945,-3.6462402};
+					angles[]={0,0.94251269,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle"";}";
+					description="Fusilero@Cóndor";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=1057;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item32
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={0.97814941,0.0014390945,-4.7041016};
+					angles[]={0,0.94251269,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle"";}";
+					description="Fusilero@Cóndor";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=1058;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					class Attribute2
+					{
+						property="ENH_allowFleeing";
+						expression="_this allowFleeing _value";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.77109462;
+							};
+						};
+					};
+					nAttributes=3;
+				};
+			};
+			class Item33
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-0.67687988,0.0014390945,-2.2260742};
+					angles[]={0,0.94251269,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle"";}";
+					description="Fusilero@Cóndor";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=1059;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item34
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={6.3741455,0.0014390945,-12.358154};
+					angles[]={0,0.9425301,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle"";}";
+					description="Fusilero@Cóndor";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=1060;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+		};
+		class Attributes
+		{
+		};
+		id=708;
+	};
+	class Item4
+	{
+		dataType="Group";
+		side="West";
+		class Entities
+		{
+			items=36;
+			class Item0
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={0.2322998,0.0014390945,7.1337891};
+					angles[]={0,0.94252157,0};
+				};
+				side="West";
+				flags=7;
+				class Attributes
+				{
+					rank="SERGEANT";
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle"";}";
+					description="Líder Pelotón @Yaguar";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=743;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item1
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-0.10778809,0.0014390945,4.300293};
+					angles[]={0,0.9925164,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle"";}";
+					description="Líder Escuadra 1@yaguar";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=963;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="ace_isEngineer";
+						expression="if !(_value == ([0,1] select (_this getUnitTrait 'engineer'))|| {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=2;
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute2
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					class Attribute3
+					{
+						property="ace_advanced_fatigue_performanceFactor";
+						expression="_this setVariable [""ace_advanced_fatigue_performanceFactor"",_value,true]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=2;
+							};
+						};
+					};
+					nAttributes=4;
+				};
+			};
+			class Item2
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-0.93902588,0.0014390945,5.578125};
+					angles[]={0,0.9925164,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle"";}";
+					description="Líder Escuadra 2@yaguar";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=965;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="ace_isEngineer";
+						expression="if !(_value == ([0,1] select (_this getUnitTrait 'engineer'))|| {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=2;
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute2
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					class Attribute3
+					{
+						property="ace_advanced_fatigue_performanceFactor";
+						expression="_this setVariable [""ace_advanced_fatigue_performanceFactor"",_value,true]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=2;
+							};
+						};
+					};
+					nAttributes=4;
+				};
+			};
+			class Item3
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-1.8582153,0.0014390945,6.8713379};
+					angles[]={0,0.9925164,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle"";}";
+					description="Líder Escuadra  3@yaguar";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=967;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="ace_isEngineer";
+						expression="if !(_value == ([0,1] select (_this getUnitTrait 'engineer'))|| {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=2;
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute2
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					class Attribute3
+					{
+						property="ace_advanced_fatigue_performanceFactor";
+						expression="_this setVariable [""ace_advanced_fatigue_performanceFactor"",_value,true]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=2;
+							};
+						};
+					};
+					nAttributes=4;
+				};
+			};
+			class Item4
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-8.9282837,0.0014390945,11.271484};
+					angles[]={0,0.94252157,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle"";}";
+					description="Fusilero AT";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=987;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item5
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-8.4716187,0.0014390945,13.387695};
+					angles[]={0,0.96953344,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle"";}";
+					description="Tirador Designado";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=999;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item6
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-9.7295532,0.0014390945,12.538818};
+					angles[]={0,0.96953344,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle"";}";
+					description="Tirador Designado";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=1000;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item7
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-3.2820435,0.0014390945,3.355957};
+					angles[]={0,0.94252443,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle"";}";
+					description="Radio Operador";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=969;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item8
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-0.69207764,0.0014390945,2.3549805};
+					angles[]={0,0.94252157,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle"";}";
+					description="Ametrallador 556";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=970;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item9
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-1.9497681,0.0014390945,1.5070801};
+					angles[]={0,0.94252157,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle"";}";
+					description="Ametrallador 556";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=971;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item10
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-1.4179077,0.0014390945,3.3393555};
+					angles[]={0,0.94252157,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle"";}";
+					description="Ametrallador 762";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=972;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item11
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-2.6755981,0.0014390945,2.4912109};
+					angles[]={0,0.94252157,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle"";}";
+					description="Ametrallador 762";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=973;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item12
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-2.6655884,0.0014390945,5.2792969};
+					angles[]={0,0.9925127,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle""; this setVariable [""ACE_IsEngineer"",1,true]; this setVariable [""ACE_isEOD"",true,true];}";
+					description="Ingeniero";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=974;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="ace_isEngineer";
+						expression="if !(_value == ([0,1] select (_this getUnitTrait 'engineer'))|| {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=2;
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute2
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					class Attribute3
+					{
+						property="ace_advanced_fatigue_performanceFactor";
+						expression="_this setVariable [""ace_advanced_fatigue_performanceFactor"",_value,true]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=2;
+							};
+						};
+					};
+					nAttributes=4;
+				};
+			};
+			class Item13
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-3.9209595,0.0014390945,4.4328613};
+					angles[]={0,0.9925127,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle""; this setVariable [""ACE_IsEngineer"",1,true]; this setVariable [""ACE_isEOD"",true,true];}";
+					description="Ingeniero";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=975;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="ace_isEngineer";
+						expression="if !(_value == ([0,1] select (_this getUnitTrait 'engineer'))|| {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=2;
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute2
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					class Attribute3
+					{
+						property="ace_advanced_fatigue_performanceFactor";
+						expression="_this setVariable [""ace_advanced_fatigue_performanceFactor"",_value,true]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=2;
+							};
+						};
+					};
+					nAttributes=4;
+				};
+			};
+			class Item14
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-3.4395142,0.0014390945,6.2150879};
+					angles[]={0,0.94252443,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle"";}";
+					description="Granadero";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=976;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item15
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-4.6972656,0.0014390945,5.3671875};
+					angles[]={0,0.94252443,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle"";}";
+					description="Granadero";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=977;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item16
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-4.0911865,0.0014390945,7.182373};
+					angles[]={0,0.94252634,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle""; this setVariable [""ace_medical_medicClass"", 2, true];}";
+					description="Enfermero";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=978;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="ace_isMedic";
+						expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=2;
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="ace_advanced_fatigue_performanceFactor";
+						expression="_this setVariable [""ace_advanced_fatigue_performanceFactor"",_value,true]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=2;
+							};
+						};
+					};
+					class Attribute2
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute3
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=4;
+				};
+			};
+			class Item17
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-5.3491211,0.0014390945,6.3334961};
+					angles[]={0,0.94252634,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle""; this setVariable [""ace_medical_medicClass"", 2, true];}";
+					description="Enfermero";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=979;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="ace_isMedic";
+						expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=2;
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="ace_advanced_fatigue_performanceFactor";
+						expression="_this setVariable [""ace_advanced_fatigue_performanceFactor"",_value,true]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=2;
+							};
+						};
+					};
+					class Attribute2
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute3
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=4;
+				};
+			};
+			class Item18
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-5.0109863,0.0014390945,8.310791};
+					angles[]={0,0.94250917,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle""; this setVariable [""ace_medical_medicClass"", 2, true];}";
+					description="Médico de Combate";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=980;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="ace_isMedic";
+						expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=2;
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="ace_advanced_fatigue_performanceFactor";
+						expression="_this setVariable [""ace_advanced_fatigue_performanceFactor"",_value,true]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=2;
+							};
+						};
+					};
+					class Attribute2
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute3
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=4;
+				};
+			};
+			class Item19
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-6.2705688,0.0014390945,7.4633789};
+					angles[]={0,0.94250917,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle""; this setVariable [""ace_medical_medicClass"", 2, true];}";
+					description="Médico de Combate";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=981;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="ace_isMedic";
+						expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=2;
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="ace_advanced_fatigue_performanceFactor";
+						expression="_this setVariable [""ace_advanced_fatigue_performanceFactor"",_value,true]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=2;
+							};
+						};
+					};
+					class Attribute2
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute3
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=4;
+				};
+			};
+			class Item20
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-5.8798828,0.0014390945,9.6552734};
+					angles[]={0,0.94250917,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle""; this setVariable [""ace_medical_medicClass"", 2, true];}";
+					description="Medico";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=982;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="ace_isMedic";
+						expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=2;
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="ace_advanced_fatigue_performanceFactor";
+						expression="_this setVariable [""ace_advanced_fatigue_performanceFactor"",_value,true]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=2;
+							};
+						};
+					};
+					class Attribute2
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute3
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=4;
+				};
+			};
+			class Item21
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-7.1235962,0.0014390945,8.7004395};
+					angles[]={0,0.94251585,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle"";}";
+					description="Medico";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=983;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="ace_isMedic";
+						expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=2;
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="ace_advanced_fatigue_performanceFactor";
+						expression="_this setVariable [""ace_advanced_fatigue_performanceFactor"",_value,true]";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=2;
+							};
+						};
+					};
+					class Attribute2
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute3
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=4;
+				};
+			};
+			class Item22
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-7.9263916,0.0014390945,9.9448242};
+					angles[]={0,0.94252634,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle""; this setVariable [""ace_medical_medicClass"", 2, true];}";
+					description="Fusilero AA";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=984;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item23
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-6.7855225,0.0014390945,10.849609};
+					angles[]={0,0.94252825,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle"";}";
+					description="Fusilero AA";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=985;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item24
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-7.6705933,0.0014390945,12.119629};
+					angles[]={0,0.94252157,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle"";}";
+					description="Fusilero AT";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=986;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item25
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-6.2977295,0.0014390945,4.3269043};
+					angles[]={0,0.94252157,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle"";}";
+					description="Fusilero";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=1005;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item26
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-5.4785767,0.0014390945,3.2963867};
+					angles[]={0,0.94252157,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle"";}";
+					description="Fusilero";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=1006;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item27
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-7.7352295,0.0014390945,6.6008301};
+					angles[]={0,0.94251269,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle"";}";
+					description="Fusilero";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=1007;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item28
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-6.9452515,0.0014390945,5.5427246};
+					angles[]={0,0.94251269,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle"";}";
+					description="Fusilero";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=1008;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item29
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-8.5852661,0.0014390945,7.6357422};
+					angles[]={0,0.94251269,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle"";}";
+					description="Fusilero";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=1009;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item30
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-10.19928,0.0014390945,10.058838};
+					angles[]={0,0.94251269,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle"";}";
+					description="Fusilero";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=1010;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item31
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-9.4072876,0.0014390945,8.9997559};
+					angles[]={0,0.94251269,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle"";}";
+					description="Fusilero";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=1011;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item32
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-11.049255,0.0014390945,11.09375};
+					angles[]={0,0.94251269,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle"";}";
+					description="Fusilero";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=1012;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item33
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-4.7977295,0.0014390945,2.423584};
+					angles[]={0,0.94252157,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle"";}";
+					description="Fusilero";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=1002;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item34
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-4.0692139,0.0014390945,1.3681641};
+					angles[]={0,0.94252157,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle"";}";
+					description="Fusilero";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=1003;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+			class Item35
+			{
+				dataType="Object";
+				class PositionInfo
+				{
+					position[]={-3.2526855,0.0014390945,0.33544922};
+					angles[]={0,0.94252157,0};
+				};
+				side="West";
+				flags=5;
+				class Attributes
+				{
+					init="call{this disableAI ""move"";  this setUnitPos ""Middle"";}";
+					description="Fusilero";
+					isPlayable=1;
+					class Inventory
+					{
+						class binocular
+						{
+							name="Laserdesignator_01_khk_F";
+						};
+						map="ItemMap";
+						compass="ItemCompass";
+						watch="ACE_Altimeter";
+						radio="tf_anprc152";
+					};
+				};
+				id=1004;
+				type="rhsusf_usmc_marpat_d_rifleman_light";
+				class CustomAttributes
+				{
+					class Attribute0
+					{
+						property="speaker";
+						expression="_this setspeaker _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Male06ENG";
+							};
+						};
+					};
+					class Attribute1
+					{
+						property="pitch";
+						expression="_this setpitch _value;";
+						class Value
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1.01;
+							};
+						};
+					};
+					nAttributes=2;
+				};
+			};
+		};
+		class Attributes
+		{
+		};
+		id=742;
+	};
+	class Item5
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-18.159119,0,7.871582};
+			angles[]={0,0.96018934,0};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+		};
+		id=776;
+		type="ACE_medicalSupplyCrate";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ammoBox";
+				expression="[_this,_value] call bis_fnc_initAmmoBox;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="[[[[],[]],[[],[]],[[""ACE_fieldDressing"",""ACE_morphine"",""ACE_epinephrine"",""ACE_bloodIV"",""ACE_bloodIV_500"",""ACE_bloodIV_250"",""ACE_bodyBag"",""adv_aceSplint_splint"",""ACE_personalAidKit"",""ACE_elasticBandage"",""ACE_packingBandage"",""adv_aceCPR_AED"",""ACE_surgicalKit"",""ACE_plasmaIV"",""ACE_plasmaIV_250"",""ACE_plasmaIV_500"",""ACE_salineIV"",""ACE_salineIV_250"",""ACE_salineIV_500""],[30,30,30,20,20,20,10,30,30,60,60,8,8,10,5,10,10,5,10]],[[],[]]],false]";
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
+	class Item6
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={-17.089722,0.28405476,6.3168945};
+			angles[]={0,5.7382898,0};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+		};
+		id=777;
+		type="ACE_Box_Ammo";
+		class CustomAttributes
+		{
+			class Attribute0
+			{
+				property="ammoBox";
+				expression="[_this,_value] call bis_fnc_initAmmoBox;";
+				class Value
+				{
+					class data
+					{
+						class type
+						{
+							type[]=
+							{
+								"STRING"
+							};
+						};
+						value="[[[[],[]],[[],[]],[[""ACRE_PRC117F"",""ACRE_PRC343"",""ACRE_PRC152""],[10,60,10]],[[""arga_m_petate_bosque_multicam""],[5]]],false]";
+					};
+				};
+			};
+			nAttributes=1;
+		};
+	};
+};
