@@ -1,0 +1,22 @@
+// VCOM SETTINGS
+force Vcm_ActivateAI = true;
+force VCM_ADVANCEDMOVEMENT = true; //Verdadero significa que la IA generará activamente puntos de referencia si no se generan otros puntos de referencia para el grupo de IA (2 o más). Falso deshabilita estos movimientos avanzados.
+force VCM_AIDISTANCEVEHPATH = 5; //La distancia que verificará la IA del líder del escuadrón para robar vehículos
+force VCM_AIMagLimit = 2; //Número de cargadores restantes antes de que AI busque munición.
+force VCM_ARTYDELAY = 300; //Retraso entre escuadrones que solicitan artillería
+force VCM_ARTYENABLE = true; //Habilite el manejo mejorado de artillería de Vcom.
+force VCM_ARTYSPREAD = 150; //Dispersion en metros
+force VCM_Debug = false; //Habilitar el modo de depuración.
+force VCM_FRMCHANGE = true; //LOS GRUPOS DE AI CAMBIARÁN LAS FORMACIONES A SU MEJOR PRESUNCION.
+force VCM_HEARINGDISTANCE = 450; //Distancia AI escucha disparos no suprimidos.
+force VCM_MINECHANCE = 0; //Probabilidad de poner una mina
+force VCM_RAGDOLL = true; //Should AI ragdoll when hit
+force VCM_RAGDOLLCHC = 50; //CHANCE AI RAGDOLL
+// force VCM_SIDEENABLED = [WEST,EAST,GUER]; //Lados que activarán Vcom AI
+force VCM_SKILLCHANGE = false; //Grupos de IA tendrán sus habilidades cambiadas por Vcom.
+force VCM_STATICARMT = 500; //Cuánto tiempo permanece la IA en armas estáticas cuando las arma inicialmente. Esto es solo para AI SIN bolsas estáticas. Se quedarán durante este tiempo cuando NO SE VEAN ENEMIGOS, o su grupo se aleje.
+force VCM_StealVeh = false; //La IA robará vehículos.
+force VCM_WARNDELAY = 40; //Cuánto tiempo tiene que sobrevivir la IA antes de poder pedir ayuda. Esto se activa una vez que la IA entra en combate.
+force VCM_WARNDIST = 500; //Hasta qué distancia la AI puede solicitar ayuda de otros grupos.
+// force VCM_ARTYLST = []; //Lista de todas las IA dentro de las piezas de artillería, deja esto solo.
+// force VCM_ARTYSIDES = [east];  //Lista de todas las IA dentro de las piezas de artillería, deja esto solo.
