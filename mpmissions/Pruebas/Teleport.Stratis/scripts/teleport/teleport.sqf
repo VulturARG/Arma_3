@@ -17,9 +17,9 @@ _callObject addAction [
 		params ["_target", "_caller", "_actionId", "_arguments"];
 		_arguments params ["_objectPosition", "_newPosition", "_startTrigger"];
 		
-		// execVM "scripts\teleport_message.sqf";
-		[[],"scripts\teleport_message.sqf"] remoteExec ["BIS_fnc_execVM", 0, false];
-		[] remoteExec 
+		[[_startTrigger], "scripts\teleport\teleport_sound.sqf"]   remoteExec ["BIS_fnc_execVM", 0, false];
+		[[_startTrigger], "scripts\teleport\teleport_message.sqf"] remoteExec ["BIS_fnc_execVM", 0, false];
+
 		sleep 5;
 		{
 			_x setPos 

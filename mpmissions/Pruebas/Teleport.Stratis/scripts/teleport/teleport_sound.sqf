@@ -2,8 +2,13 @@
                           Realizado por |ArgA|Vultur|Sgt
 *******************************************************************************/
 
-[startTrigger,"destinationMarker",callObject] execVM "scripts\teleport\teleport.sqf";
-[startTrigger_1,"destinationMarker_1",callObject_1] execVM "scripts\teleport\teleport.sqf";
+if(isDedicated || !hasInterface ) exitWith {};
+
+params["_startTrigger"];
+
+if (count ([player] inAreaArray _startTrigger) > 0) then {
+    playSound "VUL_CHOPPER";
+}
 
 /*******************************************************************************
                           Realizado por |ArgA|Vultur|Sgt

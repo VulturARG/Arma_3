@@ -1,10 +1,14 @@
 /*******************************************************************************
-                          Realizado por |ArgA|Vultur|Sgt
+                          Realizado por |ArgA|MIV
 *******************************************************************************/
 
-[startTrigger,"destinationMarker",callObject] execVM "scripts\teleport\teleport.sqf";
-[startTrigger_1,"destinationMarker_1",callObject_1] execVM "scripts\teleport\teleport.sqf";
+class VUL_CHOPPER
+{
+	name = "VUL_CHOPPER";
+	sound[] = {"scripts\teleport\sound\chopper.ogg", 1, 1};
+	titles[] = {};
+};
 
 /*******************************************************************************
-                          Realizado por |ArgA|Vultur|Sgt
+                          Realizado por |ArgA|MIV
 *******************************************************************************/
