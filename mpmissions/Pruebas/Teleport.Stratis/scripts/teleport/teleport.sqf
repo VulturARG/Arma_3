@@ -2,37 +2,40 @@
                           Realizado por |ArgA|Vultur|Sgt
 *******************************************************************************/
 
-params["_startTrigger","_destinationMarker","_callObject"];
+params["_teleport_data","_callObject"];
 
 if(isNil "_callObject") exitWith {};
 
 removeAllActions _callObject;
 
-private _objectPosition   = getPos _callObject;
-private _newPosition      = getMarkerPos _destinationMarker;
-
 _callObject addAction [
-	"<t color='#00FF00'>Transporte a " + markerText _destinationMarker + "</t>",
+	"<t color='#00FF00'>Iniciar transporte</t>",
 	{
 		params ["_target", "_caller", "_actionId", "_arguments"];
-		_arguments params ["_objectPosition", "_newPosition", "_startTrigger"];
+		_arguments params ["_teleport_data","_startTrigger"];
 		
-		[[_startTrigger], "scripts\teleport\teleport_sound.sqf"]   remoteExec ["BIS_fnc_execVM", 0, false];
-		[[_startTrigger], "scripts\teleport\teleport_message.sqf"] remoteExec ["BIS_fnc_execVM", 0, false];
-
-		sleep 5;
 		{
-			_x setPos 
-				[
-					(_objectPosition select 0) - ((getPos _x) select 0) + (_newPosition select 0),
-					(_objectPosition select 1) - ((getPos _x) select 1) + (_newPosition select 1),
-					(_objectPosition select 2) - ((getPos _x) select 2) + (_newPosition select 2)
-					
-				];
-		} forEach (playableUnits inAreaArray _startTrigger);
-		//hint "activado";
-		//setDate [2002, 4, 12, 23, 0];
-	}, [_objectPosition, _newPosition, _startTrigger], 1.5, true, true, "", "true", 50, false, "", ""
+			_x params["_startTrigger","_destinationMarker"];
+
+			private _startPosition = getPos _startTrigger;
+			private _newPosition   = getMarkerPos _destinationMarker;
+			
+			[[_startTrigger], "scripts\teleport\teleport_sound.sqf"]   remoteExec ["BIS_fnc_execVM", 0, false];
+			[[_startTrigger], "scripts\teleport\teleport_message.sqf"] remoteExec ["BIS_fnc_execVM", 0, false];
+
+			sleep 5;
+			{
+				_x setPos 
+					[
+						(_startPosition select 0) - ((getPos _x) select 0) + (_newPosition select 0),
+						(_startPosition select 1) - ((getPos _x) select 1) + (_newPosition select 1),
+						(_startPosition select 2) - ((getPos _x) select 2) + (_newPosition select 2)
+					];
+			} forEach (playableUnits inAreaArray _startTrigger);
+
+		} forEach _teleport_data;
+		
+	}, [_teleport_data, _startTrigger], 1.5, true, true, "", "true", 50, false, "", ""
 ];
 
 /*******************************************************************************

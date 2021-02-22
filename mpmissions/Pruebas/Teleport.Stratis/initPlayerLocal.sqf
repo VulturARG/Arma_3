@@ -2,7 +2,7 @@
                           Realizado por |ArgA|Vultur|Sgt
 *******************************************************************************/
 
-execVM "scripts\inicio.sqf";
+execVM "scripts\teleport\teleport_inicio.sqf";
 
 /*******************************************************************************
                           Realizado por |ArgA|Vultur|Sgt
